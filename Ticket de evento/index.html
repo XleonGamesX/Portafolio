@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket de Evento</title>
+
+    <style>
+
+        body{
+            margin: 0px;
+        }
+
+        .TicketWrapper {
+            width: 100%;
+            height: 600px;
+            padding: 100px;
+        }
+
+        .Ticket{
+            float: left;                  
+            width: 70%;                    
+            height: 100%;
+            background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-size: cover;
+            background-position: 50% 50%; 
+            border-radius: 60px;
+            color: aliceblue;
+            box-sizing: border-box;
+            padding: 20px;                
+        }
+
+        .letra{
+            font-size: 70px;
+            margin-left: 5%;
+            padding-top: 0px;
+            padding-right: 0px;
+        }
+
+        #fecha-hora {
+            font-size: 40px;
+            margin-left: 110px;
+            padding-top: 150px;
+        }
+
+        #numEntrada{
+            font-size: 50px;
+            text-align: right;
+            padding-right: 100px;
+            padding-bottom: 0px;
+            margin-top: -500px;          
+        }
+
+        
+        .desprendible{
+            float: left;                  
+            width: 20%;                    
+            height: 100%;
+            background-color: white;
+            text-align: center;            
+            box-sizing: border-box;
+            border-radius: 50px;
+            padding-top: 50px;
+            border: 5px solid black;
+        }
+
+        .desprendible img{
+            max-width: 80%;                
+        }
+
+        .linea{
+            border-left: 5px dashed white;
+            height: 100%;                  
+            margin-left: -10px;
+        }
+
+        .texto-vertical{
+            font-size: 50px;
+            padding: 50px;
+            writing-mode: vertical-lr;
+        }
+
+        .TicketWrapper::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="TicketWrapper">
+        <div class="Ticket">
+            <section>
+                <p class="letra">Event Ticket</p>
+            </section>
+
+            <section id="fecha-hora">
+                <p>14/03</p>
+                <p>10:00PM</p>
+            </section>
+
+            <section id="numEntrada">
+                <p>N° 2031</p>
+            </section>
+        </div>
+
+        <div class="desprendible">
+            <img src="https://media.istockphoto.com/id/1474203979/es/vector/c%C3%B3digo-de-barras-sobre-fondo-transparente.jpg?s=2048x2048&w=is&k=20&c=v-bmThg6eQC78kR17q919cvtNKes2gsOwpph8AwDoNA=" alt="Código de barras">
+            <p class="texto-vertical">Event Ticket</p>
+            
+        </div>
+    </div>
+</body>
+</html>

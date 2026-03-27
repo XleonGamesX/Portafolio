@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+
+        body{
+            padding: 20px;
+        }
+
+        .hoja {
+            background-color: white;   /* color de la "hoja" */
+            width: 1680px;              /* ancho de la hoja */
+            padding: 50px;             /* espacio interno */
+            border: 1px solid #ccc;    /* borde de la hoja */
+            border: 3px solid #bfa254;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2); /* sombra para dar relieve */
+            border-radius: 100px;        /* bordes ligeramente redondeados */
+            margin: 40px auto ;
+        }
+
+        #titulo{
+            text-align: center;
+            margin: 20px;
+            margin-bottom: 40px;
+        }
+
+        .imagen{
+            width: 200px;
+            height: auto;
+            border-radius: 200px ;
+            float: right;
+            margin-right: 20%;
+            margin-top: 4px;
+            border: 3px solid rgba(136, 101, 26, 0.555);
+            box-shadow:10px 10px 15px rgb(0, 0, 0,0.5);
+        }
+
+        #tabla{
+            width: 900px;
+            margin-left:5% ;
+        }
+        
+        .separar_subtitulos{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #contacto{
+            width: 900px;
+            margin-top: 15px;
+            margin-left:5% ;
+        }
+
+        footer a {
+            color: #406285;              
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="hoja">
+        <h1 id="titulo">HOJA DE VIDA</h1>
+
+        <img class="imagen" src="https://wallpapers.com/images/featured-full/kratos-pictures-4aiwryfubx7pdhga.jpg" alt="este soy yo">
+        <table id="tabla">
+            <tdr>
+                <td><h1>David Santiago León Rueda</h1></td>
+            </tr>
+
+            <tr>
+                <td><h2 class="separar_subtitulos">Perfil Profesional:</h2></td>
+            </tr>
+            <tr>
+                <td>Tecnólogo en formación en Análisis y Desarrollo de Software del SENA, con formación técnica en Contabilidad. <br>Cuento con conocimientos en desarrollo web utilizando JavaScript, HTML y CSS, así como fundamentos de programación en Python.<br> Manejo conceptos básicos de lógica de programación, estructura de datos y construcción de interfaces web.<br>
+                    Mi formación en contabilidad me permite comprender procesos empresariales como conciliaciones bancarias, nómina e impuestos, lo que aporta una visión funcional para el desarrollo de soluciones tecnológicas orientadas al sector administrativo y financiero.<br>
+                    Me caracterizo por la disciplina, responsabilidad y capacidad de aprendizaje continuo. Busco una oportunidad como desarrollador junior donde pueda aplicar mis conocimientos técnicos y fortalecer mi experiencia práctica en proyectos reales.</td>
+            </tr>
+            <tr>
+                <td><h2 class="separar_subtitulos">Formacion Academica:</h2></td>
+            </tr>
+
+            <tr>
+                <td><ul>
+                        <li>Tecnólogo en Análisis y Desarrollo de Software</li>
+                        <li>Técnico en Contabilidad</li>
+                </ul></td>
+            </tr>
+
+            <tr>
+                <td><h2 class="separar_subtitulos">CONOCIMIENTOS TÉCNICOS:</h2></td>
+            </tr>
+
+            <tr>
+                <td><ul>
+                    <li>Lenguajes: JavaScript, Python</li>
+                    <li>Desarrollo web: HTML5, CSS</li>
+                    <li>Fundamentos de programación y lógica</li>
+                    <li>Procesos contables: conciliaciones bancarias, nómina, liquidación de impuestos</li>
+                </ul></td>
+
+            </tr>
+
+            <tr>
+                <td><h2 class="separar_subtitulos">EXPERIENCIA LABORAL:</h2></td>
+            </tr>
+
+            <tr>
+                <td><h3>Mesero en Pio Rico:</h3></td>
+            </tr>
+
+            <tr>
+                <td><ul>
+                    <li>Trabajo fines de semana y festivos (2 meses)</li>
+                    <li>Atención al cliente</li>
+                    <li>Manejo de pedidos y servicio en mesa</li>
+                    <li>Trabajo bajo presión</li>
+                </td>
+            </ul></tr>
+
+            <tr>
+                <td><h2 class="separar_subtitulos">Mis hobbies:</h2></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <ul>
+                    <li>Entrenar calistenia</li>
+                    <li>Repasar conceptos vistos en clase</li>
+                    <li>Jugar Albion online</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <footer id="contacto">
+            <h3>📞 Mi contacto:</h3>
+                <p>
+                    <a href="tel:3157610249">📞 +57 3157610249</a> <br>
+                    <a href="mailto:santiagoleon0407@gmail.com">📧santiagoleon0407@gmail.com</a>
+                </p>
+        </footer>
+    </div>
+</body>
+</html>
