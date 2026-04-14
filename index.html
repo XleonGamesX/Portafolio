@@ -1,139 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <style>
-        body{
-            padding: 0%;
-            margin: 0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio</title>
 
-            background-color: rgb(83, 79, 79);
-        }
+<style>
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(83, 79, 79);
+    color: white;
+}
 
-        #portafolio {
+/* HERO */
+#hero{
+    width: 90%;
+    margin: 5% auto;
+    padding: 60px;
+    background-image: url(/Portafolio/imagenes/fondo_negro.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
 
-            height: 70vh; 
-            width: 90%;  
-            margin-left: 6%; 
-            padding: 0;
-            color:aliceblue;
-            
-            margin-top: 8%;
+#hero h1{
+    font-size: 70px;
+    margin: 0;
+}
 
-            background-size: 660px 600px;
-            background-image: url(/Portafolio/imagenes/fondo_negro.jpg) ;
-            background-repeat: no-repeat;
-        }
+#hero p{
+    font-size: 20px;
+    margin-top: 10px;
+}
 
-        .titulo {
-            font-size: 70px;
-            padding-top: 6%;
-            margin-left: 11%;
-            padding-bottom: 0%
-        }
+/* SECCION */
+#proyectos{
+    width: 90%;
+    margin: 50px auto;
+}
 
-        .nombre{
-            margin-top: 2%;
-            font-size: 25px;
-            margin-left: 7%;
-            padding: 0%;
-        }
+#proyectos h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
 
-        #titulo_proyecto{
-            font-size: 65px;
-            
-            margin: 0%;
-            padding: 0%;
-            text-align: right;
-            margin-right:20%;
-        }
+/* GRID */
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
 
-        #img1{
-            width: 200px;
-            height: auto;
-            border-radius: 5px;
-            border: 3px solid rgb(226, 218, 218);
-            box-shadow:10px 10px 15px rgba(255, 255, 255, 0.5);
-        }
+/* CARD */
+.card{
+    width: 260px;
+}
 
-        #img2{
-            width: 400px;
-            height: auto;
-            border-radius: 5px;
-            border: 3px solid rgb(226, 218, 218);
-            box-shadow:10px 10px 15px rgba(255, 255, 255, 0.5);
-        }
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 8px 8px 15px rgba(255,255,255,0.3);
+}
 
-        #img3{
-            width: 400px;
-            height: auto;
-            border-radius: 5px;
-            border: 3px solid rgb(226, 218, 218);
-            box-shadow:10px 10px 15px rgba(255, 255, 255, 0.5);
-        }
+.card p{
+    font-size: 18px;
+    margin-top: 10px;
+}
 
-        #img4 {
-            width:300px ;
-        }
+/* DESTACADO (estilo Muzli) */
+.destacado{
+    width: 100%;
+    max-width: 550px;
+}
 
-        #proyectos table {
-            margin-left: auto;
-            border-spacing: 30px;
-            margin-top: -25%;
-            width: auto; 
-        }
-
-        #proyectos p{
-            font-size: 25px;
-            color: aliceblue;
-            text-align: center;
-        }
-    </style>
+.destacado img{
+    width: 100%;
+}
+</style>
 </head>
+
 <body>
-    <div >
-        <div id="portafolio">
-            <div>
-                <p id="titulo_proyecto">Mis proyectos</p>
-                <p class="titulo">Portafolio</p>
-                <p class="nombre">David Santiago León Rueda</p>      
-            </div>
+
+<!-- HERO -->
+<div id="hero">
+    <h1>Portafolio</h1>
+    <p>David Santiago León Rueda</p>
+</div>
+
+<!-- PROYECTOS -->
+<div id="proyectos">
+    <h2>Mis proyectos</h2>
+
+    <div class="grid">
+
+        <!-- PROYECTO GRANDE -->
+        <div class="card destacado">
+            <p>Hoja de Vida</p>
+            <a href="./Hoja de vida/index.html">
+                <img src="/Portafolio/imagenes/Hoja_vida.jpg">
+            </a>
         </div>
-    </div>
 
-    <div id="proyectos">
-        <table>
-                <tr>
-                    <td>
-                        <p>Hoja de Vida</p>
-                        <a href="./Hoja de vida/index.html">
-                            <img id="img1" src="/Portafolio/imagenes/Hoja_vida.jpg" alt="hoja de vida">
-                            
-                        </a>
-                    </td>
-                    <td>
-                        <p>Ticket</p>
-                        <a href="./Ticket de evento/index.html">
-                            <img id="img2" src="/Portafolio/imagenes/Ticket.jpg" alt="Ticket concierto">
-                        </a>
-                    </td>
-                    <td>
-                        <p>¿Quien Soy?</p>
-                        <a href="/Portafolio/Quien soy/index.html">
-                            <img id="img3" src="/Portafolio/imagenes/quien soy.jpg" alt="Quien soy?">
-                        </a>
-                    </td>
+        <!-- OTROS -->
+        <div class="card">
+            <p>Ticket</p>
+            <a href="./Ticket de evento/index.html">
+                <img src="/Portafolio/imagenes/Ticket.jpg">
+            </a>
+        </div>
 
-                    <td>
-                        <p>Factura</p>
-                        <a href="/Portafolio/Galeria de facturas/">
-                            <img id="img4" src="/Portafolio/imagenes/Factura.png" alt="Quien soy?">
-                        </a>
-                    </td>
-                </tr>
-        </table>
+        <div class="card">
+            <p>¿Quién Soy?</p>
+            <a href="/Portafolio/Quien soy/index.html">
+                <img src="/Portafolio/imagenes/quien soy.jpg">
+            </a>
+        </div>
+
+        <div class="card">
+            <p>Factura</p>
+            <a href="/Portafolio/Galeria de facturas/">
+                <img src="/Portafolio/imagenes/Factura.png">
+            </a>
+        </div>
+
     </div>
+</div>
+
 </body>
 </html>
