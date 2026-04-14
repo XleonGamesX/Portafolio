@@ -13,12 +13,11 @@ body{
     color: white;
 }
 
-/* HERO */
 #hero{
     width: 90%;
     margin: 5% auto;
     padding: 60px;
-    background-image: url(/Portafolio/imagenes/fondo_negro.jpg);
+    background-image: url(/imagenes/fondo_negro.jpg);
     background-size: cover;
     border-radius: 10px;
 }
@@ -33,7 +32,6 @@ body{
     margin-top: 10px;
 }
 
-/* SECCION */
 #proyectos{
     width: 90%;
     margin: 50px auto;
@@ -44,7 +42,6 @@ body{
     margin-bottom: 30px;
 }
 
-/* GRID */
 .grid{
     display: flex;
     flex-wrap: wrap;
@@ -52,7 +49,6 @@ body{
     justify-content: center;
 }
 
-/* CARD */
 .card{
     width: 260px;
 }
@@ -69,59 +65,58 @@ body{
     margin-top: 10px;
 }
 
-/* DESTACADO (estilo Muzli) */
 .destacado{
     width: 100%;
-    max-width: 550px;
+    max-width: 250px;
 }
 
 .destacado img{
     width: 100%;
+}
+
+.centrar{
+    text-align: center;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div id="hero">
     <h1>Portafolio</h1>
     <p>David Santiago León Rueda</p>
 </div>
 
-<!-- PROYECTOS -->
 <div id="proyectos">
     <h2>Mis proyectos</h2>
 
     <div class="grid">
 
-        <!-- PROYECTO GRANDE -->
         <div class="card destacado">
-            <p>Hoja de Vida</p>
+            <p class="centrar">Hoja de Vida</p>
             <a href="./Hoja de vida/index.html">
-                <img src="/Portafolio/imagenes/Hoja_vida.jpg">
+                <img src="/imagenes/Hoja_vida.jpg">
             </a>
         </div>
 
-        <!-- OTROS -->
         <div class="card">
-            <p>Ticket</p>
+            <p class="centrar">Ticket</p>
             <a href="./Ticket de evento/index.html">
-                <img src="/Portafolio/imagenes/Ticket.jpg">
+                <img src="/imagenes/Ticket.jpg">
             </a>
         </div>
 
         <div class="card">
-            <p>¿Quién Soy?</p>
+            <p class="centrar">¿Quién Soy?</p>
             <a href="/Portafolio/Quien soy/index.html">
-                <img src="/Portafolio/imagenes/quien soy.jpg">
+                <img src="/imagenes/quien soy.jpg">
             </a>
         </div>
 
         <div class="card">
-            <p>Factura</p>
+            <p class="centrar">Factura</p>
             <a href="/Portafolio/Galeria de facturas/">
-                <img src="/Portafolio/imagenes/Factura.png">
+                <img src="/imagenes/Factura.png">
             </a>
         </div>
 
