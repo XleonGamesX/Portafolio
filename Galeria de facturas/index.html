@@ -51,6 +51,7 @@ body{
     font-size: 28px;
     color: rgb(219, 42, 42);
     font-weight: bold;
+    padding-right: 20px;
 }
 
 .factura{
@@ -63,7 +64,16 @@ body{
 
 .bloque_izquierdo p,
 .bloque_derecho p{
-    margin: 4px 0;
+    margin: 10px ;
+}
+
+.label{
+    display: inline-block;
+    width: 100px;
+}
+
+.valor{
+    display: inline-block;
 }
 
 .cuerpo_factura{
@@ -172,13 +182,6 @@ tbody td{
     margin-right: 25px; 
 }
 
-.firma{
-    text-align: right;
-    padding-top: 25px;
-    font-size: 13px;
-    color: #555;
-}
-
 .barra_negra{
     height: 15px;
     background-color: black;
@@ -216,8 +219,15 @@ tbody td{
         </div>
 
         <div class="bloque_derecho">
-            <p><strong>Invoice #:</strong> 52148</p>
-            <p><strong>Date:</strong> 01 / 02 / 2020</p>
+            <p>
+                <span class="label"><strong>Invoice #:</strong></span>
+                <span class="valor">52148</span>
+                </p>
+
+                <p>
+                <span class="label"><strong>Date:</strong></span>
+                <span class="valor">01 / 02 / 2020</span>
+            </p>
         </div>
     </div>
 
