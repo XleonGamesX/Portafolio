@@ -1,293 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factura</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factura</title>
 
-        body{
-            display: flex;
-            justify-content: center;
-            background-color: lightgrey;
-        }
+<style>
 
-        .contenedor_principal{
-            width: 60%;
-        }
+body{
+    display: flex;
+    justify-content: center;
+    background-color: lightgrey;
+    padding-top: 60px;
+    margin: 0;
+    font-family: sans-serif;
+}
 
-        .encabezado{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            text-align: center;
-            background-color: rgb(37, 36, 36);
-            border-bottom: 15px solid  rgb(219, 42, 42);
-        }
+.contenedor_principal{
+    width: 40%;
+    background-color: white;
+}
 
-        #izquierda{
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 25px;
-            margin-right: 40px;
-            color: white;
-        }
+.encabezado{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: rgb(37, 36, 36);
+    border-bottom: 8px solid rgb(219, 42, 42);
+    padding: 15px 30px;
+}
 
-        #derecha{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 30px;
-            margin-left: 250px;
-            color: rgb(219, 42, 42);
-        }
+.encabezado_izquierda{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
 
-        .factura{
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            margin-top: 30px;
-            padding: 20px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            background-color: rgb(37, 36, 36);
-            color:white;
-            margin-top: 0px;
-            text-align: center;
-        }
+.encabezado_izquierda img{
+    width: 60px;
+}
 
-        .bloque_izquierdo p{
-            margin-bottom: 8px;
-        }
+.texto-brand p{
+    margin: 0;
+}
 
-        .bloque_derecho p{
-            margin-bottom: 8px;
-        }
+.encabezado_derecha{
+    text-align: right;
+    font-size: 28px;
+    color: rgb(219, 42, 42);
+    font-weight: bold;
+}
 
+.factura{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px 30px;
+    background-color: rgb(37, 36, 36);
+    color:white;
+}
 
-        .descripcion{
-            width: 40%;
-        }
+.bloque_izquierdo p,
+.bloque_derecho p{
+    margin: 4px 0;
+}
 
-        .cuerpo_factura{
-            background-color: white;
-        }
+.cuerpo_factura{
+    background-color: white;
+}
 
-        table{
-            margin: 0px;
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0px ;
-        }
-     
-        thead{
-            height: 50px;
-            background-color: rgba(226, 236, 224, 0.973);
-        }
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
 
-        tbody tr{
-            background-color: white;
-            border-bottom: 1px solid #ccc;
-        }
+thead{
+    background-color: #eef2ec;
+}
 
-        tbody td{
-            padding: 12px 20px;
-        }
+thead td{
+    padding: 12px;
+    font-weight: bold;
+}
 
-        td, th{
-            padding: 10px;
-        }
-        
-        .sl{
-            text-align: right;
-            padding-right: 20px;
-        }
+tbody td{
+    padding: 12px;
+}
+
+.tabla_productos tbody tr{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sl{
+    text-align: right;
+}
 
 
-        .informacion_pago{
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            padding: 20px 40px;
-        }
+.informacion_pago{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 30px;
+}
 
-        /* Quitar líneas grises heredadas */
-        .pago_derecha tbody tr{
-            border-bottom: none;
-        }
+.pago_izquierda{
+    font-size: 14px;
+}
 
-        /* Línea arriba del total */
-        .linea_arriba td{
-            border-top: 2px solid black;
-            padding-top: 10px;
-        }
+.pago_izquierda p{
+    margin: 4px 0;
+}
 
-        /* Línea antes de la firma */
-        .linea_abajo td{
-            border-top: 2px solid black;
-            padding-top: 10px;
-        }
-        
-        /* Ajuste visual izquierda */
-        .pago_izquierda{
-            font-size: 14px;
-        }
+.pago_derecha table{
+    width: 100%;
+}
 
-        .pago_izquierda p{
-            margin: 4px 0;
-        }
+.pago_derecha td{
+    padding: 4px 0;
+    font-size: 14px;
+}
 
-        .barra_negra{
-            padding: 10px;
-            background-color: black;
-        }
 
-    </style>
+.linea_arriba td{
+    border-top: 2px solid #000;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+
+.contenedor_firma{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 30px; 
+}
+
+.linea_firma{
+    width: 120px;
+    border-top: 2px solid black;
+    margin-bottom: 0px;
+}
+
+.firma{
+    font-size: 13px;
+    color: #555;
+    margin: 0; 
+}
+
+.firma{
+    text-align: right;
+    padding-top: 25px;
+    font-size: 13px;
+    color: #555;
+}
+
+.barra_negra{
+    height: 15px;
+    background-color: black;
+}
+
+</style>
 </head>
+
 <body>
-    <div class="contenedor_principal">
-        <div class="encabezado">
-            <p id="izquierda">Brand Name</p>
-            <p id="derecha">INVOICE</p>
-        </div>
 
-        <div class="factura">
+<div class="contenedor_principal">
 
-            <div class="bloque_izquierdo">
-                <p><strong>Invoice to:</strong></p>
-                <p>Dynamic Clark</p>
-                <p>24 Dummy Street Area</p>
-                <p>1123 Fictional St. San Francisco, CA 94103</p>
-            </div>
-
-            <div class="bloque_derecho">
-                <p><strong>Invoice #:</strong> 52148</p>
-                <p><strong>Date:</strong> 01 / 02 / 2020</p>
+    <div class="encabezado">
+        <div class="encabezado_izquierda">
+            <img src="./Portafolio/imagenes/logo_fact.jpg" alt="logo">
+            <div class="texto-brand">
+                <p>Brand Name</p>
+                <p style="font-size:12px;">Tagline space here</p>
             </div>
         </div>
 
-        <div class="cuerpo_factura">
-            <div class="tabla_productos">
-                <table width="100%">
-                    <thead>
-                        <tr>
-                            <td class="sl">SL</td>
-                            <td class="descripcion">Item Decription</td>
-                            <td>Price</td>
-                            <td>Qty</td>
-                            <td>Total</td>
-                        </tr>
+        <div></div>
 
-                    </thead>
+        <div class="encabezado_derecha">
+            INVOICE
+        </div>
+    </div>
 
-                    <tbody>
-                        <tr>
-                            <td class="sl">1</td>
-                            <td>Lorem ipsum dolor</td>
-                            <td>50.00</td>
-                            <td>1</td>
-                            <td>50.00</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5"><hr class="linea"></td>
-                        </tr>
+    <div class="factura">
+        <div class="bloque_izquierdo">
+            <p><strong>Invoice to:</strong></p>
+            <p>Dwayne Clark</p>
+            <p>24 Dummy Street Area</p>
+            <p>1123 Fictional St. San Francisco, CA 94103</p>
+        </div>
 
-                        <tr>
-                            <td class="sl">2</td>
-                            <td>Pellentesque id neque liguia</td>
-                            <td>20.00</td>
-                            <td>3</td>
-                            <td>60.00</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5"><hr class="linea"></td>
-                        </tr>
+        <div class="bloque_derecho">
+            <p><strong>Invoice #:</strong> 52148</p>
+            <p><strong>Date:</strong> 01 / 02 / 2020</p>
+        </div>
+    </div>
 
-                        <tr>
-                            <td class="sl">3</td>
-                            <td>Interdum et malesuada fames</td>
-                            <td>10.00</td>
-                            <td>2</td>
-                            <td>20.00</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5"><hr class="linea"></td>
-                        </tr>
+    <div class="cuerpo_factura">
 
-                        <tr>
-                            <td class="sl">4</td>
-                            <td>Vivamus volutpatfaucibus</td>
-                            <td>90.00</td>
-                            <td>1</td>
-                            <td>90.00</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5"><hr class="linea"></td>
-                        </tr>
+        <table class="tabla_productos">
+            <thead>
+                <tr>
+                    <td class="sl">SL</td>
+                    <td>Item Description</td>
+                    <td>Price</td>
+                    <td>Qty</td>
+                    <td>Total</td>
+                </tr>
+            </thead>
 
-                        <tr>
-                            <td class="sl">‎</td>
-                            <td>‎ </td>
-                            <td>‎ </td>
-                            <td>‎ </td>
-                            <td>‎ </td>
-                        </tr>
-                        <tr>
-                            <td colspan="5"><hr class="linea"></td>
-                        </tr>
+            <tbody>
+                <tr>
+                    <td class="sl">1</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>$50.00</td>
+                    <td>1</td>
+                    <td>$50.00</td>
+                </tr>
 
-                    </tbody>
+                <tr>
+                    <td class="sl">2</td>
+                    <td>Pellentesque id neque ligula</td>
+                    <td>$20.00</td>
+                    <td>3</td>
+                    <td>$60.00</td>
+                </tr>
+
+                <tr>
+                    <td class="sl">3</td>
+                    <td>Interdum et malesuada fames</td>
+                    <td>$10.00</td>
+                    <td>2</td>
+                    <td>$20.00</td>
+                </tr>
+
+                <tr>
+                    <td class="sl">4</td>
+                    <td>Vivamus volutpat faucibus</td>
+                    <td>$90.00</td>
+                    <td>1</td>
+                    <td>$90.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="informacion_pago">
+
+            <div class="pago_izquierda">
+                <p><strong>Thank you for your business</strong></p>
+
+                <br>
+
+                <p><strong>Payment Info:</strong></p>
+                <p>Account Name: Lorem Ipsum</p>
+                <p>Account No: 123456789</p>
+                <p>Bank Name: Lorem Bank</p>
+
+                <div class="linea_firma"></div>
+
+                <br><br>
+
+                <p><strong>Terms & Conditions</strong></p>
+                <p style="font-size:12px; line-height:1.4;">
+                    Lorem ipsum dolor sit amet,
+                    Praesent vel justo vitae nulla fermentum malesuada.
+                    Integer feugiat posuere neque in varius.
+                </p>
+            </div>
+
+            <div class="pago_derecha">
+                <table>
+                    <tr>
+                        <td>Sub Total:</td>
+                        <td>$220.00</td>
+                    </tr>
+                    <tr>
+                        <td>Tax:</td>
+                        <td>0.00%</td>
+                    </tr>
+
+                    <tr class="linea_arriba">
+                        <td><strong>Total:</strong></td>
+                        <td><strong>$220.00</strong></td>
+                    </tr>
+
+                    <!-- FIRMA CORREGIDA -->
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="contenedor_firma">
+                                <div class="linea_firma"></div>
+                                <p class="firma">Authorised Sign</p>
+                            </div>
+                        </td>
+                    </tr>
 
                 </table>
-
-                <div class="informacion_pago">
-
-                    <!-- IZQUIERDA -->
-                    <div class="pago_izquierda">
-                        <p><strong>Thank you for your business</strong></p>
-
-                        <br>
-
-                        <p><strong>Payment Info:</strong></p>
-                        <p>Account Name: Lorem Ipsum</p>
-                        <p>Account No: 123456789</p>
-                        <p>Bank Name: Lorem Bank</p>
-
-                        <br><br>
-
-                        <p><strong>Terms & Conditions</strong></p>
-                        <p style="font-size:12px; line-height:1.4; max-width:90%;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Praesent vel justo vitae nulla fermentum malesuada. 
-                            Integer feugiat posuere neque in varius. 
-                            Sed vehicula mattis nunc, at feugiat nulla.
-                        </p>
-                    </div>
-
-                    <!-- DERECHA -->
-                    <div class="pago_derecha">
-                        <table>
-                            <tr>
-                                <td>Sub Total:</td>
-                                <td>$220.00</td>
-                            </tr>
-                            <tr>
-                                <td>Tax:</td>
-                                <td>0.00%</td>
-                            </tr>
-
-                            <!-- LINEA ARRIBA DEL TOTAL -->
-                            <tr class="linea_arriba">
-                                <td><strong>Total:</strong></td>
-                                <td><strong>$220.00</strong></td>
-                            </tr>
-
-                            <!-- LINEA ANTES DE FIRMA -->
-                            <tr class="linea_abajo">
-                                <td colspan="2" style="text-align:center; padding-top:20px;">
-                                    Authorised Sign
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
             </div>
+
         </div>
-        <div class="barra_negra"></div>
+
     </div>
+
+    <div class="barra_negra"></div>
+
+</div>
+
 </body>
 </html>
