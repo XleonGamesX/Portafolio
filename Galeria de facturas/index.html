@@ -8,16 +8,17 @@
 <style>
 
 body{
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: lightgrey;
     padding-top: 60px;
-    margin: 0;
+    padding-bottom: 60px;
     font-family: sans-serif;
 }
 
 .contenedor_principal{
-    width: 40%;
+    width: 38%;
     background-color: white;
 }
 
@@ -27,7 +28,7 @@ body{
     align-items: center;
     background-color: rgb(37, 36, 36);
     border-bottom: 8px solid rgb(219, 42, 42);
-    padding: 15px 30px;
+    padding: 25px 30px;
 }
 
 .encabezado_izquierda{
@@ -55,7 +56,7 @@ body{
 .factura{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 20px 30px;
+    padding: 30px 30px;
     background-color: rgb(37, 36, 36);
     color:white;
 }
@@ -79,27 +80,50 @@ thead{
 }
 
 thead td{
-    padding: 12px;
+    padding: 20px;
     font-weight: bold;
 }
 
-tbody td{
-    padding: 12px;
+.tabla_productos tbody tr:last-child{
+    border-bottom: none;
+}
+
+
+.tabla_productos tbody tr:empty,
+.tabla_productos tbody tr:last-child{
+    border-bottom: none;
 }
 
 .tabla_productos tbody tr{
+    border-bottom: none;
+}
+
+.tabla_productos tbody tr td{
     border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla_productos tbody tr td:first-child,
+.tabla_productos tbody tr td:last-child{
+    border-bottom: none;
+}
+
+tbody td{
+    padding: 20px;
+}
+
+
+.tabla_productos{
+    padding-top: 40px;
 }
 
 .sl{
     text-align: right;
 }
 
-
 .informacion_pago{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 30px;
+    padding: 40px;
 }
 
 .pago_izquierda{
@@ -132,18 +156,20 @@ tbody td{
     flex-direction: column;
     align-items: flex-end;
     margin-top: 30px; 
+    padding-top: 175px;
+    padding-right: 25px;
 }
 
 .linea_firma{
-    width: 120px;
+    width: 130px;
     border-top: 2px solid black;
-    margin-bottom: 0px;
+    padding-left: 10px;
 }
 
 .firma{
     font-size: 13px;
     color: #555;
-    margin: 0; 
+    margin-right: 25px; 
 }
 
 .firma{
@@ -240,6 +266,15 @@ tbody td{
                     <td>1</td>
                     <td>$90.00</td>
                 </tr>
+
+                <tr>
+                    <td class="sl">‎</td>
+                    <td>‎ </td>
+                    <td>‎ </td>
+                    <td>‎ </td>
+                    <td>‎ </td>
+                </tr>
+                
             </tbody>
         </table>
 
@@ -255,8 +290,8 @@ tbody td{
                 <p>Account No: 123456789</p>
                 <p>Bank Name: Lorem Bank</p>
 
-                <div class="linea_firma"></div>
-
+                <br><br>
+                <br><div class="linea_firma"></div><br>
                 <br><br>
 
                 <p><strong>Terms & Conditions</strong></p>
