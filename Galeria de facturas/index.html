@@ -124,6 +124,7 @@ tbody td{
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
 }
 
 .sl{
@@ -132,8 +133,12 @@ tbody td{
 
 .informacion_pago{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 40px;
+    grid-template-columns: 1.5fr 1fr;
+    padding: 20px 40px;
+}
+
+.info_pago{
+    font-size: 15px;
 }
 
 .pago_izquierda{
@@ -144,13 +149,33 @@ tbody td{
     margin: 4px 0;
 }
 
+.pago_izquierda span{
+    font-size: 13px;
+}
+
+#business{
+    font-size: 13px;
+}
+
 .pago_derecha table{
     width: 100%;
 }
 
 .pago_derecha td{
     padding: 4px 0;
-    font-size: 14px;
+    font-size: 15px;
+}
+
+.pago_derecha strong{
+    font-size: 18px;
+}
+
+#total_pago{
+    padding-left: 40px;
+}
+
+.total_numero{
+    text-align: center;
 }
 
 .linea_arriba td{
@@ -163,7 +188,7 @@ tbody td{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 30px; 
+    margin-top: 20px; 
     padding-top: 175px;
     padding-right: 25px;
 }
@@ -283,9 +308,9 @@ tbody td{
             <p>
                 <span class="label"><strong>Invoice #:</strong></span>
                 <span class="valor">52148</span>
-                </p>
+            </p>
 
-                <p>
+            <p>
                 <span class="label"><strong>Date:</strong></span>
                 <span class="valor">01 / 02 / 2020</span>
             </p>
@@ -352,14 +377,23 @@ tbody td{
         <div class="informacion_pago">
 
             <div class="pago_izquierda">
-                <p><strong>Thank you for your business</strong></p>
+                <p id="business"><strong>Thank you for your business</strong></p>
 
                 <br>
 
-                <p><strong>Payment Info:</strong></p>
-                <p>Account Name: Lorem Ipsum</p>
-                <p>Account No: 123456789</p>
-                <p>Bank Name: Lorem Bank</p>
+                <p class="info_pago"><strong>Payment Info:</strong></p>
+                <p>
+                    <span class="label">Account Name:</span>
+                    <span class="valor"> Lorem Ipsum</span>
+                </p>
+                <p>
+                    <span class="label">Account No:</span>
+                    <span class="valor">123456789</span>
+                </p>
+                <p>
+                    <span class="label">Bank Name:</span> 
+                    <span class="valor">Lorem Bank</span>
+                </p>
 
                 <br><br>
                 <br><div class="linea_firma"></div><br>
@@ -377,16 +411,16 @@ tbody td{
                 <table>
                     <tr>
                         <td>Sub Total:</td>
-                        <td>$220.00</td>
+                        <td class="total_numero">$220.00</td>
                     </tr>
                     <tr>
                         <td>Tax:</td>
-                        <td>0.00%</td>
+                        <td class="total_numero">0.00%</td>
                     </tr>
 
                     <tr class="linea_arriba">
                         <td><strong>Total:</strong></td>
-                        <td><strong>$220.00</strong></td>
+                        <td id="total_pago"><strong>$220.00</strong></td>
                     </tr>
 
                     <tr>
