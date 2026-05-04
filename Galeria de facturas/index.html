@@ -31,6 +31,7 @@ body{
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 40px;
+    padding-bottom: 10px;
 }
 
 .encabezado_izquierda{
@@ -215,16 +216,17 @@ tbody td{
 @media (max-width: 1110px){
 
     .contenedor_principal{
-        width: 55%;
+        width: 58%;
     }
 
     .encabezado{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         padding: 20px;
     }
 
     .encabezado_derecha{
         font-size: 32px;
+        padding-right: 13px;
     }
 
     .factura{
@@ -246,13 +248,13 @@ tbody td{
 
 @media (max-width:900px){
     .contenedor_principal{
-        width: 60%;
+        width: 63%;
     }
 }
 
 @media (max-width:800px){
     .contenedor_principal{
-        width: 65%;
+        width: 70%;
     }
 }
 
@@ -260,7 +262,7 @@ tbody td{
 @media (max-width: 768px){
 
     .contenedor_principal{
-        width: 70%;
+        width: 78%;
     }
 
     .encabezado{
@@ -278,7 +280,8 @@ tbody td{
     }
 
     .encabezado_derecha{
-        text-align: center;
+        text-align: right;
+        padding-right: 9px;
     }
 
     .contenedor_firma{
@@ -293,27 +296,37 @@ tbody td{
 
 @media (max-width:600px){
     .contenedor_principal{
-        width: 75%;
+        width: 85%;
+    }
+
+    .encabezado_derecha{
+        text-align: right;
+        padding-right: 6px;
     }
 }
 
 @media (max-width:500px){
     .contenedor_principal{
-        width: 80%;
+        width: 90%;
+    }
+
+    .encabezado_derecha{
+        text-align: right;
+        padding-right: 3px;
     }
 }
 
 @media (max-width:400px){
     .contenedor_principal{
-        width: 85%;
+        width: 95%;
+    }
+
+    .encabezado_derecha{
+        text-align: right;
+        padding-right: 3px;
     }
 }
 
-@media (max-width:300px){
-    .contenedor_principal{
-        width: 90%;
-    }
-}
 
 </style>
 </head>
