@@ -107,7 +107,7 @@ thead td{
 }
 
 .tabla_productos td {
-  padding: 16px 10px;
+  padding: 18px 12px;
 }
 
 .tabla_productos tbody tr {
@@ -115,16 +115,18 @@ thead td{
     to right,
     transparent 30px,              
     #ccc 30px,
-    #ccc calc(100% - 50px),        
-    transparent calc(100% - 50px)
+    #ccc calc(100% - 45px),        
+    transparent calc(100% - 45px)
   ) bottom / 100% 1px no-repeat;
 }
 
+.centrar{
+    text-align: center;
+}
 
 tbody td{
     padding: 15px;
 }
-
 
 .tabla_productos{
     min-width: 700px;
@@ -423,6 +425,15 @@ tbody td{
     <div class="cuerpo_factura">
         <div class="tabla_scroll">
             <table class="tabla_productos">
+
+                <colgroup>
+                    <col style="width: 7%;">
+                    <col style="width: 55%;">
+                    <col style="width: 7%;">
+                    <col style="width: 5%;">
+                    <col style="width: 12%;">
+                </colgroup>
+
                 <thead>
                     <tr>
                         <td class="sl">SL</td>
@@ -438,7 +449,7 @@ tbody td{
                         <td class="sl"><div class="celda">1</div></td>
                         <td><div class="celda">Lorem ipsum dolor</div></td>
                         <td><div class="celda">$50.00</div></td>
-                        <td><div class="celda">1</div></td>
+                        <td class="centrar"><div class="celda">1</div></td>
                         <td><div class="celda">$50.00</div></td>
                     </tr>
 
@@ -446,7 +457,7 @@ tbody td{
                         <td class="sl"><div class="celda">2</div></td>
                         <td><div class="celda">Pellentesque id neque ligula</div></td>
                         <td><div class="celda">$20.00</div></td>
-                        <td><div class="celda">3</div></td>
+                        <td class="centrar"><div class="celda">3</div></td>
                         <td><div class="celda">$60.00</div></td>
                     </tr>
 
@@ -454,7 +465,7 @@ tbody td{
                         <td class="sl"><div class="celda">3</div></td>
                         <td><div class="celda">Interdum et malesuada fames</div></td>
                         <td><div class="celda">$10.00</div></td>
-                        <td><div class="celda">2</div></td>
+                        <td class="centrar"><div class="celda">2</div></td>
                         <td><div class="celda">$20.00</div></td>
                     </tr>
 
@@ -462,7 +473,7 @@ tbody td{
                         <td class="sl"><div class="celda">4</div></td>
                         <td><div class="celda">Vivamus volutpat faucibus</div></td>
                         <td><div class="celda">$90.00</div></td>
-                        <td><div class="celda">1</div></td>
+                        <td class="centrar"><div class="celda">1</div></td>
                         <td><div class="celda">$90.00</div></td>
                     </tr>
                     <tr>
