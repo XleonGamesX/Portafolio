@@ -17,19 +17,19 @@ body{
 }
 
 .contenedor_principal{
-    width: 40%;
+    width: 50%;
     max-width: 1050px;
     background-color: white;
 }
 
 .encabezado{
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     background-color: rgb(37, 36, 36);
     border-bottom: 8px solid rgb(219, 42, 42);
-    padding: 25px 30px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-top: 40px;
 }
 
@@ -64,6 +64,8 @@ body{
     padding: 15px 30px;
     background-color: rgb(37, 36, 36);
     color:white;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .bloque_izquierdo p,
@@ -213,7 +215,7 @@ tbody td{
 @media (max-width: 1110px){
 
     .contenedor_principal{
-        width: 95%;
+        width: 55%;
     }
 
     .encabezado{
@@ -242,7 +244,24 @@ tbody td{
     }
 }
 
+@media (max-width:900px){
+    .contenedor_principal{
+        width: 60%;
+    }
+}
+
+@media (max-width:800px){
+    .contenedor_principal{
+        width: 65%;
+    }
+}
+
+
 @media (max-width: 768px){
+
+    .contenedor_principal{
+        width: 70%;
+    }
 
     .encabezado{
         grid-template-columns: 1fr;
@@ -272,6 +291,29 @@ tbody td{
     }
 }
 
+@media (max-width:600px){
+    .contenedor_principal{
+        width: 75%;
+    }
+}
+
+@media (max-width:500px){
+    .contenedor_principal{
+        width: 80%;
+    }
+}
+
+@media (max-width:400px){
+    .contenedor_principal{
+        width: 85%;
+    }
+}
+
+@media (max-width:300px){
+    .contenedor_principal{
+        width: 90%;
+    }
+}
 
 </style>
 </head>
