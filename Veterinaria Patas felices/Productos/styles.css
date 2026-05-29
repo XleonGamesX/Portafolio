@@ -1,0 +1,76 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf6ee;
+    color: #333;
+}
+
+.encabezado {
+    height: 50px;
+    width: auto;
+    color: #54c1e8; 
+    padding-top: 5px;
+    text-align: center;
+    background: linear-gradient(
+    to right,
+    rgba(0, 123, 255, 0.8) 0%,
+    rgb(255, 255, 255) 40%,
+    rgba(255, 255, 255, 0.986) 60%,
+    rgba(0, 123, 255, 0.8) 100%
+);
+border-radius: 0 0 10px 10px;
+}
+
+.productos {
+    padding: 40px 20px;
+}
+
+.productos h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00BFFF;
+}
+
+.productos_contenedor {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 20px;
+}
+
+.producto {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    transition: 0.2s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.icono {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.producto h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #00BFFF;
+}
+
+.producto p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+}
