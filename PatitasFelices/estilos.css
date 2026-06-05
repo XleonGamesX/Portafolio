@@ -1,4 +1,4 @@
-/* ESTILOS BÁSICOS */
+
 
 * {
     margin: 0;
@@ -448,11 +448,6 @@ button:hover::after {
     animation: parpadeo 1.5s infinite;
 }
 
-@keyframes parpadeo {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-}
-
 /* BLOG */
 
 .blog_cuidados {
@@ -576,11 +571,6 @@ button:hover::after {
     font-size: 24px;
     margin-top: 10px;
     animation: latido 1.5s infinite;
-}
-
-@keyframes latido {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
 }
 
 /* TESTIMONIOS */
@@ -715,6 +705,7 @@ button:hover::after {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* PIE DE PÁGINA */
 
 .pie_pagina {
     background: linear-gradient(to right, rgba(0, 123, 255, 0.8) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.986) 60%, rgba(0, 123, 255, 0.8) 100%);
@@ -769,6 +760,7 @@ button:hover::after {
     color: #777;
 }
 
+/* RESPONSIVE - TABLET */
 
 @media screen and (max-width: 1024px) {
     .veterinaria_sangil {
@@ -791,6 +783,7 @@ button:hover::after {
     }
 }
 
+/* RESPONSIVE - MÓVIL */
 
 @media screen and (max-width: 768px) {
     .encabezado {
@@ -872,6 +865,7 @@ button:hover::after {
     }
 }
 
+/* RESPONSIVE - MÓVIL PEQUEÑO */
 
 @media screen and (max-width: 480px) {
     .titulo {
@@ -910,6 +904,7 @@ button:hover::after {
     }
 }
 
+/* RESPONSIVE - PANTALLA MUY PEQUEÑA */
 
 @media screen and (max-width: 300px) {
     .titulo {
