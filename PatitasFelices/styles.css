@@ -1,13 +1,15 @@
-*{
+/* ESTILOS BÁSICOS */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, sans-serif;
     background-color: #fdf6ee;
-    color:#54c1e8;
+    color: #555;
 }
 
 a {
@@ -15,86 +17,74 @@ a {
     text-decoration: none;
 }
 
-.contenedor_principal{
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.encabezado{
+/* ENCABEZADO */
+
+.encabezado {
     padding: 18px 24px;
     display: flex;
     align-items: center;
     background-color: #fdf6ee;
     box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
+    gap: 15px;
 }
 
 .logo {
     width: 54px;
     height: 54px;
+    transition: 0.3s;
 }
 
-.nombre_veterinaria{
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nombre_veterinaria {
     display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-    gap:5px;
+    gap: 5px;
     flex-grow: 1;
-    justify-content:left;
     align-items: center;
+    font-size: 18px;
 }
 
-.navegacion ul{
+.navegacion ul {
     display: flex;
     gap: 15px;
     list-style: none;
 }
 
-.cita{
-    border: none;
-    background-color: #45cdfa;
-    border-radius: 8px;
-    color: #fdf6ee;
-    padding: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 16px;
+.navegacion a {
     transition: 0.3s;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-.cita:hover{
-    background-color: #00BFFF;
-    transform: scale(1.10);
-}
-
-
-
-.veterinaria_sangil{
-    display: grid;
-    grid-template-columns: 0.77fr 1.2fr;
-    align-items: center;
-    gap: 32px;
-    padding: 44px 24px;
-    line-height: 1.6;
-}
-
-.titulo_principal{
-    margin-bottom: 22px;
+.navegacion a:hover {
     color: #00BFFF;
 }
 
-.subtitulo_principal{
-    margin-bottom: 16px;
-    font-size: 1.20rem;
-    color: #45cdfa;
+/* SECCIÓN VETERINARIA */
+
+.veterinaria_sangil {
+    display: grid;
+    grid-template-columns: 0.77fr 1.2fr;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 24px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
 }
 
-.veterinaria_imagen{
+.veterinaria_imagen {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px;
-    background: #FDF6EE;
+    padding: 15px;
+    background: #fdf6ee;
     border-radius: 18px;
 }
 
@@ -102,43 +92,73 @@ a {
     width: 100%;
     max-width: 220px;
     border-radius: 16px;
+    transition: 0.3s;
 }
 
-.descripcion_veterinaria{
-    color:#7f8688
+.veterinaria_imagen img:hover {
+    transform: scale(1.05);
 }
 
-.veterinaria_sangil{
-    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
-}
-
-.titulo_veterinarios{
-    margin-bottom: 10px;
-    margin-top: 25px;
+.titulo_principal {
+    margin-bottom: 22px;
     color: #00BFFF;
-    text-align: center;
-    padding-bottom: 22px;
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
-.veterinarios_informacion{
-    display:grid;
-    ;
-    grid-template-columns:0.8fr 0.8fr 0.8fr 0.8fr;
+.subtitulo_principal {
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #45cdfa;
+}
+
+.descripcion_veterinaria {
+    color: #7f8688;
+    margin-bottom: 15px;
+}
+
+/* BOTÓN CITA */
+
+.cita {
+    border: none;
+    background-color: #45cdfa;
+    border-radius: 8px;
+    color: #fdf6ee;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 16px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.cita:hover {
+    background-color: #00BFFF;
+    transform: scale(1.1);
+}
+
+.cita:focus {
+    outline: 2px solid #00BFFF;
+    outline-offset: 2px;
+}
+
+/* VETERINARIOS */
+
+.titulo_veterinarios {
+    text-align: center;
+    margin: 25px 0 30px 0;
+    color: #00BFFF;
+    font-size: 24px;
+}
+
+.veterinarios_informacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 0 55px;
     gap: 18px;
     margin-bottom: 32px;
-    align-items: stretch;
 }
 
-.veterinarios_informacion img{
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.veterinarios{
+.veterinarios {
     border: 2px solid #00BFFF;
     background-color: white;
     border-radius: 12px;
@@ -147,299 +167,307 @@ a {
     flex-direction: column;
     height: 100%;
     transition: 0.3s;
-    max-width: 320px;
 }
 
-.veterinarios:hover{
+.veterinarios:hover {
     transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
 }
 
-.veterinarios h2{
+.veterinarios img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.veterinarios h2 {
     text-align: center;
-    font-family:sans-serif;
     margin-top: 10px;
-    font-size: 22px;
-}
-
-.veterinarios h3{
-    text-align: center;
     font-size: 18px;
-    font-family:sans-serif;
-    margin-top: 16px;
-    min-height: 55px;
+    color: #1d3557;
 }
 
-.veterinarios p{
-    color:#7f8688;
-    padding: 15px 20px;
-    text-align:center;
+.veterinarios h3 {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #7f8688;
+}
+
+.veterinarios p {
+    color: #7f8688;
+    padding: 15px 15px;
+    text-align: center;
     flex-grow: 1;
     line-height: 1.4;
+    font-size: 13px;
 }
 
-.encabezado_servicios {
-    padding-top: 5px;
-    height: 50px;
-    width: auto;
-    color: #54c1e8; 
-    text-align: center;
-    background: linear-gradient(
-    to right,
-    rgba(0, 123, 255, 0.8) 0%,
-    rgb(255, 255, 255) 40%,
-    rgba(255, 255, 255, 0.986) 60%,
-    rgba(0, 123, 255, 0.8) 100%
-);
-border-radius: 0 0 10px 10px;
-}
+/* TÍTULO GENERAL */
 
-.encabezado h1 {
-    padding-top: 10px;
-    font-size: 24px;
-}
-
-.titulo{
+.titulo {
     text-align: center;
     margin: 40px 0;
-    font-size: 40px;
-    color: #54c1e8;
+    font-size: 32px;
+    color: #555;
 }
 
-.servicios_contenedor{
+/* SERVICIOS */
+
+.servicios {
+    padding: 40px;
+    background-color: #fdf6ee;
+}
+
+.servicios_contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
-    padding: 40px;
+    padding: 20px;
     align-items: stretch;
 }
 
-.servicio{
+.servicio {
     background: white;
     padding: 30px;
     border-radius: 20px;
     text-align: center;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
-
     display: flex;
     flex-direction: column;
+    border: 2px solid transparent;
 }
 
-.servicio button{
-    margin-top: auto;
-}
-
-.servicio:hover{
+.servicio:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: #00BFFF;
 }
 
-.icono{
+.servicio:focus-within {
+    outline: 2px solid #00BFFF;
+}
+
+.icono {
     font-size: 50px;
     margin-bottom: 15px;
 }
 
-.servicio h2{
-    color: #244c74;
+.servicio h2 {
+    color: #1d3557;
+    margin-bottom: 15px;
 }
 
-.servicio p{
+.servicio p {
     color: #555;
     line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    font-size: 13px;
 }
 
-button{
-    margin-top: 15px;
+/* BOTONES */
+
+button {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-
-    background: linear-gradient(135deg,#4facfe,#00c6ff);
-
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
     color: white;
     cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 13px;
+}
 
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: 2px solid #00BFFF;
+    outline-offset: 2px;
+}
+
+button::after {
+    content: ' →';
     transition: 0.3s;
 }
 
-button:hover{
-    transform: scale(1.05);
+button:hover::after {
+    transform: translateX(3px);
 }
 
-/*================ PRODUCTOS ====================*/
-.encabezado_productos{
-    width: 100%;
-    height: 50px;
-    padding-top: 5px;
-    color: #54c1e8;
-    text-align: center;
+/* PRODUCTOS */
 
-    background: linear-gradient(
-        to right,
-        rgba(0, 123, 255, 0.8) 0%,
-        rgb(255, 255, 255) 40%,
-        rgba(255, 255, 255, 0.986) 60%,
-        rgba(0, 123, 255, 0.8) 100%
-    );
-
-    border-radius: 0 0 10px 10px;
+.productos_destacados {
+    padding: 40px;
+    background-color: #fdf6ee;
 }
 
-.productos_destacados{
-padding: 40px 0px;
-background-color: #fdf6ee;
+.productos_contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px;
 }
 
-.productos_contenedor{
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 40px;
-max-width: 1400px;
-margin: auto;
-padding: 0 50px;
-}
-
-.producto{
-    padding: 0px 20px;
+.producto {
+    padding: 20px;
     background: white;
     border-radius: 12px;
-    padding: 20px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
     display: flex;
     flex-direction: column;
     transition: 0.3s;
+    border: 2px solid transparent;
 }
 
-.producto{
-transform: scale(1.03);
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
+    border-color: #00BFFF;
 }
 
-.precio{
-margin-top: auto;
-padding: 10px;
-border-radius: 8px;
-background-color: #f0fbff;
-color: #00BFFF;
-font-weight: bold;
+.producto h2 {
+    color: #1d3557;
+    margin: 15px 0 10px 0;
+    font-size: 16px;
 }
 
-.contenedor_boton_productos{
-display: flex;
-justify-content: center;
-margin-top: 35px;
+.producto p {
+    color: #555;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
-.btn_productos{
-background: linear-gradient(135deg,#4facfe,#00c6ff);
-color: white;
-padding: 12px 25px;
-border-radius: 10px;
-transition: 0.3s;
-font-weight: bold;
+.precio {
+    margin-top: auto;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f0fbff;
+    color: #00BFFF;
+    font-weight: bold;
 }
 
-.btn_productos{
-transform: scale(1.05);
-}
-
-.contenedor_boton_productos{
+.contenedor_boton_productos {
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
-.btn_productos{
-    background: linear-gradient(135deg,#4facfe,#00c6ff);
+.btn_productos {
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
     color: white;
-    padding: 12px 25px;
+    padding: 12px 30px;
     border-radius: 10px;
     font-weight: bold;
-    transition: .3s;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
 }
 
-.btn_productos:hover{
+.btn_productos:hover {
     transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* ================= GENERAL ================= */
-
-.titulo_seccion{
-    text-align: center;
-    margin: 40px 0;
-    font-size: 35px;
-    color: #1d3557;
+.btn_productos::before {
+    content: '→ ';
+    margin-right: 5px;
 }
 
+/* VIDEOS */
 
-/* ================= VIDEOS ================= */
-
-.videos_mascotas{
+.videos_mascotas {
     padding: 40px;
     background-color: #fdf6ee;
 }
 
-.contenedor_videos{
+.contenedor_videos {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.video{
+.video {
     width: 400px;
     background: white;
     padding: 30px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    transition: 0.3s;
+    border: 2px solid transparent;
 }
 
-.video h2, p{
-    padding: 20px 0px;
+.video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: #00BFFF;
 }
 
+.video h2 {
+    color: #1d3557;
+    margin: 15px 0;
+}
 
-/* ================= URGENCIAS ================= */
+/* URGENCIAS */
 
-.urgencias{
-    background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.98) 40%,
-    rgba(0, 123, 255, 0.8) 100%
-);
+.urgencias {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 123, 255, 0.8) 100%);
     padding: 50px;
     text-align: center;
 }
 
-.telefono_urgencias{
-    margin-top: 20px;
+.urgencias h1 {
+    color: #1d3557;
+    margin-bottom: 15px;
+}
+
+.urgencias p {
+    color: #7f8688;
+    margin-bottom: 20px;
+}
+
+.telefono_urgencias {
     font-size: 40px;
     font-weight: bold;
     color: red;
+    animation: parpadeo 1.5s infinite;
 }
 
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
 
-/* ================= BLOG ================= */
+/* BLOG */
 
-.blog_cuidados{
+.blog_cuidados {
     padding: 40px;
-    background-color:#fdf6ee;
+    background-color: #fdf6ee;
 }
 
-.contenedor_blog{
+.contenedor_blog {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.articulo{
+.articulo {
     width: 280px;
     background-color: white;
     border-radius: 10px;
@@ -447,38 +475,62 @@ transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
     text-align: center;
     transition: 0.3s;
+    border: 2px solid transparent;
 }
 
-.articulo:hover{
+.articulo:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
+    border-color: #00BFFF;
 }
 
-.articulo img{
+.articulo img {
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.articulo span{
+.articulo h2 {
+    color: #1d3557;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.articulo span {
     color: gray;
-    font-size: 14px;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 10px;
 }
 
+.articulo p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.5;
+}
 
-/* ================= ADOPCION ================= */
+.articulo::before {
+    content: '📰 ';
+    display: block;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
-.adopcion{
+/* ADOPCIÓN */
+
+.adopcion {
     padding: 40px;
     background-color: #fdf6ee;
 }
 
-.contenedor_adopcion{
+.contenedor_adopcion {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-.mascota{
+.mascota {
     width: 300px;
     background-color: white;
     padding: 15px;
@@ -486,437 +538,387 @@ transform: scale(1.05);
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
     transition: 0.3s;
+    border: 2px solid transparent;
 }
 
-.mascota:hover{
+.mascota:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
+    border-color: #00BFFF;
 }
 
-.mascota img{
-    width: 250px;
-    height: auto;
+.mascota img {
+    width: 100%;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
+.mascota h2 {
+    color: #1d3557;
+    margin: 10px 0;
+}
 
-/* ================= TESTIMONIOS ================= */
+.mascota h3 {
+    color: #00BFFF;
+    font-size: 14px;
+    margin: 10px 0;
+}
 
-.testimonios{
+.mascota p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.mascota::after {
+    content: '❤️';
+    display: block;
+    font-size: 24px;
+    margin-top: 10px;
+    animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* TESTIMONIOS */
+
+.testimonios {
     padding: 40px;
     background-color: #fdf6ee;
 }
 
-.contenedor_testimonios{
+.contenedor_testimonios {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.testimonio{
+.testimonio {
     width: 300px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
+    transition: 0.3s;
+    border-left: 4px solid #00BFFF;
 }
 
+.testimonio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
+}
 
+.testimonio p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-style: italic;
+}
 
-/* ================= MAPA ================= */
+.testimonio h3 {
+    color: #00BFFF;
+    font-size: 13px;
+}
 
-.ubicacion{
+.testimonio::before {
+    content: '"';
+    display: block;
+    font-size: 40px;
+    color: #00BFFF;
+    margin-bottom: 10px;
+}
+
+/* FORMULARIO */
+
+.formulario_cita {
     padding: 40px;
     background-color: #fdf6ee;
-    text-align: center;
 }
 
-.mapa{
-    margin-top: 20px;
-}
-
-
-/* ================= FORMULARIO ================= */
-
-.formulario_cita{
-    padding: 40px;
-    background-color: #fdf6ee;
-}
-
-.texto_formulario{
+.texto_formulario {
     text-align: center;
     color: #666;
     margin-bottom: 30px;
+    font-size: 14px;
 }
 
-.formulario{
+.formulario {
     max-width: 700px;
     margin: auto;
-
     display: flex;
     flex-direction: column;
     gap: 20px;
-
     background-color: #f8fbff;
     padding: 30px;
     border-radius: 15px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.campo{
+.campo {
     display: flex;
     flex-direction: column;
 }
 
-.campo label{
+.campo label {
     margin-bottom: 8px;
-    color: #244c74;
+    color: #1d3557;
     font-weight: bold;
+    font-size: 13px;
 }
 
 .campo input,
 .campo select,
-.campo textarea{
+.campo textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
-
-    font-size: 16px;
+    font-size: 14px;
     outline: none;
+    transition: 0.3s;
 }
 
-.campo textarea{
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #00BFFF;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+.campo textarea {
     resize: vertical;
 }
 
+/* UBICACIÓN */
 
-/* ================= FOOTER ================= */
+.ubicacion {
+    padding: 40px;
+    background-color: #fdf6ee;
+    text-align: center;
+}
 
-.footer{
-    background: linear-gradient(
-        to right,
-        rgba(0, 123, 255, 0.8) 0%,
-        rgb(255, 255, 255) 40%,
-        rgba(255, 255, 255, 0.986) 60%,
-        rgba(0, 123, 255, 0.8) 100%
-    );
+.ubicacion p {
+    color: #7f8688;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.mapa {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.pie_pagina {
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.8) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.986) 60%, rgba(0, 123, 255, 0.8) 100%);
     color: #555;
     text-align: center;
     padding: 30px 20px;
 }
 
-.redes_sociales{
-    margin: 20px 0;
+.pie_pagina h2 {
+    color: #1d3557;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
 
+.pie_pagina p {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.redes_sociales {
+    margin: 20px 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
-
+    gap: 15px;
     flex-wrap: wrap;
 }
 
-.redes_sociales a{
+.redes_sociales a {
     background-color: #45cdfa;
     padding: 10px 15px;
     border-radius: 8px;
-
     transition: 0.3s;
+    font-weight: bold;
+    color: white;
+    font-size: 13px;
 }
 
-.redes_sociales a:hover{
+.redes_sociales a:hover {
     background-color: #00BFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.copy{
-    margin-top: 20px;
-    font-size: 14px;
+.redes_sociales a::before {
+    content: '🔗 ';
+    margin-right: 5px;
 }
 
-/* ========================================= */
-/* TABLET */
-/* ========================================= */
+.copia {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #777;
+}
 
-@media screen and (max-width: 1024px){
 
-    .veterinaria_sangil{
+@media screen and (max-width: 1024px) {
+    .veterinaria_sangil {
         grid-template-columns: 1fr;
         text-align: center;
         justify-items: center;
     }
 
-    .texto_veterianaria{
-        width: 100%;
-        max-width: 800px;
-    }
-
-    .veterinarios_informacion{
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
-        justify-content: center;
-        justify-items: center;
+    .veterinarios_informacion {
+        grid-template-columns: repeat(2, 1fr);
         padding: 0 20px;
     }
 
-    .servicios_contenedor{
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    .servicios_contenedor {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .contenedor_adopcion{
-        flex-wrap: wrap;
-        justify-content: center;
+    .productos_contenedor {
+        grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
-/* ========================================= */
-/* MOVIL */
-/* ========================================= */
 
-@media screen and (max-width: 768px){
-
-    /* HEADER */
-
-    .encabezado{
+@media screen and (max-width: 768px) {
+    .encabezado {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         text-align: center;
         gap: 15px;
     }
 
-    .nombre_veterinaria{
-        margin-left: 0;
-        justify-content: center;
+    .nombre_veterinaria {
         flex-grow: 0;
     }
 
-    .navegacion{
-        width: 100%;
-    }
-
-    .navegacion ul{
+    .navegacion ul {
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
     }
 
-    /* PRESENTACION */
-
-    .veterinaria_sangil{
+    .veterinaria_sangil {
         padding: 25px 15px;
-        gap: 20px;
     }
 
-    .texto_veterianaria{
-        text-align: center;
-        width: 100%;
-    }
-
-    .descripcion_veterinaria{
-        text-align: center;
-    }
-
-    /* VETERINARIOS */
-
-    .veterinarios_informacion{
+    .veterinarios_informacion {
         grid-template-columns: 1fr;
-        justify-items: center;
         padding: 0 15px;
     }
 
-    .veterinarios{
-        width: 100%;
-        max-width: 450px;
-    }
-
-    /* SERVICIOS */
-
-    .servicios_contenedor{
+    .servicios_contenedor {
         grid-template-columns: 1fr;
-        justify-items: center;
-        padding: 20px;
+        padding: 15px;
     }
 
-    .servicio{
-        width: 100%;
-        max-width: 450px;
+    .productos_contenedor {
+        grid-template-columns: 1fr;
+        padding: 15px;
     }
 
-    /* VIDEOS */
-
-    .contenedor_videos{
+    .contenedor_videos {
         flex-direction: column;
         align-items: center;
     }
 
-    .video{
+    .video {
         width: 100%;
         max-width: 500px;
-        overflow: hidden;
     }
 
-    .video video{
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    /* BLOG */
-
-    .contenedor_blog{
+    .contenedor_blog {
         flex-direction: column;
         align-items: center;
     }
 
-    .articulo{
+    .articulo {
         width: 100%;
         max-width: 500px;
     }
 
-    /* ADOPCION */
-
-    .contenedor_adopcion{
+    .contenedor_adopcion {
         flex-direction: column;
         align-items: center;
     }
 
-    .mascota{
+    .mascota {
         width: 100%;
         max-width: 500px;
     }
 
-    .mascota img{
-        width: 100%;
-        max-width: 100%;
-    }
-
-    /* TESTIMONIOS */
-
-    .contenedor_testimonios{
+    .contenedor_testimonios {
         flex-direction: column;
         align-items: center;
     }
 
-    .testimonio{
+    .testimonio {
         width: 100%;
         max-width: 500px;
     }
 
-    /* FORMULARIO */
-
-    .formulario{
-        width: 100%;
-        max-width: 95%;
-        margin: auto;
+    .formulario {
+        width: 95%;
     }
-
-    .campo input,
-    .campo select,
-    .campo textarea{
-        width: 100%;
-    }
-
-    /* MAPA */
-
-    .mapa{
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .mapa iframe{
-        width: 100%;
-    }
-
 }
 
-/* ========================================= */
-/* MOVILES PEQUEÑOS */
-/* ========================================= */
 
-@media screen and (max-width: 480px){
-
-    .titulo{
-        font-size: 28px;
+@media screen and (max-width: 480px) {
+    .titulo {
+        font-size: 24px;
     }
 
-    .titulo_seccion{
-        font-size: 26px;
+    .titulo_principal {
+        font-size: 1.5rem;
     }
 
-    .titulo_principal{
-        font-size: 1.8rem;
-    }
-
-    .subtitulo_principal{
-        font-size: 1rem;
-    }
-
-    .encabezado{
+    .encabezado {
         padding: 15px 10px;
     }
 
-    .navegacion ul{
+    .navegacion ul {
         flex-direction: column;
         gap: 8px;
     }
 
-    .servicio,
-    .video,
-    .articulo,
-    .mascota,
-    .testimonio{
-        padding: 15px;
+    .servicios_contenedor,
+    .productos_contenedor {
+        gap: 15px;
     }
 
-    .blog_cuidados,
-    .videos_mascotas,
-    .adopcion,
-    .testimonios,
-    .formulario_cita,
-    .ubicacion{
-        padding: 20px 10px;
-    }
-
-    .telefono_urgencias{
+    .telefono_urgencias {
         font-size: 28px;
     }
 
-    .formulario{
-        padding: 20px 15px;
+    button {
+        width: 100%;
     }
 
+    .redes_sociales {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-/* ========================================= */
-/* 300PX */
-/* ========================================= */
 
-@media screen and (max-width: 300px){
-
-    .titulo{
-        font-size: 20px;
-    }
-
-    .titulo_seccion{
+@media screen and (max-width: 300px) {
+    .titulo {
         font-size: 18px;
     }
 
-    .titulo_principal{
-        font-size: 1.3rem;
-    }
-
-    .subtitulo_principal{
-        font-size: 0.9rem;
-    }
-
-    .logo{
+    .logo {
         width: 40px;
         height: 40px;
-    }
-
-    .telefono_urgencias{
-        font-size: 18px;
     }
 
     .veterinarios,
@@ -924,57 +926,16 @@ transform: scale(1.05);
     .video,
     .articulo,
     .mascota,
-    .testimonio{
+    .testimonio {
         width: 100%;
         min-width: 0;
     }
-
-    .campo input,
-    .campo select,
-    .campo textarea{
-        font-size: 14px;
-    }
-
-    button{
-        width: 100%;
-    }
-
-    .redes_sociales{
-        flex-direction: column;
-        align-items: center;
-    }
-
 }
 
-@media screen and (max-width: 1024px){
+/* CONTENEDOR PRINCIPAL */
 
-    .productos_contenedor{
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
-        justify-content: center;
-    }
-
-}
-
-@media screen and (max-width: 768px){
-
-    .productos_contenedor{
-        grid-template-columns: 1fr;
-        justify-items: center;
-        padding: 20px;
-    }
-
-    .producto{
-        width: 100%;
-        max-width: 450px;
-    }
-
-}
-
-@media screen and (max-width: 480px){
-
-    .producto{
-        max-width: 100%;
-        padding: 15px;
-    }
-
+.contenedor_principal {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
