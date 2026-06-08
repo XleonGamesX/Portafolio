@@ -206,7 +206,8 @@ span{
     width:100%;
     height:240px;
     object-fit:contain;
-    display:block;
+    background:#0b1020;
+    padding:10px;
 }
 
 .contenido{
