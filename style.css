@@ -17,8 +17,11 @@ body{
     color:white;
     font-family:"Segoe UI",sans-serif;
     overflow-x:hidden;
-    position:relative;
 }
+
+/* =========================
+   ESTRELLAS (MEJORADAS)
+========================= */
 
 .stars,
 .stars2,
@@ -28,80 +31,58 @@ body{
     pointer-events:none;
 }
 
-/* =========================
-   ESTRELLAS LEJANAS (GRANDES SUAVES)
-========================= */
+/* lejanas */
 .stars{
     background-image:
         radial-gradient(3px 3px at 10% 20%, #fff, transparent),
         radial-gradient(2px 2px at 25% 80%, #fff, transparent),
         radial-gradient(3px 3px at 40% 30%, #fff, transparent),
         radial-gradient(2px 2px at 70% 60%, #fff, transparent),
-        radial-gradient(3px 3px at 90% 10%, #fff, transparent),
-        radial-gradient(2px 2px at 55% 15%, #fff, transparent),
-        radial-gradient(2px 2px at 35% 50%, #fff, transparent);
+        radial-gradient(3px 3px at 90% 10%, #fff, transparent);
 
     background-size:350px 350px;
-
-    animation:moveStars1 120s linear infinite;
-
+    animation:move1 120s linear infinite;
     opacity:.75;
 }
 
-/* =========================
-   ESTRELLAS MEDIAS (AZULES MÁS BRILLANTES)
-========================= */
+/* medias */
 .stars2{
     background-image:
         radial-gradient(2px 2px at 15% 40%, #58a6ff, transparent),
         radial-gradient(2px 2px at 55% 70%, #58a6ff, transparent),
         radial-gradient(2px 2px at 80% 20%, #58a6ff, transparent),
-        radial-gradient(2px 2px at 35% 60%, #58a6ff, transparent),
-        radial-gradient(2px 2px at 75% 50%, #58a6ff, transparent),
-        radial-gradient(2px 2px at 20% 90%, #58a6ff, transparent);
+        radial-gradient(2px 2px at 35% 60%, #58a6ff, transparent);
 
     background-size:450px 450px;
-
-    animation:moveStars2 80s linear infinite reverse;
-
+    animation:move2 80s linear infinite reverse;
     opacity:.65;
 }
 
-/* =========================
-   ESTRELLAS CERCANAS (GRANDES Y BRILLANTES)
-========================= */
+/* cercanas */
 .stars3{
     background-image:
-        radial-gradient(4px 4px at 20% 50%, #ffffff, transparent),
-        radial-gradient(3px 3px at 60% 20%, #ffffff, transparent),
-        radial-gradient(4px 4px at 85% 75%, #ffffff, transparent),
-        radial-gradient(3px 3px at 30% 85%, #ffffff, transparent),
-        radial-gradient(3px 3px at 45% 35%, #ffffff, transparent);
+        radial-gradient(4px 4px at 20% 50%, #fff, transparent),
+        radial-gradient(3px 3px at 60% 20%, #fff, transparent),
+        radial-gradient(4px 4px at 85% 75%, #fff, transparent),
+        radial-gradient(3px 3px at 30% 85%, #fff, transparent);
 
     background-size:550px 550px;
-
-    animation:moveStars3 50s linear infinite;
-
+    animation:move3 50s linear infinite;
     opacity:.55;
-
     filter:drop-shadow(0 0 6px rgba(255,255,255,.6));
 }
 
-/* =========================
-   MOVIMIENTO MÁS FLUIDO
-========================= */
-
-@keyframes moveStars1{
+@keyframes move1{
     from{transform:translateY(0);}
     to{transform:translateY(400px);}
 }
 
-@keyframes moveStars2{
+@keyframes move2{
     from{transform:translateY(0);}
     to{transform:translateY(600px);}
 }
 
-@keyframes moveStars3{
+@keyframes move3{
     from{transform:translateY(0);}
     to{transform:translateY(900px);}
 }
@@ -121,7 +102,7 @@ body{
 }
 
 .badge{
-    padding:30px 55px;
+    padding:20px 45px;
     border:1px solid rgba(255,255,255,.15);
     border-radius:999px;
     color:#9db7ff;
@@ -129,41 +110,33 @@ body{
     backdrop-filter:blur(10px);
 }
 
-span{
-    font-size:2.2rem;
-}
-
 #hero h1{
-    font-size:clamp(3rem,8vw,7rem);
-    line-height:1.1;
-    max-width:900px;
+    font-size:clamp(2.5rem,7vw,6rem);
     background:linear-gradient(90deg,#fff,#58a6ff);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
 #hero p{
-    margin-top:25px;
-    max-width:700px;
+    margin-top:20px;
     color:#b6bfd0;
     font-size:1.2rem;
-    line-height:1.8;
 }
 
 .github-btn{
-    margin-top:35px;
-    text-decoration:none;
-    color:white;
+    margin-top:30px;
+    padding:12px 28px;
     background:#58a6ff;
-    padding:14px 30px;
-    border-radius:12px;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
     font-weight:600;
     transition:.3s;
 }
 
 .github-btn:hover{
     transform:translateY(-4px);
-    box-shadow:0 0 25px rgba(88,166,255,.6);
+    box-shadow:0 0 20px rgba(88,166,255,.6);
 }
 
 /* =========================
@@ -178,46 +151,46 @@ span{
 
 #proyectos h2{
     text-align:center;
-    font-size:3rem;
-    margin-bottom:60px;
+    font-size:2.8rem;
+    margin-bottom:50px;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
+/* card */
 .card{
     background:rgba(16,24,39,.8);
     border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
+    border-radius:18px;
     overflow:hidden;
-    backdrop-filter:blur(15px);
-    transition:.4s;
+    transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,0,0,.4);
+    transform:translateY(-8px);
+    box-shadow:0 20px 35px rgba(0,0,0,.4);
 }
 
+/* 🔥 IMAGEN CORREGIDA */
 .card img{
     width:100%;
     height:240px;
-    object-fit:contain;
-    background:#0b1020;
-    padding:10px;
+    object-fit:cover;
+    display:block;
 }
 
+/* contenido */
 .contenido{
-    padding:20px;
+    padding:15px;
+    text-align:center;
 }
 
 .contenido h3{
-    text-align:center;
-    margin-bottom:10px;
-    font-size:1.3rem;
+    font-size:1.2rem;
 }
 
 /* destacado */
@@ -241,12 +214,12 @@ footer{
 
 @media(max-width:768px){
 
-    #hero p{
-        font-size:1rem;
+    #hero h1{
+        font-size:2.2rem;
     }
 
     #proyectos h2{
-        font-size:2.2rem;
+        font-size:2rem;
     }
 
     .card img{
