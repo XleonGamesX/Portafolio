@@ -1,12 +1,14 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-html, body{
-    height:100%;
+html{
     scroll-behavior:smooth;
 }
 
@@ -15,70 +17,84 @@ body{
     color:white;
     font-family:"Segoe UI",sans-serif;
     overflow-x:hidden;
+    position:relative;
 }
 
-/* ===== FONDO ===== */
+/* =========================
+   FONDO ESTRELLAS
+========================= */
+
 .stars,
 .stars2,
 .stars3{
     position:fixed;
     inset:0;
     pointer-events:none;
+    z-index:-1;
 }
 
-/* ESTRELLAS LEJANAS */
 .stars{
     background-image:
         radial-gradient(3px 3px at 10% 20%, #fff, transparent),
         radial-gradient(2px 2px at 25% 80%, #fff, transparent),
         radial-gradient(3px 3px at 40% 30%, #fff, transparent),
         radial-gradient(2px 2px at 70% 60%, #fff, transparent),
-        radial-gradient(3px 3px at 90% 10%, #fff, transparent);
+        radial-gradient(3px 3px at 90% 10%, #fff, transparent),
+        radial-gradient(2px 2px at 55% 15%, #fff, transparent),
+        radial-gradient(2px 2px at 35% 50%, #fff, transparent);
 
     background-size:350px 350px;
-    animation:move1 120s linear infinite;
-    opacity:.8;
+    animation:moveStars1 120s linear infinite;
+    opacity:.75;
 }
 
-/* ESTRELLAS MEDIAS */
 .stars2{
     background-image:
         radial-gradient(2px 2px at 15% 40%, #58a6ff, transparent),
         radial-gradient(2px 2px at 55% 70%, #58a6ff, transparent),
-        radial-gradient(2px 2px at 80% 20%, #58a6ff, transparent);
+        radial-gradient(2px 2px at 80% 20%, #58a6ff, transparent),
+        radial-gradient(2px 2px at 35% 60%, #58a6ff, transparent),
+        radial-gradient(2px 2px at 75% 50%, #58a6ff, transparent),
+        radial-gradient(2px 2px at 20% 90%, #58a6ff, transparent);
 
     background-size:450px 450px;
-    animation:move2 80s linear infinite reverse;
-    opacity:.7;
+    animation:moveStars2 80s linear infinite reverse;
+    opacity:.65;
 }
 
-/* ESTRELLAS CERCANAS */
 .stars3{
     background-image:
-        radial-gradient(4px 4px at 20% 50%, #fff, transparent),
-        radial-gradient(3px 3px at 60% 20%, #fff, transparent),
-        radial-gradient(4px 4px at 85% 75%, #fff, transparent);
+        radial-gradient(4px 4px at 20% 50%, #ffffff, transparent),
+        radial-gradient(3px 3px at 60% 20%, #ffffff, transparent),
+        radial-gradient(4px 4px at 85% 75%, #ffffff, transparent),
+        radial-gradient(3px 3px at 30% 85%, #ffffff, transparent),
+        radial-gradient(3px 3px at 45% 35%, #ffffff, transparent);
 
     background-size:550px 550px;
-    animation:move3 60s linear infinite;
-    opacity:.6;
-    filter:drop-shadow(0 0 6px white);
+    animation:moveStars3 50s linear infinite;
+    opacity:.55;
+    filter:drop-shadow(0 0 6px rgba(255,255,255,.6));
 }
 
-@keyframes move1{
+@keyframes moveStars1{
     from{transform:translateY(0);}
     to{transform:translateY(400px);}
 }
-@keyframes move2{
+
+@keyframes moveStars2{
     from{transform:translateY(0);}
     to{transform:translateY(600px);}
 }
-@keyframes move3{
+
+@keyframes moveStars3{
     from{transform:translateY(0);}
     to{transform:translateY(900px);}
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 #hero{
     min-height:100vh;
     display:flex;
@@ -90,82 +106,159 @@ body{
 }
 
 .badge{
-    padding:20px 40px;
-    border:1px solid rgba(255,255,255,.2);
+    padding:20px 45px;
+    border:1px solid rgba(255,255,255,.15);
     border-radius:999px;
-    margin-bottom:20px;
+    color:#9db7ff;
+    margin-bottom:30px;
+    backdrop-filter:blur(10px);
+    font-size:1.3rem;
 }
 
 #hero h1{
-    font-size:clamp(2.8rem,6vw,6rem);
-    background:linear-gradient(90deg,#fff,#58a6ff);
+    font-size:clamp(3rem,7vw,6.5rem);
+    line-height:1.1;
+    max-width:1200px;
+
+    background:linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #d8e6ff 40%,
+        #58a6ff 100%
+    );
+
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
 #hero p{
-    margin-top:20px;
+    margin-top:25px;
     color:#b6bfd0;
+    font-size:1.2rem;
 }
 
 .github-btn{
-    margin-top:30px;
-    padding:12px 26px;
-    background:#58a6ff;
-    border-radius:10px;
+    margin-top:35px;
     text-decoration:none;
     color:white;
+    background:#58a6ff;
+    padding:14px 32px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
 }
 
-/* PROYECTOS */
+.github-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 25px rgba(88,166,255,.6);
+}
+
+/* =========================
+   PROYECTOS
+========================= */
+
 #proyectos{
-    width:min(1200px,90%);
-    margin:auto;
-    padding:80px 0;
+    max-width:1300px;
+    margin:0 auto;
+    padding:70px 20px 100px;
 }
 
 #proyectos h2{
     text-align:center;
-    font-size:2.8rem;
+    font-size:3rem;
     margin-bottom:50px;
 }
 
+/* AQUÍ ESTABA EL PROBLEMA */
+
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
 }
 
 .card{
-    background:rgba(16,24,39,.8);
-    border-radius:18px;
+    background:rgba(16,24,39,.85);
+    border:1px solid rgba(88,166,255,.15);
+    border-radius:20px;
     overflow:hidden;
-    border:1px solid rgba(255,255,255,.08);
-    transition:.3s;
+    backdrop-filter:blur(15px);
+    transition:.35s;
 }
 
 .card:hover{
     transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+    border-color:rgba(88,166,255,.5);
 }
 
 .card img{
     width:100%;
-    height:220px;
-    object-fit:cover; /* 🔥 CLAVE para que se vea como imagen completa */
+    height:240px;
+    object-fit:cover;
+    display:block;
 }
 
 .contenido{
     padding:18px;
-    text-align:center;
 }
 
 .contenido h3{
-    font-size:1.2rem;
+    text-align:center;
+    font-size:1.4rem;
 }
 
-/* FOOTER */
+.destacado{
+    border-color:rgba(88,166,255,.5);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
     text-align:center;
     padding:40px;
     color:#7b8596;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:1024px){
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:768px){
+
+    #hero h1{
+        font-size:3rem;
+    }
+
+    #hero p{
+        font-size:1rem;
+    }
+
+    .badge{
+        font-size:1rem;
+        padding:15px 30px;
+    }
+
+    #proyectos h2{
+        font-size:2.2rem;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        height:200px;
+    }
+
 }
