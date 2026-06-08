@@ -1,138 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio</title>
-
-<style>
-body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(83, 79, 79);
-    color: white;
-}
-
-#hero{
-    width: 90%;
-    margin: 5% auto;
-    padding: 60px;
-    background-image: url(/Portafolio/imagenes/fondo_negro.jpg);
-    background-size: cover;
-    border-radius: 10px;
-}
-
-#hero h1{
-    font-size: 70px;
-    margin: 0;
-}
-
-#hero p{
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-#proyectos{
-    width: 90%;
-    margin: 50px auto;
-}
-
-#proyectos h2{
-    font-size: 40px;
-    margin-bottom: 30px;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
-    justify-content: center;
-}
-
-.card{
-    width: 260px;
-}
-
-.card img{
-    width: 100%;
-    border-radius: 10px;
-    border: 2px solid white;
-    box-shadow: 8px 8px 15px rgba(255,255,255,0.3);
-}
-
-.card p{
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.destacado{
-    width: 100%;
-    max-width: 250px;
-}
-
-.destacado img{
-    width: 100%;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | David Santiago León Rueda</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+    <!-- FONDO ESPACIAL -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
 
-<div id="hero">
-    <h1>Portafolio</h1>
-    <p>David Santiago León Rueda</p>
-</div>
+    <!-- HERO -->
+    <section id="hero">
 
-<div id="proyectos">
-    <h2>Mis proyectos</h2>
+        <span class="badge">
+            Portafolio
+        </span>
 
-    <div class="grid">
+        <h1>
+            David Santiago León Rueda
+        </h1>
 
-        <div class="card destacado">
-            <p>Hoja de Vida</p>
-            <a href="./Hoja de vida/index.html">
-                <img src="/Portafolio/imagenes/Hoja_vida.jpg">
-            </a>
+        <p>
+            Desarrollador Web
+        </p>
+
+        <a
+            href="https://github.com/xLeonGamesX"
+            target="_blank"
+            class="github-btn"
+        >
+            GitHub
+        </a>
+
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos">
+
+        <h2>Mis proyectos</h2>
+
+        <div class="grid">
+
+            <article class="card destacado">
+                <a href="./Hoja de vida/index.html">
+                    <img src="./imagenes/Hoja_vida.jpg" alt="Hoja de Vida">
+                </a>
+                <div class="contenido">
+                    <h3>Hoja de Vida</h3>
+                    <p>Diseño profesional de hoja de vida responsive.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="./Ticket de evento/index.html">
+                    <img src="./imagenes/Ticket.jpg" alt="Ticket">
+                </a>
+                <div class="contenido">
+                    <h3>Ticket de Evento</h3>
+                    <p>Diseño digital de ticket para eventos.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="./Quien soy/index.html">
+                    <img src="./imagenes/quien soy.jpg" alt="Quién Soy">
+                </a>
+                <div class="contenido">
+                    <h3>¿Quién Soy?</h3>
+                    <p>Página de presentación personal.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="./Galeria de facturas/">
+                    <img src="./imagenes/Factura.png" alt="Factura">
+                </a>
+                <div class="contenido">
+                    <h3>Factura</h3>
+                    <p>Galería de facturas con diseño moderno.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="./PatitasFelices/index.html">
+                    <img src="./imagenes/log_veterinaria.png" alt="Veterinaria">
+                </a>
+                <div class="contenido">
+                    <h3>Patitas Felices</h3>
+                    <p>Sitio web para una veterinaria.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="./Tienda_ropa/index.html">
+                    <img src="./imagenes/tienda_ropa.jpg" alt="Tienda de Ropa">
+                </a>
+                <div class="contenido">
+                    <h3>Tienda de Ropa</h3>
+                    <p>E-commerce enfocado en moda y catálogo.</p>
+                </div>
+            </article>
+
         </div>
 
-        <div class="card">
-            <p>Ticket</p>
-            <a href="./Ticket de evento/index.html">
-                <img src="/Portafolio/imagenes/Ticket.jpg">
-            </a>
-        </div>
+    </section>
 
-        <div class="card">
-            <p>¿Quién Soy?</p>
-            <a href="/Portafolio/Quien soy/index.html">
-                <img src="/Portafolio/imagenes/quien soy.jpg">
-            </a>
-        </div>
-
-        <div class="card">
-            <p>Factura</p>
-            <a href="/Portafolio/Galeria de facturas/">
-                <img src="/Portafolio/imagenes/Factura.png">
-            </a>
-        </div>
-
-        <div class="card">
-            <p>Veterinaria</p>
-            <a href="/Portafolio/PatitasFelices/index.html">
-                <img src="/Portafolio/imagenes/log_veterinaria.png">
-            </a>
-        </div>
-
-        <div class="card">
-            <p>Tienda de ropa</p>
-            <a href="/Portafolio/Tienda_ropa/index.html">
-                <img src="/Portafolio/imagenes/tienda_ropa.jpg">
-            </a>
-        </div>
-
-    </div>
-</div>
+    <footer>
+        © 2026 David Santiago León Rueda
+    </footer>
 
 </body>
 </html>
