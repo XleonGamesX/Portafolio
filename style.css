@@ -215,13 +215,9 @@ span{
 }
 
 .contenido h3{
+    text-align:center;
     margin-bottom:10px;
     font-size:1.3rem;
-}
-
-.contenido p{
-    color:#aab3c5;
-    line-height:1.6;
 }
 
 /* destacado */
