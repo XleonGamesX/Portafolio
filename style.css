@@ -17,10 +17,11 @@ body{
     color:white;
     font-family:"Segoe UI",sans-serif;
     overflow-x:hidden;
+    position:relative;
 }
 
 /* =========================
-   ESTRELLAS
+   FONDO ESPACIAL MEJORADO
 ========================= */
 
 .stars,
@@ -31,60 +32,69 @@ body{
     pointer-events:none;
 }
 
-/* LEJANAS */
+/* estrellas lejanas */
 .stars{
     background-image:
-        radial-gradient(3px 3px at 10% 20%, #fff, transparent),
-        radial-gradient(2px 2px at 25% 80%, #fff, transparent),
-        radial-gradient(3px 3px at 40% 30%, #fff, transparent),
-        radial-gradient(2px 2px at 70% 60%, #fff, transparent),
-        radial-gradient(3px 3px at 90% 10%, #fff, transparent);
+        radial-gradient(2px 2px at 10% 20%, #fff, transparent),
+        radial-gradient(1px 1px at 25% 80%, #fff, transparent),
+        radial-gradient(2px 2px at 40% 30%, #fff, transparent),
+        radial-gradient(1px 1px at 70% 60%, #fff, transparent),
+        radial-gradient(2px 2px at 90% 10%, #fff, transparent),
+        radial-gradient(1px 1px at 55% 15%, #fff, transparent);
 
-    background-size:350px 350px;
-    animation:move1 120s linear infinite;
-    opacity:.75;
+    background-size:400px 400px;
+
+    animation:move1 140s linear infinite;
+
+    opacity:.6;
 }
 
-/* MEDIAS */
+/* estrellas medias */
 .stars2{
     background-image:
-        radial-gradient(2px 2px at 15% 40%, #58a6ff, transparent),
-        radial-gradient(2px 2px at 55% 70%, #58a6ff, transparent),
-        radial-gradient(2px 2px at 80% 20%, #58a6ff, transparent),
-        radial-gradient(2px 2px at 35% 60%, #58a6ff, transparent);
+        radial-gradient(1px 1px at 15% 40%, #58a6ff, transparent),
+        radial-gradient(1px 1px at 55% 70%, #58a6ff, transparent),
+        radial-gradient(1px 1px at 80% 20%, #58a6ff, transparent),
+        radial-gradient(1px 1px at 35% 60%, #58a6ff, transparent);
 
-    background-size:450px 450px;
-    animation:move2 80s linear infinite reverse;
-    opacity:.65;
+    background-size:500px 500px;
+
+    animation:move2 90s linear infinite reverse;
+
+    opacity:.5;
 }
 
-/* CERCANAS */
+/* estrellas cercanas */
 .stars3{
     background-image:
-        radial-gradient(4px 4px at 20% 50%, #fff, transparent),
-        radial-gradient(3px 3px at 60% 20%, #fff, transparent),
-        radial-gradient(4px 4px at 85% 75%, #fff, transparent),
-        radial-gradient(3px 3px at 30% 85%, #fff, transparent);
+        radial-gradient(2px 2px at 20% 50%, #ffffff, transparent),
+        radial-gradient(2px 2px at 60% 20%, #ffffff, transparent),
+        radial-gradient(2px 2px at 85% 75%, #ffffff, transparent),
+        radial-gradient(2px 2px at 30% 85%, #ffffff, transparent);
 
-    background-size:550px 550px;
-    animation:move3 50s linear infinite;
-    opacity:.55;
-    filter:drop-shadow(0 0 6px rgba(255,255,255,.6));
+    background-size:600px 600px;
+
+    animation:move3 60s linear infinite;
+
+    opacity:.35;
+
+    filter:drop-shadow(0 0 3px rgba(255,255,255,.4));
 }
 
+/* animaciones */
 @keyframes move1{
     from{transform:translateY(0);}
-    to{transform:translateY(400px);}
+    to{transform:translateY(300px);}
 }
 
 @keyframes move2{
     from{transform:translateY(0);}
-    to{transform:translateY(600px);}
+    to{transform:translateY(500px);}
 }
 
 @keyframes move3{
     from{transform:translateY(0);}
-    to{transform:translateY(900px);}
+    to{transform:translateY(800px);}
 }
 
 /* =========================
@@ -108,6 +118,10 @@ body{
     color:#9db7ff;
     margin-bottom:25px;
     backdrop-filter:blur(10px);
+}
+
+span{
+    font-size:2.2rem;
 }
 
 #hero h1{
@@ -179,26 +193,28 @@ body{
     box-shadow:0 20px 40px rgba(0,0,0,.4);
 }
 
-/* IMAGEN CORREGIDA */
 .card img{
     width:100%;
     height:240px;
-    object-fit:contain;
-    background:#0b1020;
+    object-fit:cover;
     display:block;
 }
 
-/* TEXTO */
 .contenido{
     padding:20px;
-    text-align:center;
 }
 
 .contenido h3{
+    margin-bottom:10px;
     font-size:1.3rem;
 }
 
-/* DESTACADO */
+.contenido p{
+    color:#aab3c5;
+    line-height:1.6;
+}
+
+/* destacado */
 .destacado{
     border:1px solid rgba(88,166,255,.4);
 }
