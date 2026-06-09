@@ -268,6 +268,37 @@ img {
     font-size: 13px;
 }
 
+.lista_servicios {
+    list-style: none;
+    text-align: left;
+    margin: 15px 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.lista_servicios li {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 13px;
+}
+
+.btn_servicio {
+    display: block;
+    margin-top: auto;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
+    transition: 0.3s;
+}
+
+.btn_servicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
 /* BOTONES */
 
 button {
