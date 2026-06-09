@@ -291,7 +291,8 @@ img {
     font-weight: bold;
     color: white;
     background: linear-gradient(135deg, #4facfe, #00c6ff);
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .btn_servicio:hover {
@@ -299,37 +300,12 @@ img {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* BOTONES */
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #4facfe, #00c6ff);
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: bold;
-    font-size: 13px;
+.btn_servicio::after {
+    content: " →";
 }
 
-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-button:focus {
-    outline: 2px solid #00BFFF;
-    outline-offset: 2px;
-}
-
-button::after {
-    content: ' →';
-    transition: 0.3s;
-}
-
-button:hover::after {
-    transform: translateX(3px);
+.btn_servicio:hover::after {
+    margin-left: 5px;
 }
 
 /* PRODUCTOS */
