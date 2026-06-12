@@ -81,16 +81,43 @@ a {
 }
 
 .navegacion-principal a {
-    font-size: 13px;
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: #333;
     font-weight: bold;
-    letter-spacing: 1px;
     transition: color 0.3s ease;
 }
 
-.navegacion-principal a:hover {
-    color: #2cc4d3;
+.navegacion-principal a::before {
+    content: "";
+    position: absolute;
+    top: -6px;              /* 👈 arriba del texto */
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #f3d73b; /* amarillo como en la imagen */
+    transition: width 0.3s ease;
 }
 
+.navegacion-principal a:hover::before {
+    width: 100%;
+}
+
+.navegacion-principal a:hover {
+    color: #f3d73b; 
+}
+
+.navegacion-principal a:hover::before,
+.navegacion-principal a.activo::before {
+    width: 100%;
+}
+
+.navegacion-principal a:hover,
+.navegacion-principal a.activo {
+    color: #f3d73b;
+}
 
 /* ===========================
    HERO / SECCIÓN DESTACADA
@@ -155,8 +182,15 @@ a {
     color: #999;
     font-size: 14px;
     letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
+.logo-marca:hover {
+    color: #2cc4d3;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
 /* ===========================
    PROMOCIONES
@@ -244,6 +278,14 @@ a {
     letter-spacing: 0.5px;
     font-weight: 500;
     transition: all 0.3s ease;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.filtros-productos a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
 }
 
 .filtros-productos a.activo {
@@ -269,11 +311,12 @@ a {
     text-align: center;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
 .tarjeta-producto:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .tarjeta-producto img {
@@ -392,13 +435,12 @@ a {
 
 .galeria-instagram {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
 }
 
 .item-instagram {
-    flex: 1 1 20%; /* 5 columnas por defecto */
-    min-width: 120px;
+    display: flex;
+    width: 400px;
 }
 
 .item-instagram img {
@@ -523,6 +565,18 @@ a {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
+
+    .galeria-instagram {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .item-instagram {
+        flex: 1 1 50%;
+        width: 100%;
+    }
+
 }
 
 
@@ -547,9 +601,11 @@ a {
         gap: 20px;
     }
 
-    /* Instagram: 3 columnas */
-    .item-instagram {
-        flex: 1 1 33.33%;
+    .galeria-instagram {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
     }
 
     /* Navegación: reduce espaciado */
