@@ -1,5 +1,15 @@
 
+/* ================================================
+   ESTILOS — PATITAS FELICES (PÁGINA PRINCIPAL)
+   Todas las clases están en español.
+   Sin position ni JavaScript.
+   ================================================ */
 
+
+/* ================================================
+   RESET BÁSICO
+   Elimina márgenes y paddings por defecto del navegador
+   ================================================ */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +19,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #fdf6ee;
-    color: #555;
+    color: #333;
 }
 
 a {
@@ -17,935 +27,945 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 img {
+    display: block;
     max-width: 100%;
-    height: auto;
 }
 
-/* ENCABEZADO */
 
-.encabezado {
-    padding: 18px 24px;
-    display: flex;
-    align-items: center;
-    background-color: #fdf6ee;
-    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
-    gap: 15px;
+/* ================================================
+   BOTONES REUTILIZABLES
+   Se usan en varias secciones del sitio
+   ================================================ */
+
+/* Botón principal — fondo azul sólido */
+.boton__primario {
+    display: inline-block;
+    background-color: #00BFFF;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.logo {
-    width: 54px;
-    height: 54px;
-    transition: 0.3s;
-}
-
-.logo:hover {
+.boton__primario:hover {
+    background-color: #45cdfa;
     transform: scale(1.05);
 }
 
-.nombre_veterinaria {
+/* Cuando el boton__primario es un <button> ocupa todo el ancho */
+button.boton__primario {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+}
+
+/* Botón secundario — fondo degradado azul */
+.boton__secundario {
+    display: inline-block;
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
+    color: #fff;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-top: 12px;
+}
+
+.boton__secundario:hover {
+    transform: scale(1.05);
+}
+
+
+/* ================================================
+   TÍTULOS DE SECCIÓN
+   Reutilizados en múltiples secciones
+   ================================================ */
+.titulo__seccion {
+    font-size: 2rem;
+    color: #244c74;
+    margin-bottom: 36px;
+}
+
+/* Agrega alineación centrada cuando se combina con .centrado */
+.centrado {
+    text-align: center;
+}
+
+/* Párrafo de apoyo centrado bajo un título */
+.texto__centrado {
+    text-align: center;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+
+/* ================================================
+   ENCABEZADO
+   Barra superior fija con logo, navegación y botón
+   ================================================ */
+.encabezado {
+    background-color: #fdf6ee;
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
+    padding: 14px 40px;
+}
+
+/* Fila que alinea marca, nav y botón en horizontal */
+.encabezado__contenido {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo + nombre — ocupa el espacio sobrante a la izquierda */
+.encabezado__marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.encabezado__logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+/* "Patitas" en azul claro, "Felices" en azul oscuro */
+.encabezado__nombre {
     display: flex;
     gap: 5px;
-    flex-grow: 1;
+    font-size: 1.2rem;
+    color: #00BFFF;
     align-items: center;
-    font-size: 18px;
 }
 
-.navegacion ul {
+.encabezado__nombre strong {
+    color: #244c74;
+}
+
+/* Lista de navegación en fila */
+.encabezado__nav ul {
     display: flex;
-    gap: 15px;
-    list-style: none;
+    gap: 24px;
 }
 
-.navegacion a {
-    transition: 0.3s;
-    font-size: 14px;
-    font-weight: bold;
+.encabezado__nav a {
+    font-size: 0.95rem;
+    color: #244c74;
+    transition: color 0.2s;
 }
 
-.navegacion a:hover {
+.encabezado__nav a:hover {
     color: #00BFFF;
 }
 
-/* SECCIÓN VETERINARIA */
-
-.veterinaria_sangil {
-    display: grid;
-    grid-template-columns: 0.77fr 1.2fr;
-    align-items: center;
-    gap: 30px;
-    padding: 40px 24px;
-    line-height: 1.6;
-    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
-}
-
-.veterinaria_imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    background: #fdf6ee;
-    border-radius: 18px;
-}
-
-.veterinaria_imagen img {
-    width: 100%;
-    max-width: 220px;
-    border-radius: 16px;
-    transition: 0.3s;
-}
-
-.veterinaria_imagen img:hover {
-    transform: scale(1.05);
-}
-
-.titulo_principal {
-    margin-bottom: 22px;
-    color: #00BFFF;
-    font-size: 24px;
-}
-
-.subtitulo_principal {
-    margin-bottom: 16px;
-    font-size: 18px;
-    color: #45cdfa;
-}
-
-.descripcion_veterinaria {
-    color: #7f8688;
-    margin-bottom: 15px;
-}
-
-/* BOTÓN CITA */
-
-.cita {
-    border: none;
-    background-color: #45cdfa;
-    border-radius: 8px;
-    color: #fdf6ee;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 16px;
-    transition: 0.3s;
-    font-weight: bold;
-}
-
-.cita:hover {
+/* Botón de llamado a la acción del encabezado */
+.encabezado__boton {
     background-color: #00BFFF;
-    transform: scale(1.1);
-}
-
-.cita:focus {
-    outline: 2px solid #00BFFF;
-    outline-offset: 2px;
-}
-
-/* VETERINARIOS */
-
-.titulo_veterinarios {
-    text-align: center;
-    margin: 25px 0 30px 0;
-    color: #00BFFF;
-    font-size: 24px;
-}
-
-.veterinarios_informacion {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 0 55px;
-    gap: 18px;
-    margin-bottom: 32px;
-}
-
-.veterinarios {
-    border: 2px solid #00BFFF;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: 0.3s;
-}
-
-.veterinarios:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
-}
-
-.veterinarios img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.veterinarios h2 {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 18px;
-    color: #1d3557;
-}
-
-.veterinarios h3 {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 10px;
-    color: #7f8688;
-}
-
-.veterinarios p {
-    color: #7f8688;
-    padding: 15px 15px;
-    text-align: center;
-    flex-grow: 1;
-    line-height: 1.4;
-    font-size: 13px;
-}
-
-/* TÍTULO GENERAL */
-
-.titulo {
-    text-align: center;
-    margin: 40px 0;
-    font-size: 32px;
-    color: #555;
-}
-
-/* SERVICIOS */
-
-.servicios {
-    padding: 40px;
-    background-color: #fdf6ee;
-}
-
-.servicios_contenedor {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
-    padding: 20px;
-    align-items: stretch;
-}
-
-.servicio {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid transparent;
-}
-
-.servicio:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border-color: #00BFFF;
-}
-
-.servicio:focus-within {
-    outline: 2px solid #00BFFF;
-}
-
-.icono {
-    font-size: 50px;
-    margin-bottom: 15px;
-}
-
-.servicio h2 {
-    color: #1d3557;
-    margin-bottom: 15px;
-}
-
-.servicio p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    flex-grow: 1;
-    font-size: 13px;
-}
-
-.lista_servicios {
-    list-style: none;
-    text-align: left;
-    margin: 15px 0;
-    padding: 0;
-    flex-grow: 1;
-}
-
-.lista_servicios li {
-    margin-bottom: 8px;
-    color: #555;
-    font-size: 13px;
-}
-
-.btn_servicio {
-    display: block;
-    margin-top: auto;
-    padding: 12px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(135deg, #4facfe, #00c6ff);
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.btn_servicio:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.btn_servicio::after {
-    content: " →";
-}
-
-.btn_servicio:hover::after {
-    margin-left: 5px;
-}
-
-/* PRODUCTOS */
-
-.productos_destacados {
-    padding: 40px;
-    background-color: #fdf6ee;
-}
-
-.productos_contenedor {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    max-width: 1400px;
-    margin: auto;
-    padding: 20px;
-}
-
-.producto {
-    padding: 20px;
-    background: white;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s;
-    border: 2px solid transparent;
-}
-
-.producto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
-    border-color: #00BFFF;
-}
-
-.producto h2 {
-    color: #1d3557;
-    margin: 15px 0 10px 0;
-    font-size: 16px;
-}
-
-.producto p {
-    color: #555;
-    font-size: 13px;
-    margin-bottom: 10px;
-}
-
-.precio {
-    margin-top: auto;
-    padding: 10px;
+    color: #fff;
+    padding: 10px 20px;
     border-radius: 8px;
-    background-color: #f0fbff;
-    color: #00BFFF;
-    font-weight: bold;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.contenedor_boton_productos {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.btn_productos {
-    background: linear-gradient(135deg, #4facfe, #00c6ff);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-}
-
-.btn_productos:hover {
+.encabezado__boton:hover {
+    background-color: #45cdfa;
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn_productos::before {
-    content: '→ ';
-    margin-right: 5px;
-}
 
-/* VIDEOS */
-
-.videos_mascotas {
-    padding: 40px;
-    background-color: #fdf6ee;
-}
-
-.contenedor_videos {
+/* ================================================
+   PORTADA (HERO)
+   Imagen de fondo con texto e overlay degradado
+   ================================================ */
+.portada {
+    background-image: url('imagenes/veterinaria1.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 520px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    align-items: center;
 }
 
-.video video {
+/* Overlay semitransparente que oscurece la imagen */
+.portada__fondo {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
-}
-
-.video{
-    width: 400px;
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    min-height: 520px;
+    background: linear-gradient(to right, rgba(36, 76, 116, 0.85) 40%, rgba(0, 191, 255, 0.2) 100%);
     display: flex;
-    flex-direction: column;
-    transition: 0.3s;
-    border: 2px solid transparent;
+    align-items: center;
+    padding: 60px 80px;
 }
 
-.video:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border-color: #00BFFF;
+/* Bloque de texto centrado a la izquierda */
+.portada__contenido {
+    max-width: 560px;
+    color: #fff;
 }
 
-.video h2 {
-    color: #1d3557;
-    margin: 15px 0;
+.portada__titulo {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
 }
 
-/* URGENCIAS */
-
-.urgencias {
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 123, 255, 0.8) 100%);
-    padding: 50px;
-    text-align: center;
-}
-
-.urgencias h1 {
-    color: #1d3557;
-    margin-bottom: 15px;
-}
-
-.urgencias p {
-    color: #7f8688;
-    margin-bottom: 20px;
-}
-
-.telefono_urgencias {
-    font-size: 40px;
-    font-weight: bold;
-    color: red;
-    animation: parpadeo 1.5s infinite;
-}
-
-/* BLOG */
-
-.blog_cuidados {
-    padding: 40px;
-    background-color: #fdf6ee;
-}
-
-.contenedor_blog {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.articulo {
-    width: 280px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
-    text-align: center;
-    transition: 0.3s;
-    border: 2px solid transparent;
-}
-
-.articulo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
-    border-color: #00BFFF;
-}
-
-.articulo img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.articulo h2 {
-    color: #1d3557;
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.articulo span {
-    color: gray;
-    font-size: 12px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.articulo p {
-    color: #555;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.articulo::before {
-    content: '📰 ';
-    display: block;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-/* ADOPCIÓN */
-
-.adopcion {
-    padding: 40px;
-    background-color: #fdf6ee;
-}
-
-.contenedor_adopcion {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.mascota {
-    width: 300px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
-    transition: 0.3s;
-    border: 2px solid transparent;
-}
-
-.mascota:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
-    border-color: #00BFFF;
-}
-
-.mascota img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.mascota h2 {
-    color: #1d3557;
-    margin: 10px 0;
-}
-
-.mascota h3 {
-    color: #00BFFF;
-    font-size: 14px;
-    margin: 10px 0;
-}
-
-.mascota p {
-    color: #555;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.mascota::after {
-    content: '❤️';
-    display: block;
-    font-size: 24px;
-    margin-top: 10px;
-    animation: latido 1.5s infinite;
-}
-
-/* TESTIMONIOS */
-
-.testimonios {
-    padding: 40px;
-    background-color: #fdf6ee;
-}
-
-.contenedor_testimonios {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.testimonio {
-    width: 300px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
-    transition: 0.3s;
-    border-left: 4px solid #00BFFF;
-}
-
-.testimonio:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
-}
-
-.testimonio p {
-    color: #555;
-    font-size: 13px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+.portada__subtitulo {
+    font-size: 1.15rem;
+    color: #a8e8ff;
+    margin-bottom: 14px;
     font-style: italic;
 }
 
-.testimonio h3 {
-    color: #00BFFF;
-    font-size: 13px;
+.portada__descripcion {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ddeeff;
+    margin-bottom: 28px;
 }
 
-.testimonio::before {
-    content: '"';
-    display: block;
-    font-size: 40px;
-    color: #00BFFF;
-    margin-bottom: 10px;
+.portada__boton {
+    display: inline-block;
+    background-color: #00BFFF;
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-/* FORMULARIO */
+.portada__boton:hover {
+    background-color: #45cdfa;
+    transform: scale(1.05);
+}
 
-.formulario_cita {
-    padding: 40px;
+
+/* ================================================
+   NOSOTROS
+   Dos columnas: imagen izquierda, texto derecha
+   ================================================ */
+.nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 48px;
+    align-items: center;
+    padding: 72px 80px;
     background-color: #fdf6ee;
 }
 
-.texto_formulario {
+/* Caja azul suave que enmarca el logo */
+.nosotros__imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8f6ff;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.nosotros__imagen img {
+    max-width: 260px;
+    border-radius: 14px;
+}
+
+.nosotros__texto h2 {
+    margin-bottom: 20px;
+}
+
+.nosotros__texto p {
+    color: #7f8688;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.nosotros__texto .boton__primario {
+    margin-top: 8px;
+}
+
+
+/* ================================================
+   VETERINARIOS
+   Cuadrícula de 4 tarjetas con foto y descripción
+   ================================================ */
+.veterinarios__seccion {
+    padding: 60px 80px;
+    background-color: #fff;
+}
+
+.veterinarios__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* Tarjeta de cada veterinario */
+.veterinario__tarjeta {
+    border: 2px solid #e0f4ff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 191, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.veterinario__tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 191, 255, 0.2);
+}
+
+/* Foto del veterinario */
+.veterinario__tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Bloque de texto del veterinario */
+.veterinario__info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.veterinario__info h3 {
+    color: #244c74;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+/* Especialidad en azul */
+.veterinario__info span {
+    font-size: 0.82rem;
+    color: #00BFFF;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.veterinario__info p {
+    color: #7f8688;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+
+/* ================================================
+   SERVICIOS
+   Cuadrícula de 4 tarjetas con imagen real y descripción
+   ================================================ */
+.servicios__seccion {
+    padding: 60px 80px;
+    background-color: #f1faff;
+}
+
+.servicios__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+/* Tarjeta de cada servicio */
+.servicio__tarjeta {
+    background-color: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicio__tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 191, 255, 0.2);
+}
+
+/* Imagen del servicio — ocupa la parte superior de la tarjeta */
+.servicio__imagen {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.servicio__tarjeta:hover .servicio__imagen {
+    transform: scale(1.05);
+}
+
+/* Bloque de texto con título, descripción y botón */
+.servicio__cuerpo {
+    padding: 20px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+}
+
+.servicio__cuerpo h3 {
+    color: #244c74;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.servicio__cuerpo p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+
+/* ================================================
+   AVISO DE URGENCIAS
+   Banner rojo/degradado con botón de llamada llamativo
+   ================================================ */
+.aviso__urgencias {
+    background: linear-gradient(135deg, #244c74, #00BFFF);
+    padding: 50px 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.aviso__urgencias h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.aviso__urgencias p {
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+/* ── Botón de teléfono llamativo ── */
+.aviso__boton__telefono {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background-color: #e63946;          /* rojo urgencia */
+    color: #fff;
+    padding: 18px 48px;
+    border-radius: 14px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(230, 57, 70, 0.5);
+    /* Animación de pulso: llama la atención sin JavaScript */
+    animation: pulso__telefono 2s ease-in-out infinite;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.aviso__boton__telefono:hover {
+    background-color: #c1121f;
+    transform: scale(1.06);
+    animation: none;                    /* detiene el pulso al pasar el cursor */
+}
+
+/* Icono del teléfono grande */
+.aviso__icono__llamada {
+    font-size: 2rem;
+}
+
+/* Número principal grande y en negrita */
+.aviso__numero {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+/* Texto pequeño debajo del número */
+.aviso__etiqueta__llamada {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Animación de pulso: escala + sombra */
+@keyframes pulso__telefono {
+    0%   { box-shadow: 0 6px 24px rgba(230, 57, 70, 0.5); transform: scale(1); }
+    50%  { box-shadow: 0 8px 36px rgba(230, 57, 70, 0.8); transform: scale(1.04); }
+    100% { box-shadow: 0 6px 24px rgba(230, 57, 70, 0.5); transform: scale(1); }
+}
+
+
+/* ================================================
+   VIDEOS
+   Cuadrícula de 4 videos de mascotas
+   ================================================ */
+.videos__seccion {
+    padding: 60px 80px;
+    background-color: #fdf6ee;
+}
+
+.videos__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* Tarjeta de cada video */
+.video__tarjeta {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 0 0 16px;
+}
+
+.video__tarjeta video {
+    width: 100%;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+.video__tarjeta h3 {
+    color: #244c74;
+    font-size: 0.95rem;
+    padding: 12px 14px 4px;
+}
+
+.video__tarjeta p {
+    color: #888;
+    font-size: 0.85rem;
+    padding: 0 14px;
+}
+
+
+/* ================================================
+   BLOG
+   Cuadrícula de 4 artículos con imagen y fecha.
+   El texto completo se despliega con <details> nativo
+   del HTML, sin necesidad de JavaScript.
+   ================================================ */
+.blog__seccion {
+    padding: 60px 80px;
+    background-color: #fff;
+}
+
+.blog__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* Tarjeta de cada artículo del blog */
+.blog__tarjeta {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.blog__tarjeta:hover {
+    transform: translateY(-4px);
+}
+
+/* Imagen de portada del artículo */
+.blog__tarjeta img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Bloque de texto del artículo */
+.blog__info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Fecha del artículo en gris claro */
+.blog__fecha {
+    font-size: 0.78rem;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+.blog__info h3 {
+    color: #244c74;
+    font-size: 0.97rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.blog__info > p {
+    color: #666;
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+/* ── Desplegable <details> ── */
+.blog__detalle {
+    margin-top: 12px;
+}
+
+/* El <summary> actúa como el botón "Leer más" */
+.blog__detalle > summary.blog__enlace {
+    display: inline-block;
+    color: #00BFFF;
+    font-size: 0.88rem;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;           /* quita el triángulo por defecto */
+    transition: color 0.2s;
+    user-select: none;
+}
+
+/* Quita el triángulo en webkit */
+.blog__detalle > summary.blog__enlace::-webkit-details-marker {
+    display: none;
+}
+
+.blog__detalle > summary.blog__enlace:hover {
+    color: #244c74;
+}
+
+/* Cuando está abierto cambia el texto a "Cerrar ↑" usando CSS */
+.blog__detalle[open] > summary.blog__enlace {
+    color: #244c74;
+}
+
+/* Bloque de texto completo que aparece al abrir */
+.blog__texto__completo {
+    margin-top: 12px;
+    padding: 14px;
+    background-color: #f0f8ff;
+    border-left: 3px solid #00BFFF;
+    border-radius: 0 8px 8px 0;
+    /* Animación de apertura suave */
+    animation: desplegar 0.3s ease;
+}
+
+.blog__texto__completo p {
+    color: #555;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.blog__texto__completo p:last-child {
+    margin-bottom: 0;
+}
+
+/* Animación de entrada del contenido desplegado */
+@keyframes desplegar {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ================================================
+   ADOPCIÓN
+   Mascotas en adopción con foto y descripción
+   ================================================ */
+.adopcion__seccion {
+    padding: 60px 80px;
+    background-color: #eefbea;
+}
+
+.adopcion__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* Tarjeta de cada mascota en adopción */
+.adopcion__tarjeta {
+    background-color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.adopcion__tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+/* Foto de la mascota */
+.adopcion__tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Bloque de texto con nombre, edad y descripción */
+.adopcion__info {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.adopcion__info h3 {
+    color: #244c74;
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+}
+
+/* Edad en azul */
+.adopcion__info span {
+    font-size: 0.85rem;
+    color: #00BFFF;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.adopcion__info p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 14px;
+}
+
+
+/* ================================================
+   TESTIMONIOS
+   Tarjetas con citas de clientes satisfechos
+   ================================================ */
+.testimonios__seccion {
+    padding: 60px 80px;
+    background-color: #fff7e6;
+}
+
+.testimonios__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Tarjeta con borde izquierdo azul */
+.testimonio__tarjeta {
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    border-left: 4px solid #00BFFF;
+}
+
+.testimonio__tarjeta p {
+    color: #555;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+}
+
+.testimonio__tarjeta h4 {
+    color: #244c74;
+    font-size: 0.9rem;
+}
+
+
+/* ================================================
+   FORMULARIO DE CITA
+   Fondo: foto de grupo de mascotas sobre azul.
+   Un overlay degradado suaviza la imagen para que
+   el formulario blanco quede bien legible encima.
+   ================================================ */
+.formulario__seccion {
+    padding: 60px 80px;
+    background-image:
+        /* Overlay: parte superior más opaca (título legible),
+           parte inferior más transparente (mascotas visibles) */
+        linear-gradient(
+            to bottom,
+            rgba(253, 246, 238, 0.92) 0%,
+            rgba(253, 246, 238, 0.75) 50%,
+            rgba(180, 225, 245, 0.70) 100%
+        ),
+        url('imagenes/IMAGEN\ FONDO.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Texto descriptivo bajo el título */
+.formulario__descripcion {
     text-align: center;
     color: #666;
     margin-bottom: 30px;
-    font-size: 14px;
+    margin-top: -16px;
 }
 
+/* Caja del formulario centrada */
 .formulario {
-    max-width: 700px;
-    margin: auto;
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 36px;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(0, 191, 255, 0.12);
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #f8fbff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Cada campo: label arriba, input abajo */
 .campo {
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
 
 .campo label {
-    margin-bottom: 8px;
-    color: #1d3557;
+    color: #244c74;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 0.9rem;
 }
 
+/* Estilos compartidos para input, select y textarea */
 .campo input,
 .campo select,
 .campo textarea {
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #cce8ff;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
     outline: none;
-    transition: 0.3s;
+    transition: border-color 0.2s;
 }
 
+/* Borde azul al enfocar el campo */
 .campo input:focus,
 .campo select:focus,
 .campo textarea:focus {
     border-color: #00BFFF;
-    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
 }
 
+/* El textarea se puede redimensionar solo verticalmente */
 .campo textarea {
     resize: vertical;
 }
 
-/* UBICACIÓN */
 
-.ubicacion {
-    padding: 40px;
-    background-color: #fdf6ee;
-    text-align: center;
+/* ================================================
+   MAPA DE UBICACIÓN
+   Iframe de Google Maps con bordes redondeados
+   ================================================ */
+.ubicacion__seccion {
+    padding: 60px 80px;
+    background-color: #f0f4f8;
 }
 
-.ubicacion p {
-    color: #7f8688;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-.mapa {
-    margin-top: 20px;
-    border-radius: 10px;
+/* Contenedor del mapa con sombra */
+.mapa__contenedor {
+    margin-top: 16px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
-/* PIE DE PÁGINA */
-
-.pie_pagina {
-    background: linear-gradient(to right, rgba(0, 123, 255, 0.8) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.986) 60%, rgba(0, 123, 255, 0.8) 100%);
-    color: #555;
-    text-align: center;
-    padding: 30px 20px;
+.mapa__contenedor iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    display: block;
 }
 
-.pie_pagina h2 {
-    color: #1d3557;
-    margin-bottom: 10px;
-    font-size: 20px;
+
+/* ================================================
+   PIE DE PÁGINA
+   4 columnas: marca, servicios, información, contacto
+   ================================================ */
+.pie__pagina {
+    background-color: #244c74;
+    color: #fff;
+    padding: 50px 80px 0;
 }
 
-.pie_pagina p {
-    margin-bottom: 10px;
-    font-size: 13px;
+/* Cuadrícula del pie: columna ancha + 3 columnas iguales */
+.pie__contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.redes_sociales {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+/* Título de cada columna del pie */
+.pie__columna h3 {
+    font-size: 1rem;
+    color: #45cdfa;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.redes_sociales a {
-    background-color: #45cdfa;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: 0.3s;
-    font-weight: bold;
-    color: white;
-    font-size: 13px;
+.pie__columna p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #cde8f5;
 }
 
-.redes_sociales a:hover {
-    background-color: #00BFFF;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.redes_sociales a::before {
-    content: '🔗 ';
-    margin-right: 5px;
-}
-
-.copia {
-    margin-top: 15px;
-    font-size: 12px;
-    color: #777;
-}
-
-/* RESPONSIVE - TABLET */
-
-@media screen and (max-width: 1024px) {
-    .veterinaria_sangil {
-        grid-template-columns: 1fr;
-        text-align: center;
-        justify-items: center;
-    }
-
-    .veterinarios_informacion {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 20px;
-    }
-
-    .servicios_contenedor {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .productos_contenedor {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* RESPONSIVE - MÓVIL */
-
-@media screen and (max-width: 768px) {
-    .encabezado {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .nombre_veterinaria {
-        flex-grow: 0;
-    }
-
-    .navegacion ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .veterinaria_sangil {
-        padding: 25px 15px;
-    }
-
-    .veterinarios_informacion {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-    }
-
-    .servicios_contenedor {
-        grid-template-columns: 1fr;
-        padding: 15px;
-    }
-
-    .productos_contenedor {
-        grid-template-columns: 1fr;
-        padding: 15px;
-    }
-
-    .contenedor_videos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .video {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .contenedor_blog {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .articulo {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .contenedor_adopcion {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .mascota {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .contenedor_testimonios {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .testimonio {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .formulario {
-        width: 95%;
-    }
-}
-
-/* RESPONSIVE - MÓVIL PEQUEÑO */
-
-@media screen and (max-width: 480px) {
-    .titulo {
-        font-size: 24px;
-    }
-
-    .titulo_principal {
-        font-size: 1.5rem;
-    }
-
-    .encabezado {
-        padding: 15px 10px;
-    }
-
-    .navegacion ul {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .servicios_contenedor,
-    .productos_contenedor {
-        gap: 15px;
-    }
-
-    .telefono_urgencias {
-        font-size: 28px;
-    }
-
-    button {
-        width: 100%;
-    }
-
-    .redes_sociales {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* RESPONSIVE - PANTALLA MUY PEQUEÑA */
-
-@media screen and (max-width: 300px) {
-    .titulo {
-        font-size: 18px;
-    }
-
-    .logo {
-        width: 40px;
-        height: 40px;
-    }
-
-    .veterinarios,
-    .servicio,
-    .video,
-    .articulo,
-    .mascota,
-    .testimonio {
-        width: 100%;
-        min-width: 0;
-    }
-}
-
-/* CONTENEDOR PRINCIPAL */
-
-.contenedor_principal {
-    min-height: 90vh;
+/* Lista de enlaces del pie */
+.pie__columna ul {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+.pie__columna ul li,
+.pie__columna ul a {
+    font-size: 0.88rem;
+    color: #cde8f5;
+    transition: color 0.2s;
+}
+
+.pie__columna ul a:hover {
+    color: #45cdfa;
+}
+
+/* Botones de redes sociales */
+.pie__redes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.pie__redes a {
+    background-color: #45cdfa;
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.pie__redes a:hover {
+    background-color: #00BFFF;
+    transform: scale(1.05);
+}
+
+/* Línea de derechos reservados */
+.pie__derechos {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.5);
 }
