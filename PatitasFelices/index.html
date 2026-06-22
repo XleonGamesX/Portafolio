@@ -1,406 +1,533 @@
+código de veterinaria
+
+
+HTML
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Patitas Felices</title>
 </head>
 <body>
-    <div class="contenedor_principal" id="inicio">
-        <header class="encabezado">
-            <img src="./imagenes/log_veterinaria.png" alt="Logo de Patitas Felices" class="logo">
-            <div class="nombre_veterinaria">
-                <span>Patitas</span>
-                <strong>Felices</strong>
+
+    <!-- ========================================
+         ENCABEZADO
+         Logo + nombre de la veterinaria + nav + botón cita
+    ======================================== -->
+    <header class="encabezado" id="inicio">
+        <div class="encabezado__contenido">
+
+            <div class="encabezado__marca">
+                <img src="./imagenes/log_veterinaria.png" alt="Logo Patitas Felices" class="encabezado__logo">
+                <div class="encabezado__nombre">
+                    <span>Patitas</span>
+                    <strong>Felices</strong>
+                </div>
             </div>
-            <nav class="navegacion">
+
+            <nav class="encabezado__nav">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#acerca">Nosotros</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="https://xleongamesx.github.io/Portafolio/PatitasFelices/Productos/">Productos</a></li>
+                    <li><a href="/Productos/index.html">Productos</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-        </header>
 
-        <section class="veterinaria_sangil">
-            <div class="veterinaria_imagen">
-                <img src="./imagenes/log_veterinaria.png" alt="Mascota feliz" />
-            </div>
-            
-            <div class="texto_veterinaria">
-                <h1 class="titulo_principal">Bienvenidos a Patitas Felices</h1>
-                <h2 class="subtitulo_principal">"Experiencia médica que inspira confianza"</h2>
-                <p class="descripcion_veterinaria">En Patitas Felices, nos dedicamos a cuidar de tus mascotas con amor y profesionalismo. Nuestro equipo de veterinarios altamente capacitados está comprometido a brindar la mejor atención médica para tu compañero peludo. Ofrecemos una amplia gama de servicios, desde consultas de rutina hasta tratamientos especializados, todo en un ambiente cálido y acogedor. ¡Tu mascota merece lo mejor, y en Patitas Felices, eso es exactamente lo que ofrecemos!</p>
-                <button class="cita"><a href="#cita">Agenda tu cita</a></button>
-            </div>
-        </section>
+            <a href="#cita" class="encabezado__boton">Agenda tu cita</a>
 
-        <section class="info_veterinarios">
-            <div class="titulo_veterinarios">
-                <h2>Nuestros Veterinarios</h2>
-            </div>
-            <div class="veterinarios_informacion">
-                <div class="veterinarios">
-                    <img src="./imagenes/veterinario1.jpg" alt="Dr. Andrés Martínez">
-                    <h2>Dr. Andrés Martínez</h2>
-                    <h3>Atención de urgencias y cuidado general</h3>
-                    <p>Andrés disfruta ayudar a las mascotas cuando más lo necesitan. Tiene experiencia atendiendo emergencias y problemas de salud comunes.</p>
-                </div>
-
-                <div class="veterinarios">
-                    <img src="./imagenes/veterinaria1.jpg" alt="Dra. Laura Gómez">
-                    <h2>Dra. Laura Gómez</h2>
-                    <h3>Especialista en mascotas pequeñas</h3>
-                    <p>Laura tiene más de 8 años acompañando a perros y gatos en cada etapa de su vida. Es conocida por su paciencia.</p>
-                </div>
-
-                <div class="veterinarios">
-                    <img src="./imagenes/veterinaria2.jpg" alt="">
-                    <h2>Dra. Camila Rojas</h2>
-                    <h3>Bienestar y cuidado preventivo</h3>
-                    <p>Camila se enfoca en prevenir enfermedades y mantener a las mascotas felices y saludables.</p>
-                </div>
-
-                <div class="veterinarios">
-                    <img src="./imagenes/veterinario2.jpg" alt="">
-                    <h2>Dr. Felipe Torres</h2>
-                    <h3>Animales exóticos y atención personalizada</h3>
-                    <p>Felipe cuenta con experiencia atendiendo aves, conejos, hámsters y otras mascotas poco comunes.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="servicios" id="servicios">
-    <h1 class="titulo">Nuestros Servicios</h1>
-
-    <div class="servicios_contenedor">
-
-        <div class="servicio">
-            <div class="icono">🐶</div>
-            <h2>Consulta General</h2>
-            <p>
-                Evaluamos la salud de tu mascota mediante una revisión completa,
-                diagnóstico preventivo y recomendaciones personalizadas para su bienestar.
-            </p>
-
-            <ul class="lista_servicios">
-                <li>✔ Examen físico completo</li>
-                <li>✔ Control preventivo</li>
-                <li>✔ Nutrición y cuidados</li>
-                <li>✔ Seguimiento médico</li>
-            </ul>
-
-            <a href="#cita" class="btn_servicio">
-                📅 Agendar cita
-            </a>
         </div>
+    </header>
 
-        <div class="servicio">
-            <div class="icono">💉</div>
-            <h2>Vacunación</h2>
-            <p>
-                Protegemos a tu mascota contra enfermedades mediante esquemas
-                de vacunación actualizados para cada etapa de vida.
-            </p>
 
-            <ul class="lista_servicios">
-                <li>✔ Vacunas para cachorros</li>
-                <li>✔ Refuerzos anuales</li>
-                <li>✔ Carnet de vacunación</li>
-                <li>✔ Asesoría preventiva</li>
-            </ul>
-
-            <a href="#cita" class="btn_servicio">
-                📅 Agendar cita
-            </a>
+    <!-- ========================================
+         PORTADA (HERO)
+         Imagen de fondo con texto encima y botón de cita
+    ======================================== -->
+    <section class="portada">
+        <div class="portada__fondo">
+            <div class="portada__contenido">
+                <h1 class="portada__titulo">Bienvenidos a Patitas Felices</h1>
+                <p class="portada__subtitulo">"Experiencia médica que inspira confianza"</p>
+                <p class="portada__descripcion">Cuidamos a tus mascotas con amor y profesionalismo. Nuestro equipo está comprometido a brindar la mejor atención para tu compañero peludo.</p>
+                <a href="#cita" class="portada__boton">Agenda tu cita</a>
+            </div>
         </div>
+    </section>
 
-        <div class="servicio">
-            <div class="icono">🏥</div>
-            <h2>Cirugía</h2>
-            <p>
-                Realizamos procedimientos quirúrgicos con equipos modernos
-                y protocolos de seguridad para tu tranquilidad.
-            </p>
 
-            <ul class="lista_servicios">
-                <li>✔ Esterilización</li>
-                <li>✔ Cirugías programadas</li>
-                <li>✔ Monitoreo especializado</li>
-                <li>✔ Recuperación supervisada</li>
-            </ul>
-
-            <a href="#cita" class="btn_servicio">
-                📅 Agendar cita
-            </a>
+    <!-- ========================================
+         NOSOTROS
+         Descripción de la veterinaria con imagen
+    ======================================== -->
+    <section class="nosotros" id="nosotros">
+        <div class="nosotros__imagen">
+            <img src="imagenes/log_veterinaria.png" alt="Patitas Felices">
         </div>
-
-        <div class="servicio">
-            <div class="icono">🚑</div>
-            <h2>Emergencias 24/7</h2>
-            <p>
-                Atención inmediata para situaciones críticas que requieren
-                intervención veterinaria urgente.
-            </p>
-
-            <ul class="lista_servicios">
-                <li>✔ Atención inmediata</li>
-                <li>✔ Accidentes y traumatismos</li>
-                <li>✔ Intoxicaciones</li>
-                <li>✔ Hospitalización</li>
-            </ul>
-
-            <a href="#cita" class="btn_servicio">
-                📅 Solicitar atención
-            </a>
+        <div class="nosotros__texto">
+            <h2 class="titulo__seccion">¿Quiénes somos?</h2>
+            <p>En Patitas Felices nos dedicamos a cuidar de tus mascotas con amor y profesionalismo. Nuestro equipo de veterinarios altamente capacitados está comprometido a brindar la mejor atención médica para tu compañero peludo.</p>
+            <p>Ofrecemos una amplia gama de servicios, desde consultas de rutina hasta tratamientos especializados, todo en un ambiente cálido y acogedor.</p>
+            <a href="#cita" class="boton__primario">Contáctanos</a>
         </div>
+    </section>
 
-    </div>
-</section>
 
-        <section class="productos_destacados">
-            <h1 class="titulo">Productos Destacados</h1>
+    <!-- ========================================
+         VETERINARIOS
+         Tarjetas con foto y descripción de cada doctor
+    ======================================== -->
+    <section class="veterinarios__seccion">
+        <h2 class="titulo__seccion centrado">Nuestros Veterinarios</h2>
+        <div class="veterinarios__cuadricula">
 
-            <div class="productos_contenedor">
-                <div class="producto">
-                    <div class="icono">🐶</div>
-                    <h2>Concentrado para perros</h2>
-                    <p>Alimentos balanceados y nutritivos para perros de todas las edades y tamaños.</p>
-                    <p class="precio">$85.000 COP</p>
-                </div>
-
-                <div class="producto">
-                    <div class="icono">🐱</div>
-                    <h2>Concentrado para gatos</h2>
-                    <p>Nutrición especializada para mantener a tu gato saludable, activo y fuerte.</p>
-                    <p class="precio">$78.000 COP</p>
-                </div>
-
-                <div class="producto">
-                    <div class="icono">🦴</div>
-                    <h2>Snacks y premios</h2>
-                    <p>Deliciosos premios ideales para entrenamiento, cuidado dental y consentimiento.</p>
-                    <p class="precio">$18.000 COP</p>
-                </div>
-
-                <div class="producto">
-                    <div class="icono">🧴</div>
-                    <h2>Shampoo veterinario</h2>
-                    <p>Productos de higiene que cuidan la piel y el pelaje de tu mascota.</p>
-                    <p class="precio">$25.000 COP</p>
+            <div class="veterinario__tarjeta">
+                <img src="imagenes/veterinario1.jpg" alt="Dr. Andrés Martínez">
+                <div class="veterinario__info">
+                    <h3>Dr. Andrés Martínez</h3>
+                    <span>Urgencias y cuidado general</span>
+                    <p>Andrés disfruta ayudar a las mascotas cuando más lo necesitan. Transmite calma y confianza, explicando todo de forma sencilla.</p>
                 </div>
             </div>
 
-            <div class="contenedor_boton_productos">
-                <a href="https://xleongamesx.github.io/Portafolio/PatitasFelices/Productos/" class="btn_productos">
-                    Explorar más productos
-                </a>
+            <div class="veterinario__tarjeta">
+                <img src="imagenes/veterinaria1.jpg" alt="Dra. Laura Gómez">
+                <div class="veterinario__info">
+                    <h3>Dra. Laura Gómez</h3>
+                    <span>Especialista en mascotas pequeñas</span>
+                    <p>Laura tiene más de 8 años acompañando a perros y gatos. Es conocida por su paciencia y trato cálido y cercano.</p>
+                </div>
             </div>
-        </section>
 
-        <section class="videos_mascotas">
-    <h1 class="titulo">Tips de cuidado</h1>
+            <div class="veterinario__tarjeta">
+                <img src="https://media.istockphoto.com/id/1846927886/es/foto/animales-para-examen-y-tratamiento-en-la-cl%C3%ADnica-veterinaria.jpg?s=1024x1024&w=is&k=20&c=c-gumCJzGneNnKqk9lMZMhJ5AKVDLXH1epejJ0cCWJs=" alt="Dra. Camila Rojas">
+                <div class="veterinario__info">
+                    <h3>Dra. Camila Rojas</h3>
+                    <span>Bienestar y cuidado preventivo</span>
+                    <p>Camila se enfoca en prevenir enfermedades y mantener a las mascotas felices. Crea vínculos especiales con animales y familias.</p>
+                </div>
+            </div>
 
-    <div class="contenedor_videos">
+            <div class="veterinario__tarjeta">
+                <img src="https://media.istockphoto.com/id/1846927886/es/foto/animales-para-examen-y-tratamiento-en-la-cl%C3%ADnica-veterinaria.jpg?s=1024x1024&w=is&k=20&c=c-gumCJzGneNnKqk9lMZMhJ5AKVDLXH1epejJ0cCWJs=" alt="Dr. Felipe Torres">
+                <div class="veterinario__info">
+                    <h3>Dr. Felipe Torres</h3>
+                    <span>Animales exóticos</span>
+                    <p>Felipe tiene experiencia atendiendo aves, conejos, hámsters y otras mascotas poco comunes con atención personalizada.</p>
+                </div>
+            </div>
 
-        <div class="video">
-            <h2>Consulta veterinaria</h2>
-            <video controls width="100%" height="250" preload="metadata" autoplay  controls preload="auto">
-                <source src="https://www.dropbox.com/scl/fi/54gfourakq3t19abdkih1/Principal.mp4?rlkey=j3hls28ieq2odh5jgavwd906y&raw=1" type="video/mp4">
-                Tu navegador no soporta videos HTML5.
-            </video>
         </div>
+    </section>
 
-        <div class="video">
-            <h2>¿Cómo cuidar tu mascota?</h2>
-            <video controls width="100%" height="250" preload="metadata" controls autoplay muted preload="auto">
-                <source src="https://www.dropbox.com/scl/fi/rd5vfybtya42qnvd6mnkj/cuidado_mascota.mp4?rlkey=4hk17iri29xzpvhp064oz2ukz&raw=1" type="video/mp4">
-                Tu navegador no soporta videos HTML5.
-            </video>
+
+    <!-- ========================================
+         SERVICIOS
+         Tarjetas con los servicios que ofrece la veterinaria
+    ======================================== -->
+    <section class="servicios__seccion" id="servicios">
+        <h2 class="titulo__seccion centrado">Nuestros Servicios</h2>
+        <div class="servicios__cuadricula">
+
+            <!-- Consulta General: veterinario revisando una mascota -->
+            <div class="servicio__tarjeta">
+                <img
+                    src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=600&q=80"
+                    alt="Consulta General veterinaria"
+                    class="servicio__imagen">
+                <div class="servicio__cuerpo">
+                    <h3>Consulta General</h3>
+                    <p>Evaluamos la salud de tu mascota y ofrecemos diagnósticos y recomendaciones personalizadas.</p>
+                    <a href="#cita" class="boton__secundario">Más información</a>
+                </div>
+            </div>
+
+            <!-- Vacunación: jeringa / vacuna aplicada a una mascota -->
+            <div class="servicio__tarjeta">
+                <img
+                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80"
+                    alt="Vacunación de mascotas"
+                    class="servicio__imagen">
+                <div class="servicio__cuerpo">
+                    <h3>Vacunación</h3>
+                    <p>Protege a tu mascota con vacunas esenciales para prevenir enfermedades.</p>
+                    <a href="#cita" class="boton__secundario">Más información</a>
+                </div>
+            </div>
+
+            <!-- Cirugía: quirófano veterinario -->
+            <div class="servicio__tarjeta">
+                <img
+                    src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&q=80"
+                    alt="Cirugía veterinaria"
+                    class="servicio__imagen">
+                <div class="servicio__cuerpo">
+                    <h3>Cirugía</h3>
+                    <p>Procedimientos quirúrgicos seguros realizados por especialistas veterinarios.</p>
+                    <a href="#cita" class="boton__secundario">Más información</a>
+                </div>
+            </div>
+
+            <!-- Emergencias: ambulancia / urgencias veterinarias -->
+            <div class="servicio__tarjeta">
+                <img
+                    src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80"
+                    alt="Emergencias veterinarias 24/7"
+                    class="servicio__imagen">
+                <div class="servicio__cuerpo">
+                    <h3>Emergencias 24/7</h3>
+                    <p>Atención veterinaria inmediata disponible las 24 horas del día.</p>
+                    <a href="#cita" class="boton__secundario">Más información</a>
+                </div>
+            </div>
+
         </div>
+    </section>
 
-        <div class="video">
-            <h2>¿Cuánto duerme un gato?</h2>
-            <video controls width="100%" height="250" preload="metadata" controls autoplay muted preload="auto">
-                <source src="https://www.dropbox.com/scl/fi/fnzxyeq0dkye75xg10ok1/Cu-nto-Duerme-un-Gato-al-D-a-Cachorro-Adulto-y-Anciano.mp4?rlkey=ozter77dy8coeg4g3bok12lvr&raw=1" type="video/mp4">
-                Tu navegador no soporta videos HTML5.
-            </video>
+
+    <!-- ========================================
+         BANNER DE URGENCIAS
+         Llamado a la acción con número de teléfono
+    ======================================== -->
+    <section class="aviso__urgencias">
+        <h2>Urgencias 24/7</h2>
+        <p>Estamos disponibles las 24 horas para atender cualquier emergencia veterinaria.</p>
+
+        <!-- Botón de llamada — al hacer clic en móvil marca el número directamente -->
+        <a href="tel:3204567890" class="aviso__boton__telefono">
+            <span class="aviso__icono__llamada">📲</span>
+            <span class="aviso__numero">320 456 7890</span>
+            <span class="aviso__etiqueta__llamada">Llámanos ahora</span>
+        </a>
+    </section>
+
+
+    <!-- ========================================
+         VIDEOS
+         Galería de videos de mascotas
+    ======================================== -->
+    <section class="videos__seccion">
+        <h2 class="titulo__seccion centrado">Videos de nuestras mascotas</h2>
+        <div class="videos__cuadricula">
+
+            <div class="video__tarjeta">
+                <video controls width="100%">
+                    <source src="https://www.dropbox.com/scl/fi/54gfourakq3t19abdkih1/Principal.mp4?rlkey=j3hls28ieq2odh5jgavwd906y&raw=1" type="video/mp4">
+                </video>
+                <h3>Consulta veterinaria</h3>
+                <p>Video sobre una consulta veterinaria.</p>
+            </div>
+
+            <div class="video__tarjeta">
+                <video autoplay muted loop width="100%">
+                    <source src="https://www.dropbox.com/scl/fi/rd5vfybtya42qnvd6mnkj/cuidado_mascota.mp4?rlkey=4hk17iri29xzpvhp064oz2ukz&raw=1" type="video/mp4">
+                    </video>
+                <h3>como cuidar a tu mascota </h3>
+                <p>Mascota disfrutando en el parque.</p>
+            </div>
+
+            <div class="video__tarjeta">
+                <video autoplay muted loop width="100%">
+                   <source src="https://www.dropbox.com/scl/fi/fnzxyeq0dkye75xg10ok1/Cu-nto-Duerme-un-Gato-al-D-a-Cachorro-Adulto-y-Anciano.mp4?rlkey=ozter77dy8coeg4g3bok12lvr&raw=1" type="video/mp4">
+                </video>
+                <h3>cuanto duerme un gato<h3>
+                <p>Momento tranquilo de uno de nuestros pacientes.</p>
+            </div>
+
+            <div class="video__tarjeta">
+                <video autoplay muted loop width="100%">
+                    <source src="https://www.dropbox.com/scl/fi/7tv061rrk3k2hkoye7bq5/Limpiar-perro.mp4?rlkey=uxz0vapbja1h6jnlgemih2fvw&raw=1" type="video/mp4">
+                </video>
+                <h3>limpiar a tu mascota</h3>
+                <p>Cuidado e higiene para perros y gatos.</p>
+            </div>
+
         </div>
+    </section>
 
-        <div class="video">
-            <h2>Limpiar a tu mascota</h2>
-            <video controls width="100%" height="250" preload="metadata" controls autoplay muted preload="auto">
-                <source src="https://www.dropbox.com/scl/fi/7tv061rrk3k2hkoye7bq5/Limpiar-perro.mp4?rlkey=uxz0vapbja1h6jnlgemih2fvw&raw=1" type="video/mp4">
-                Tu navegador no soporta videos HTML5.
-            </video>
-        </div>
 
-    </div>
-</section>
+    <!-- ========================================
+         BLOG
+         Artículos de consejos y cuidados para mascotas.
+         Técnica CSS pura: <details> + <summary> despliega
+         el texto completo al hacer clic, sin JavaScript.
+    ======================================== -->
+    <section class="blog__seccion">
+        <h2 class="titulo__seccion centrado">Blog de Cuidados</h2>
+        <div class="blog__cuadricula">
 
-        <section class="urgencias">
-            <h1>Urgencias 24/7</h1>
-            <p>En Patitas Felices estamos disponibles las 24 horas para atender cualquier emergencia veterinaria.</p>
-            <div class="telefono_urgencias">📞 320 456 7890</div>
-        </section>
+            <article class="blog__tarjeta">
+                <img src="imagenes/blog1.jpg" alt="Cuidado de perros en verano">
+                <div class="blog__info">
+                    <span class="blog__fecha">15 Mayo 2026</span>
+                    <h3>Cómo cuidar a tu perro en verano</h3>
+                    <p>Consejos para mantener hidratado y saludable a tu perro durante días calurosos.</p>
+                    <!-- details despliega el texto completo al hacer clic en "Leer más" -->
+                    <details class="blog__detalle">
+                        <summary class="blog__enlace">Leer más →</summary>
+                        <div class="blog__texto__completo">
+                            <p>Durante el verano las altas temperaturas pueden ser peligrosas para tu perro. Asegúrate de que siempre tenga agua fresca disponible y evita los paseos en las horas de mayor calor (entre 12 pm y 4 pm).</p>
+                            <p>Nunca dejes a tu mascota encerrada en el carro. El suelo caliente puede quemar sus patas, así que camina sobre pasto o superficies frescas. Si notas que jadea excesivamente, busca sombra de inmediato y moja su cuerpo con agua tibia.</p>
+                            <p>Consulta con tu veterinario si tu perro es de raza braquicéfala (Bulldog, Pug, etc.), ya que son más propensos al golpe de calor.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
 
-        <section class="blog_cuidados">
-            <h1 class="titulo">Blog de Cuidados</h1>
+            <article class="blog__tarjeta">
+                <img src="imagenes/blog2.jpg" alt="Vacunas">
+                <div class="blog__info">
+                    <span class="blog__fecha">10 Mayo 2026</span>
+                    <h3>Importancia de las vacunas</h3>
+                    <p>Las vacunas ayudan a prevenir enfermedades graves y mejoran la calidad de vida.</p>
+                    <details class="blog__detalle">
+                        <summary class="blog__enlace">Leer más →</summary>
+                        <div class="blog__texto__completo">
+                            <p>Vacunar a tu mascota es una de las decisiones más importantes que puedes tomar como dueño responsable. Las vacunas entrenan el sistema inmunológico para reconocer y combatir enfermedades como el moquillo, la rabia o el parvovirus.</p>
+                            <p>El calendario de vacunación comienza desde las 6-8 semanas de vida. Las vacunas básicas deben reforzarse anualmente o cada tres años según el tipo. Consulta con nuestros veterinarios para conocer el esquema ideal para tu mascota según su edad, raza y estilo de vida.</p>
+                            <p>Recuerda que las mascotas vacunadas también protegen a las personas que conviven con ellas.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
 
-            <div class="contenedor_blog">
-                <article class="articulo">
-                    <img src="./imagenes/perro_agua.jpg" alt="Cuidado de perros">
-                    <h2>Cómo cuidar a tu perro en verano</h2>
-                    <p>Aprende consejos importantes para mantener hidratado y saludable a tu perro durante días calurosos.</p>
-                </article>
-
-                <article class="articulo">
-                    <img src="./imagenes/vacuna_perro.jpg" alt="Vacunas">
-                    <h2>Importancia de las vacunas</h2>
-                    <p>Las vacunas ayudan a prevenir enfermedades graves y mejoran la calidad de vida de tu mascota.</p>
-                </article>
-
-                <article class="articulo">
-                    <img src="./imagenes/gato_comiendo.jpg" alt="Gatos">
-                    <h2>Alimentación saludable para gatos</h2>
+            <article class="blog__tarjeta">
+                <img src="imagenes/blog3.jpg" alt="Gatos">
+                <div class="blog__info">
+                    <span class="blog__fecha">05 Mayo 2026</span>
+                    <h3>Alimentación saludable para gatos</h3>
                     <p>Descubre qué alimentos son recomendados para mantener a tu gato fuerte y saludable.</p>
-                </article>
-
-                <article class="articulo">
-                    <img src="./imagenes/baño_perro.jpg" alt="Baño mascotas">
-                    <h2>¿Cada cuánto bañar a tu mascota?</h2>
-                    <p>Consejos básicos de higiene para perros y gatos según su raza y tipo de pelaje.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="adopcion">
-            <h1 class="titulo">Adopta una mascota</h1>
-
-            <div class="contenedor_adopcion">
-                <div class="mascota">
-                    <img src="./imagenes/perro1.jpg" alt="Max">
-                    <h2>Max</h2>
-                    <h3>Edad: 2 años</h3>
-                    <p>Max fue rescatado de la calle y ahora busca una familia amorosa. Es juguetón y muy amigable.</p>
+                    <details class="blog__detalle">
+                        <summary class="blog__enlace">Leer más →</summary>
+                        <div class="blog__texto__completo">
+                            <p>Los gatos son carnívoros estrictos, lo que significa que necesitan proteína animal de alta calidad en su dieta. Elige alimentos balanceados específicos para gatos, ya sea húmedos o secos, que contengan carne como primer ingrediente.</p>
+                            <p>Evita darles alimentos como cebolla, ajo, uvas, chocolate o lácteos, ya que son tóxicos o difíciles de digerir para los felinos. El agua fresca es esencial: muchos gatos prefieren bebederos con flujo de agua.</p>
+                            <p>Si tu gato tiene más de 7 años, considera una dieta senior formulada para proteger riñones y articulaciones. Consulta con nuestros especialistas para recomendaciones personalizadas.</p>
+                        </div>
+                    </details>
                 </div>
+            </article>
 
-                <div class="mascota">
-                    <img src="./imagenes/gato1.jpg" alt="Luna">
-                    <h2>Luna</h2>
-                    <h3>Edad: 1 año</h3>
+            <article class="blog__tarjeta">
+                <img src="imagenes/blog4.jpg" alt="Baño mascotas">
+                <div class="blog__info">
+                    <span class="blog__fecha">01 Mayo 2026</span>
+                    <h3>¿Cada cuánto bañar a tu mascota?</h3>
+                    <p>Consejos de higiene para perros y gatos según su raza y tipo de pelaje.</p>
+                    <details class="blog__detalle">
+                        <summary class="blog__enlace">Leer más →</summary>
+                        <div class="blog__texto__completo">
+                            <p>La frecuencia del baño depende del tipo de pelaje y el estilo de vida de tu mascota. En general, los perros de pelo corto pueden bañarse cada 4-6 semanas, mientras que los de pelo largo o rizado necesitan higiene más frecuente, cada 2-3 semanas.</p>
+                            <p>Los gatos raramente necesitan baños ya que se autolimpian, pero si están muy sucios o tienen pulgas, un baño con shampoo veterinario es necesario. Usa siempre productos formulados para mascotas; el shampoo humano puede irritar su piel.</p>
+                            <p>Sécalos bien después del baño, especialmente en días fríos, para evitar resfriados. En Patitas Felices ofrecemos servicio de baño y peluquería profesional.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================
+         ADOPCIÓN
+         Mascotas disponibles para ser adoptadas
+    ======================================== -->
+    <section class="adopcion__seccion">
+        <h2 class="titulo__seccion centrado">Adopta una mascota</h2>
+        <div class="adopcion__cuadricula">
+
+            <div class="adopcion__tarjeta">
+                <img src="imagenes/perro.jpeg" alt="Max">
+                <div class="adopcion__info">
+                    <h3>Max</h3>
+                    <span>Edad: 2 años</span>
+                    <p>Max fue rescatado de la calle y busca una familia amorosa. Es juguetón y muy amigable.</p>
+                    <a href="#contacto" class="boton__primario">Adoptarme</a>
+                </div>
+            </div>
+
+            <div class="adopcion__tarjeta">
+                <img src="imagenes/gato1.jpeg" alt="Luna">
+                <div class="adopcion__info">
+                    <h3>Luna</h3>
+                    <span>Edad: 1 año</span>
                     <p>Luna es una gatita tranquila y cariñosa que disfruta dormir y recibir mucho cariño.</p>
+                    <a href="#contacto" class="boton__primario">Adoptarme</a>
                 </div>
+            </div>
 
-                <div class="mascota">
-                    <img src="./imagenes/perro2.jpg" alt="Rocky">
-                    <h2>Rocky</h2>
-                    <h3>Edad: 3 años</h3>
+            <div class="adopcion__tarjeta">
+                <img src="imagenes/perro2.jpeg" alt="Rocky">
+                <div class="adopcion__info">
+                    <h3>Rocky</h3>
+                    <span>Edad: 3 años</span>
                     <p>Rocky es muy protector y le encanta jugar con niños. Está vacunado y listo para adopción.</p>
+                    <a href="#contacto" class="boton__primario">Adoptarme</a>
                 </div>
             </div>
-        </section>
 
-        <section class="testimonios">
-            <h1 class="titulo">Testimonios</h1>
+        </div>
+    </section>
 
-            <div class="contenedor_testimonios">
-                <div class="testimonio">
-                    <p>"Gracias a Patitas Felices encontré a mi mejor amigo. Max ahora es parte de nuestra familia."</p>
-                    <h3>Carolina Pérez</h3>
-                </div>
 
-                <div class="testimonio">
-                    <p>"La atención fue excelente y Luna se adaptó rápidamente a nuestro hogar."</p>
-                    <h3>Andrés Gómez</h3>
-                </div>
+    <!-- ========================================
+         TESTIMONIOS
+         Opiniones de clientes satisfechos
+    ======================================== -->
+    <section class="testimonios__seccion">
+        <h2 class="titulo__seccion centrado">Lo que dicen nuestros clientes</h2>
+        <div class="testimonios__cuadricula">
 
-                <div class="testimonio">
-                    <p>"Rocky llegó a nuestra vida y cambió todo para mejor. Excelente servicio."</p>
-                    <h3>Laura Martínez</h3>
-                </div>
-            </div>
-        </section>
-
-        <section class="formulario_cita" id="cita">
-            <h1 class="titulo">Agenda tu cita</h1>
-
-            <p class="texto_formulario">Completa el siguiente formulario para reservar una cita para tu mascota.</p>
-
-            <form class="formulario">
-                <div class="campo">
-                    <label for="nombre">Nombre del dueño</label>
-                    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
-                </div>
-
-                <div class="campo">
-                    <label for="mascota">Nombre de la mascota</label>
-                    <input type="text" id="mascota" placeholder="Nombre de tu mascota">
-                </div>
-
-                <div class="campo">
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" placeholder="Número de contacto">
-                </div>
-
-                <div class="campo">
-                    <label for="fecha">Fecha de la cita</label>
-                    <input type="date" id="fecha">
-                </div>
-
-                <div class="campo">
-                    <label for="servicio">Servicio</label>
-                    <select id="servicio">
-                        <option>Consulta General</option>
-                        <option>Vacunación</option>
-                        <option>Cirugía</option>
-                        <option>Urgencias</option>
-                        <option>Baño y cuidado</option>
-                    </select>
-                </div>
-
-                <div class="campo">
-                    <label for="mensaje">Mensaje adicional</label>
-                    <textarea id="mensaje" rows="5" placeholder="Escribe información importante sobre tu mascota"></textarea>
-                </div>
-
-                <button type="submit">Reservar cita</button>
-            </form>
-        </section>
-
-        <section class="ubicacion" id="contacto">
-            <h1 class="titulo">Nuestra ubicación</h1>
-
-            <p>Visítanos y conoce nuestras instalaciones.</p>
-
-            <div class="mapa">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.879821365147!2d-73.11980042505676!3d7.376018392634932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6846f8a8c39d7d%3A0x53d4d4e3d5c3f8b4!2sSan%20Gil%2C%20Santander!5e0!3m2!1ses!2sco!4v1717000000000!5m2!1ses!2sco"
-                    width="100%"
-                    height="350"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy">
-                </iframe>
-            </div>
-        </section>
-
-        <footer class="pie_pagina">
-            <h2>Patitas Felices</h2>
-            <p>Cuidamos a tus mascotas con amor y profesionalismo.</p>
-
-            <div class="redes_sociales">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">TikTok</a>
-                <a href="#">WhatsApp</a>
+            <div class="testimonio__tarjeta">
+                <p>"Gracias a Patitas Felices encontré a mi mejor amigo. Max ahora es parte de nuestra familia."</p>
+                <h4>— Carolina Pérez</h4>
             </div>
 
-            <p class="copia">© 2026 Patitas Felices - Todos los derechos reservados</p>
-        </footer>
-    </div>
+            <div class="testimonio__tarjeta">
+                <p>"La atención fue excelente y Luna se adaptó rápidamente a nuestro hogar."</p>
+                <h4>— Andrés Gómez</h4>
+            </div>
+
+            <div class="testimonio__tarjeta">
+                <p>"Rocky llegó a nuestra vida y cambió todo para mejor. Excelente servicio."</p>
+                <h4>— Laura Martínez</h4>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================
+         FORMULARIO DE CITA
+         Formulario para reservar una cita médica
+    ======================================== -->
+    <section class="formulario__seccion" id="cita">
+        <h2 class="titulo__seccion centrado">Agenda tu cita</h2>
+        <p class="formulario__descripcion">Completa el siguiente formulario para reservar una cita para tu mascota.</p>
+
+        <form class="formulario">
+
+            <div class="campo">
+                <label for="nombre">Nombre del dueño</label>
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+            </div>
+
+            <div class="campo">
+                <label for="mascota">Nombre de la mascota</label>
+                <input type="text" id="mascota" placeholder="Nombre de tu mascota">
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" placeholder="Número de contacto">
+            </div>
+
+            <div class="campo">
+                <label for="fecha">Fecha de la cita</label>
+                <input type="date" id="fecha">
+            </div>
+
+            <div class="campo">
+                <label for="servicio">Servicio</label>
+                <select id="servicio">
+                    <option>Consulta General</option>
+                    <option>Vacunación</option>
+                    <option>Cirugía</option>
+                    <option>Urgencias</option>
+                    <option>Baño y cuidado</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje adicional</label>
+                <textarea id="mensaje" rows="5" placeholder="Escribe información importante sobre tu mascota"></textarea>
+            </div>
+
+            <button type="submit" class="boton__primario">Reservar cita</button>
+
+        </form>
+    </section>
+
+
+    <!-- ========================================
+         MAPA DE UBICACIÓN
+         Mapa de Google Maps con la dirección
+    ======================================== -->
+    <section class="ubicacion__seccion" id="contacto">
+        <h2 class="titulo__seccion centrado">Nuestra ubicación</h2>
+        <p class="texto__centrado">Visítanos y conoce nuestras instalaciones en San Gil, Santander.</p>
+        <div class="mapa__contenedor">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.879821365147!2d-73.11980042505676!3d7.376018392634932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6846f8a8c39d7d%3A0x53d4d4e3d5c3f8b4!2sSan%20Gil%2C%20Santander!5e0!3m2!1ses!2sco!4v1717000000000!5m2!1ses!2sco"
+                width="100%"
+                height="350"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+
+    <!-- ========================================
+         PIE DE PÁGINA
+         4 columnas: marca, servicios, información, contacto
+    ======================================== -->
+    <footer class="pie__pagina">
+        <div class="pie__contenido">
+
+            <div class="pie__columna">
+                <h3>Patitas Felices</h3>
+                <p>Cuidamos a tus mascotas con amor y profesionalismo en San Gil, Santander.</p>
+                <div class="pie__redes">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="pie__columna">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#servicios">Consulta General</a></li>
+                    <li><a href="#servicios">Vacunación</a></li>
+                    <li><a href="#servicios">Cirugía</a></li>
+                    <li><a href="#servicios">Emergencias 24/7</a></li>
+                </ul>
+            </div>
+
+            <div class="pie__columna">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#cita">Agendar cita</a></li>
+                    <li><a href="/Productos/index.html">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="pie__columna">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>📲 320 456 7890</li>
+                    <li>📍 San Gil, Santander</li>
+                    <li>🕐 Lun–Sab: 8am–6pm</li>
+                    <li>🚑 Urgencias: 24/7</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="pie__derechos">
+            <p>© 2026 Patitas Felices — Todos los derechos reservados</p>
+        </div>
+    </footer>
+
 </body>
 </html>
