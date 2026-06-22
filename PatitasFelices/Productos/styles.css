@@ -1,4 +1,3 @@
-/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
@@ -11,201 +10,518 @@ body {
     color: #333;
 }
 
+/* Quita el subrayado y el color por defecto de los enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Quita los puntos de las listas */
+ul {
+    list-style: none;
+}
+
+/* Hace las imágenes responsivas */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ================================================
+   ENCABEZADO
+   Barra superior con logo, navegación y botón de cita
+   ================================================ */
 .encabezado {
-    height: 50px;
-    width: auto;
-    color: #54c1e8; 
-    padding-top: 5px;
-    text-align: center;
-    background: linear-gradient(
-    to right,
-    rgba(0, 123, 255, 0.8) 0%,
-    rgb(255, 255, 255) 40%,
-    rgba(255, 255, 255, 0.986) 60%,
-    rgba(0, 123, 255, 0.8) 100%
-);
-border-radius: 0 0 10px 10px;
+    background-color: #fdf6ee;
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
+    padding: 14px 40px;
 }
 
-.productos {
-    padding: 40px 20px;
-}
-
-.productos h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #00BFFF;
-}
-
-.productos_contenedor {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+/* Fila interna que alinea logo, nav y botón en línea */
+.encabezado__contenido {
+    display: flex;
+    align-items: center;
     gap: 20px;
 }
 
-.producto{
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.2s ease;
+/* Contenedor del logo + nombre — ocupa el espacio sobrante */
+.encabezado__marca {
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
 }
 
+.encabezado__logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
 
-.producto:hover {
+/* Nombre "Patitas Felices" en dos colores */
+.encabezado__nombre {
+    display: flex;
+    gap: 5px;
+    font-size: 1.2rem;
+    color: #00BFFF;
+    align-items: center;
+}
+
+.encabezado__nombre strong {
+    color: #244c74;
+}
+
+/* Lista de enlaces de navegación en fila */
+.encabezado__nav ul {
+    display: flex;
+    gap: 24px;
+}
+
+.encabezado__nav a {
+    font-size: 0.95rem;
+    color: #244c74;
+    transition: color 0.2s;
+}
+
+/* Enlace activo (página actual) */
+.encabezado__nav a:hover,
+.encabezado__nav a.activo {
+    color: #00BFFF;
+    font-weight: bold;
+}
+
+/* Botón "Agenda tu cita" del encabezado */
+.encabezado__boton {
+    background-color: #00BFFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.encabezado__boton:hover {
+    background-color: #45cdfa;
     transform: scale(1.05);
 }
 
-.icono {
-    font-size: 40px;
+
+/* ================================================
+   PORTADA DE LA TIENDA
+   Banner con degradado azul y título centrado
+   ================================================ */
+.tienda__portada {
+    background: linear-gradient(135deg, #244c74 0%, #00BFFF 100%);
+    padding: 50px 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.tienda__portada h1 {
+    font-size: 2.4rem;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-.producto h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #00BFFF;
+.tienda__portada p {
+    font-size: 1.05rem;
+    opacity: 0.88;
 }
 
-.producto p {
-    font-size: 14px;
-    line-height: 1.4;
-    color: #666;
+
+/* ================================================
+   BARRA DE FILTROS
+   Fila con el título "Categorías:" y los botones de filtro
+   ================================================ */
+.filtros__barra {
+    background-color: #fff;
+    border-bottom: 2px solid #e8f6ff;
+    padding: 16px 60px;
 }
 
-.precio{
-    margin-top: auto;
-    font-size: 1rem;
+/* Fila interior: título + botones + contador */
+.filtros__contenido {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.filtros__titulo {
+    color: #244c74;
     font-weight: bold;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Grupo de botones de categoría */
+.filtros__categorias {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Botón de filtro individual */
+.filtro__boton {
+    display: inline-block;
+    padding: 7px 18px;
+    border-radius: 20px;
+    border: 2px solid #e0f4ff;
+    font-size: 0.86rem;
+    color: #244c74;
+    font-weight: bold;
+    transition: border-color 0.2s, background-color 0.2s, color 0.2s, transform 0.15s;
+}
+
+.filtro__boton:hover {
+    border-color: #00BFFF;
+    background-color: #e8f6ff;
     color: #00BFFF;
-    background-color: #f0fbff;
-    padding: 8px;
+    transform: translateY(-2px);
+}
+
+/* Resalta el botón correspondiente cuando su categoría está activa.
+   Usa :has() para llegar desde el body hasta el filtro activo. */
+body:has(#cat-todos:target)        .filtro__boton[href="#cat-todos"],
+body:has(#cat-alimentacion:target) .filtro__boton[href="#cat-alimentacion"],
+body:has(#cat-higiene:target)      .filtro__boton[href="#cat-higiene"],
+body:has(#cat-salud:target)        .filtro__boton[href="#cat-salud"],
+body:has(#cat-accesorios:target)   .filtro__boton[href="#cat-accesorios"],
+body:has(#cat-juguetes:target)     .filtro__boton[href="#cat-juguetes"] {
+    border-color: #00BFFF;
+    background-color: #00BFFF;
+    color: #fff;
+}
+
+/* Contador de productos: actualiza el texto según la categoría activa */
+.filtros__contador::before {
+    content: "Mostrando: todos los productos";
+    color: #666;
+    font-size: 0.88rem;
+}
+
+body:has(#cat-alimentacion:target) .filtros__contador::before { content: "Mostrando: Alimentación — 3 productos"; }
+body:has(#cat-higiene:target)      .filtros__contador::before { content: "Mostrando: Higiene — 3 productos"; }
+body:has(#cat-salud:target)        .filtros__contador::before { content: "Mostrando: Salud — 3 productos"; }
+body:has(#cat-accesorios:target)   .filtros__contador::before { content: "Mostrando: Accesorios — 4 productos"; }
+body:has(#cat-juguetes:target)     .filtros__contador::before { content: "Mostrando: Juguetes — 3 productos"; }
+body:has(#cat-todos:target)        .filtros__contador::before { content: "Mostrando: todos los productos — 16"; }
+
+
+/* ================================================
+   ANCLAS DE FILTRO (invisibles)
+   Solo sirven como puntos de referencia para :target
+   ================================================ */
+#cat-todos,
+#cat-alimentacion,
+#cat-higiene,
+#cat-salud,
+#cat-accesorios,
+#cat-juguetes {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+
+/* ================================================
+   SECCIÓN DE PRODUCTOS
+   Contenedor principal con la cuadrícula de tarjetas
+   ================================================ */
+.tienda__seccion {
+    padding: 48px 60px;
+    background-color: #fdf6ee;
+}
+
+/* Cuadrícula de 4 columnas iguales */
+.productos__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+
+/* ================================================
+   LÓGICA DE FILTROS — CSS puro con :target
+   ------------------------------------------------
+   Por defecto todas las tarjetas son visibles.
+   Cuando se hace clic en un filtro, su ancla queda
+   como :target. Con el selector ~ (hermano general)
+   ocultamos las tarjetas que NO son de esa categoría.
+   ================================================ */
+
+#cat-alimentacion:target ~ .productos__cuadricula .producto__tarjeta:not(.tarjeta--alimentacion) { display: none; }
+#cat-higiene:target      ~ .productos__cuadricula .producto__tarjeta:not(.tarjeta--higiene)      { display: none; }
+#cat-salud:target        ~ .productos__cuadricula .producto__tarjeta:not(.tarjeta--salud)        { display: none; }
+#cat-accesorios:target   ~ .productos__cuadricula .producto__tarjeta:not(.tarjeta--accesorios)   { display: none; }
+#cat-juguetes:target     ~ .productos__cuadricula .producto__tarjeta:not(.tarjeta--juguetes)     { display: none; }
+/* #cat-todos no oculta nada — es el estado por defecto */
+
+
+/* ================================================
+   TARJETA DE PRODUCTO
+   Caja blanca con imagen, etiqueta, nombre y botón
+   ================================================ */
+.producto__tarjeta {
+    background-color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto__tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 191, 255, 0.2);
+}
+
+/* ------------------------------------------------
+   Marco de imagen + etiqueta superpuesta
+   Truco: display grid con misma fila/columna para
+   que la etiqueta quede encima de la imagen
+   sin usar position.
+   ------------------------------------------------ */
+.producto__imagen__marco {
+    display: grid;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+}
+
+/* Imagen ocupa la celda [1,1] del grid */
+.producto__imagen {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Zoom suave al pasar el cursor */
+.producto__tarjeta:hover .producto__imagen {
+    transform: scale(1.06);
+}
+
+/* Etiqueta también en la celda [1,1], alineada arriba-izquierda */
+.producto__etiqueta {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: start;
+    justify-self: start;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 0 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+/* Color de fondo de la etiqueta según categoría */
+.etiqueta--alimentacion { background-color: #f59e0b; }
+.etiqueta--higiene      { background-color: #06b6d4; }
+.etiqueta--salud        { background-color: #10b981; }
+.etiqueta--accesorios   { background-color: #8b5cf6; }
+.etiqueta--juguetes     { background-color: #ef4444; }
+
+/* Bloque de texto del producto */
+.producto__info {
+    padding: 16px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 6px;
+}
+
+/* Subcategoría (ej: "Perros", "Gatos") */
+.producto__categoria {
+    font-size: 0.78rem;
+    color: #00BFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Nombre del producto en mayúsculas */
+.producto__nombre {
+    font-size: 0.97rem;
+    color: #244c74;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+/* Descripción corta del producto */
+.producto__descripcion {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Botón "Consultar precio" */
+.producto__boton {
+    display: inline-block;
+    margin-top: 14px;
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
+    color: #fff;
+    text-align: center;
+    padding: 10px 18px;
     border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* ========================================= */
-/* ESCRITORIO MEDIANO */
-/* ========================================= */
-
-@media screen and (max-width: 1200px){
-
-    .productos_contenedor{
-        grid-template-columns: repeat(4, 1fr);
-    }
-
+.producto__boton:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 14px rgba(0, 191, 255, 0.35);
 }
 
-/* ========================================= */
-/* TABLET */
-/* ========================================= */
 
-@media screen and (max-width: 992px){
-
-    .productos_contenedor{
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 10px;
-    }
-
+/* ================================================
+   AVISO DE CONTACTO
+   Banner oscuro al final para cuando no encuentran algo
+   ================================================ */
+.contacto__aviso {
+    background-color: #244c74;
+    padding: 50px 40px;
+    text-align: center;
+    color: #fff;
 }
 
-/* ========================================= */
-/* TABLET PEQUEÑA */
-/* ========================================= */
-
-@media screen and (max-width: 768px){
-
-    .productos{
-        padding: 30px 15px;
-    }
-
-    .productos_contenedor{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        justify-items: center;
-    }
-
-    .producto{
-        max-width: 100%;
-    }
-
-    .producto h2{
-        font-size: 17px;
-    }
-
+.contacto__aviso h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
 }
 
-/* ========================================= */
-/* MOVIL */
-/* ========================================= */
-
-@media screen and (max-width: 480px){
-
-    .encabezado{
-        padding: 10px;
-        height: auto;
-    }
-
-    .productos_contenedor{
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .producto{
-        width: 100%;
-        max-width: 380px;
-        margin: auto;
-    }
-
-    .productos h1{
-        font-size: 28px;
-    }
-
-    .producto h2{
-        font-size: 16px;
-    }
-
-    .producto p{
-        font-size: 14px;
-    }
-
+.contacto__aviso p {
+    font-size: 1rem;
+    color: #a8d8f0;
+    margin-bottom: 28px;
 }
 
-/* ========================================= */
-/* MOVILES MUY PEQUEÑOS */
-/* ========================================= */
+/* Fila con los dos botones de contacto */
+.contacto__botones {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
 
-@media screen and (max-width: 300px){
+/* Botón de llamada telefónica */
+.boton__telefono {
+    background-color: #fff;
+    color: #244c74;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
 
-    .productos{
-        padding: 15px 8px;
-    }
+.boton__telefono:hover {
+    background-color: #e8f6ff;
+    transform: scale(1.04);
+}
 
-    .productos h1{
-        font-size: 22px;
-    }
+/* Botón de agendar cita */
+.boton__cita {
+    background-color: #00BFFF;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
 
-    .producto{
-        padding: 15px;
-    }
+.boton__cita:hover {
+    background-color: #45cdfa;
+    transform: scale(1.04);
+}
 
-    .producto h2{
-        font-size: 14px;
-    }
 
-    .producto p{
-        font-size: 12px;
-    }
+/* ================================================
+   PIE DE PÁGINA
+   4 columnas: marca, categorías, links, contacto
+   ================================================ */
+.pie__pagina {
+    background-color: #244c74;
+    color: #fff;
+    padding: 50px 60px 0;
+}
 
-    .precio{
-        font-size: 14px;
-    }
+/* Cuadrícula de 4 columnas para el pie */
+.pie__contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
 
-    .icono{
-        font-size: 30px;
-    }
+/* Encabezado de cada columna */
+.pie__columna h3 {
+    font-size: 1rem;
+    color: #45cdfa;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
+.pie__columna p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #cde8f5;
+}
+
+/* Lista de enlaces del pie */
+.pie__columna ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pie__columna ul li,
+.pie__columna ul a {
+    font-size: 0.88rem;
+    color: #cde8f5;
+    transition: color 0.2s;
+}
+
+.pie__columna ul a:hover {
+    color: #45cdfa;
+}
+
+/* Botones de redes sociales */
+.pie__redes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.pie__redes a {
+    background-color: #45cdfa;
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.pie__redes a:hover {
+    background-color: #00BFFF;
+    transform: scale(1.05);
+}
+
+/* Línea de derechos al fondo */
+.pie__derechos {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.5);
 }
