@@ -674,7 +674,7 @@ button.boton__primario {
             rgba(253, 246, 238, 0.75) 50%,
             rgba(180, 225, 245, 0.70) 100%
         ),
-        url('imagenes/IMAGEN\ FONDO.jpg');
+        url('./imagenes/perros_fondos.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
