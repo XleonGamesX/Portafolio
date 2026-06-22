@@ -1,15 +1,3 @@
-
-/* ================================================
-   ESTILOS — PATITAS FELICES (PÁGINA PRINCIPAL)
-   Todas las clases están en español.
-   Sin position ni JavaScript.
-   ================================================ */
-
-
-/* ================================================
-   RESET BÁSICO
-   Elimina márgenes y paddings por defecto del navegador
-   ================================================ */
 * {
     margin: 0;
     padding: 0;
@@ -36,13 +24,6 @@ img {
     max-width: 100%;
 }
 
-
-/* ================================================
-   BOTONES REUTILIZABLES
-   Se usan en varias secciones del sitio
-   ================================================ */
-
-/* Botón principal — fondo azul sólido */
 .boton__primario {
     display: inline-block;
     background-color: #00BFFF;
@@ -60,14 +41,12 @@ img {
     transform: scale(1.05);
 }
 
-/* Cuando el boton__primario es un <button> ocupa todo el ancho */
 button.boton__primario {
     width: 100%;
     font-size: 1rem;
     padding: 12px;
 }
 
-/* Botón secundario — fondo degradado azul */
 .boton__secundario {
     display: inline-block;
     background: linear-gradient(135deg, #4facfe, #00c6ff);
@@ -85,48 +64,34 @@ button.boton__primario {
     transform: scale(1.05);
 }
 
-
-/* ================================================
-   TÍTULOS DE SECCIÓN
-   Reutilizados en múltiples secciones
-   ================================================ */
 .titulo__seccion {
     font-size: 2rem;
     color: #244c74;
     margin-bottom: 36px;
 }
 
-/* Agrega alineación centrada cuando se combina con .centrado */
 .centrado {
     text-align: center;
 }
 
-/* Párrafo de apoyo centrado bajo un título */
 .texto__centrado {
     text-align: center;
     color: #666;
     margin-bottom: 24px;
 }
 
-
-/* ================================================
-   ENCABEZADO
-   Barra superior fija con logo, navegación y botón
-   ================================================ */
 .encabezado {
     background-color: #fdf6ee;
     box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
     padding: 14px 40px;
 }
 
-/* Fila que alinea marca, nav y botón en horizontal */
 .encabezado__contenido {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* Logo + nombre — ocupa el espacio sobrante a la izquierda */
 .encabezado__marca {
     display: flex;
     align-items: center;
@@ -140,7 +105,6 @@ button.boton__primario {
     object-fit: contain;
 }
 
-/* "Patitas" en azul claro, "Felices" en azul oscuro */
 .encabezado__nombre {
     display: flex;
     gap: 5px;
@@ -153,7 +117,6 @@ button.boton__primario {
     color: #244c74;
 }
 
-/* Lista de navegación en fila */
 .encabezado__nav ul {
     display: flex;
     gap: 24px;
@@ -169,7 +132,6 @@ button.boton__primario {
     color: #00BFFF;
 }
 
-/* Botón de llamado a la acción del encabezado */
 .encabezado__boton {
     background-color: #00BFFF;
     color: #fff;
@@ -185,11 +147,6 @@ button.boton__primario {
     transform: scale(1.05);
 }
 
-
-/* ================================================
-   PORTADA (HERO)
-   Imagen de fondo con texto e overlay degradado
-   ================================================ */
 .portada {
     background-image: url('imagenes/veterinaria1.jpg');
     background-size: cover;
@@ -199,7 +156,6 @@ button.boton__primario {
     align-items: center;
 }
 
-/* Overlay semitransparente que oscurece la imagen */
 .portada__fondo {
     width: 100%;
     min-height: 520px;
@@ -209,7 +165,6 @@ button.boton__primario {
     padding: 60px 80px;
 }
 
-/* Bloque de texto centrado a la izquierda */
 .portada__contenido {
     max-width: 560px;
     color: #fff;
@@ -250,11 +205,6 @@ button.boton__primario {
     transform: scale(1.05);
 }
 
-
-/* ================================================
-   NOSOTROS
-   Dos columnas: imagen izquierda, texto derecha
-   ================================================ */
 .nosotros {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
@@ -264,7 +214,6 @@ button.boton__primario {
     background-color: #fdf6ee;
 }
 
-/* Caja azul suave que enmarca el logo */
 .nosotros__imagen {
     display: flex;
     justify-content: center;
@@ -293,11 +242,6 @@ button.boton__primario {
     margin-top: 8px;
 }
 
-
-/* ================================================
-   VETERINARIOS
-   Cuadrícula de 4 tarjetas con foto y descripción
-   ================================================ */
 .veterinarios__seccion {
     padding: 60px 80px;
     background-color: #fff;
@@ -309,7 +253,6 @@ button.boton__primario {
     gap: 24px;
 }
 
-/* Tarjeta de cada veterinario */
 .veterinario__tarjeta {
     border: 2px solid #e0f4ff;
     border-radius: 14px;
@@ -325,14 +268,12 @@ button.boton__primario {
     box-shadow: 0 8px 24px rgba(0, 191, 255, 0.2);
 }
 
-/* Foto del veterinario */
 .veterinario__tarjeta img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
-/* Bloque de texto del veterinario */
 .veterinario__info {
     padding: 16px;
     display: flex;
@@ -361,11 +302,6 @@ button.boton__primario {
     flex-grow: 1;
 }
 
-
-/* ================================================
-   SERVICIOS
-   Cuadrícula de 4 tarjetas con imagen real y descripción
-   ================================================ */
 .servicios__seccion {
     padding: 60px 80px;
     background-color: #f1faff;
@@ -377,7 +313,6 @@ button.boton__primario {
     gap: 28px;
 }
 
-/* Tarjeta de cada servicio */
 .servicio__tarjeta {
     background-color: #fff;
     border-radius: 18px;
@@ -393,7 +328,6 @@ button.boton__primario {
     box-shadow: 0 10px 28px rgba(0, 191, 255, 0.2);
 }
 
-/* Imagen del servicio — ocupa la parte superior de la tarjeta */
 .servicio__imagen {
     width: 100%;
     height: 180px;
@@ -406,7 +340,6 @@ button.boton__primario {
     transform: scale(1.05);
 }
 
-/* Bloque de texto con título, descripción y botón */
 .servicio__cuerpo {
     padding: 20px 22px 24px;
     display: flex;
@@ -429,11 +362,6 @@ button.boton__primario {
     flex-grow: 1;
 }
 
-
-/* ================================================
-   AVISO DE URGENCIAS
-   Banner rojo/degradado con botón de llamada llamativo
-   ================================================ */
 .aviso__urgencias {
     background: linear-gradient(135deg, #244c74, #00BFFF);
     padding: 50px 40px;
@@ -452,19 +380,17 @@ button.boton__primario {
     opacity: 0.9;
 }
 
-/* ── Botón de teléfono llamativo ── */
 .aviso__boton__telefono {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
-    background-color: #e63946;          /* rojo urgencia */
+    background-color: #e63946;       
     color: #fff;
     padding: 18px 48px;
     border-radius: 14px;
     text-decoration: none;
     box-shadow: 0 6px 24px rgba(230, 57, 70, 0.5);
-    /* Animación de pulso: llama la atención sin JavaScript */
     animation: pulso__telefono 2s ease-in-out infinite;
     transition: background-color 0.2s, transform 0.2s;
 }
@@ -472,15 +398,13 @@ button.boton__primario {
 .aviso__boton__telefono:hover {
     background-color: #c1121f;
     transform: scale(1.06);
-    animation: none;                    /* detiene el pulso al pasar el cursor */
+    animation: none;                  
 }
 
-/* Icono del teléfono grande */
 .aviso__icono__llamada {
     font-size: 2rem;
 }
 
-/* Número principal grande y en negrita */
 .aviso__numero {
     font-size: 2rem;
     font-weight: bold;
@@ -488,7 +412,6 @@ button.boton__primario {
     line-height: 1;
 }
 
-/* Texto pequeño debajo del número */
 .aviso__etiqueta__llamada {
     font-size: 0.85rem;
     opacity: 0.9;
@@ -496,18 +419,12 @@ button.boton__primario {
     letter-spacing: 1px;
 }
 
-/* Animación de pulso: escala + sombra */
 @keyframes pulso__telefono {
     0%   { box-shadow: 0 6px 24px rgba(230, 57, 70, 0.5); transform: scale(1); }
     50%  { box-shadow: 0 8px 36px rgba(230, 57, 70, 0.8); transform: scale(1.04); }
     100% { box-shadow: 0 6px 24px rgba(230, 57, 70, 0.5); transform: scale(1); }
 }
 
-
-/* ================================================
-   VIDEOS
-   Cuadrícula de 4 videos de mascotas
-   ================================================ */
 .videos__seccion {
     padding: 60px 80px;
     background-color: #fdf6ee;
@@ -519,7 +436,6 @@ button.boton__primario {
     gap: 24px;
 }
 
-/* Tarjeta de cada video */
 .video__tarjeta {
     background-color: #fff;
     border-radius: 12px;
@@ -546,13 +462,6 @@ button.boton__primario {
     padding: 0 14px;
 }
 
-
-/* ================================================
-   BLOG
-   Cuadrícula de 4 artículos con imagen y fecha.
-   El texto completo se despliega con <details> nativo
-   del HTML, sin necesidad de JavaScript.
-   ================================================ */
 .blog__seccion {
     padding: 60px 80px;
     background-color: #fff;
@@ -564,7 +473,6 @@ button.boton__primario {
     gap: 24px;
 }
 
-/* Tarjeta de cada artículo del blog */
 .blog__tarjeta {
     border-radius: 14px;
     overflow: hidden;
@@ -579,14 +487,12 @@ button.boton__primario {
     transform: translateY(-4px);
 }
 
-/* Imagen de portada del artículo */
 .blog__tarjeta img {
     width: 100%;
     height: 160px;
     object-fit: cover;
 }
 
-/* Bloque de texto del artículo */
 .blog__info {
     padding: 16px;
     display: flex;
@@ -594,7 +500,6 @@ button.boton__primario {
     flex-grow: 1;
 }
 
-/* Fecha del artículo en gris claro */
 .blog__fecha {
     font-size: 0.78rem;
     color: #aaa;
@@ -614,24 +519,21 @@ button.boton__primario {
     line-height: 1.5;
 }
 
-/* ── Desplegable <details> ── */
 .blog__detalle {
     margin-top: 12px;
 }
 
-/* El <summary> actúa como el botón "Leer más" */
 .blog__detalle > summary.blog__enlace {
     display: inline-block;
     color: #00BFFF;
     font-size: 0.88rem;
     font-weight: bold;
     cursor: pointer;
-    list-style: none;           /* quita el triángulo por defecto */
+    list-style: none;          
     transition: color 0.2s;
     user-select: none;
 }
 
-/* Quita el triángulo en webkit */
 .blog__detalle > summary.blog__enlace::-webkit-details-marker {
     display: none;
 }
@@ -640,12 +542,10 @@ button.boton__primario {
     color: #244c74;
 }
 
-/* Cuando está abierto cambia el texto a "Cerrar ↑" usando CSS */
 .blog__detalle[open] > summary.blog__enlace {
     color: #244c74;
 }
 
-/* Bloque de texto completo que aparece al abrir */
 .blog__texto__completo {
     margin-top: 12px;
     padding: 14px;
@@ -667,17 +567,13 @@ button.boton__primario {
     margin-bottom: 0;
 }
 
-/* Animación de entrada del contenido desplegado */
+
 @keyframes desplegar {
     from { opacity: 0; transform: translateY(-6px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
 
-/* ================================================
-   ADOPCIÓN
-   Mascotas en adopción con foto y descripción
-   ================================================ */
 .adopcion__seccion {
     padding: 60px 80px;
     background-color: #eefbea;
@@ -689,7 +585,6 @@ button.boton__primario {
     gap: 28px;
 }
 
-/* Tarjeta de cada mascota en adopción */
 .adopcion__tarjeta {
     background-color: #fff;
     border-radius: 14px;
@@ -704,14 +599,12 @@ button.boton__primario {
     transform: translateY(-5px);
 }
 
-/* Foto de la mascota */
 .adopcion__tarjeta img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-/* Bloque de texto con nombre, edad y descripción */
 .adopcion__info {
     padding: 18px;
     display: flex;
@@ -725,7 +618,6 @@ button.boton__primario {
     margin-bottom: 4px;
 }
 
-/* Edad en azul */
 .adopcion__info span {
     font-size: 0.85rem;
     color: #00BFFF;
@@ -741,11 +633,6 @@ button.boton__primario {
     margin-bottom: 14px;
 }
 
-
-/* ================================================
-   TESTIMONIOS
-   Tarjetas con citas de clientes satisfechos
-   ================================================ */
 .testimonios__seccion {
     padding: 60px 80px;
     background-color: #fff7e6;
@@ -757,7 +644,6 @@ button.boton__primario {
     gap: 24px;
 }
 
-/* Tarjeta con borde izquierdo azul */
 .testimonio__tarjeta {
     background-color: #fff;
     border-radius: 14px;
@@ -779,18 +665,9 @@ button.boton__primario {
     font-size: 0.9rem;
 }
 
-
-/* ================================================
-   FORMULARIO DE CITA
-   Fondo: foto de grupo de mascotas sobre azul.
-   Un overlay degradado suaviza la imagen para que
-   el formulario blanco quede bien legible encima.
-   ================================================ */
 .formulario__seccion {
     padding: 60px 80px;
     background-image:
-        /* Overlay: parte superior más opaca (título legible),
-           parte inferior más transparente (mascotas visibles) */
         linear-gradient(
             to bottom,
             rgba(253, 246, 238, 0.92) 0%,
@@ -803,7 +680,6 @@ button.boton__primario {
     background-repeat: no-repeat;
 }
 
-/* Texto descriptivo bajo el título */
 .formulario__descripcion {
     text-align: center;
     color: #666;
@@ -811,7 +687,6 @@ button.boton__primario {
     margin-top: -16px;
 }
 
-/* Caja del formulario centrada */
 .formulario {
     max-width: 680px;
     margin: 0 auto;
@@ -824,7 +699,6 @@ button.boton__primario {
     gap: 20px;
 }
 
-/* Cada campo: label arriba, input abajo */
 .campo {
     display: flex;
     flex-direction: column;
@@ -837,7 +711,6 @@ button.boton__primario {
     font-size: 0.9rem;
 }
 
-/* Estilos compartidos para input, select y textarea */
 .campo input,
 .campo select,
 .campo textarea {
@@ -857,22 +730,15 @@ button.boton__primario {
     border-color: #00BFFF;
 }
 
-/* El textarea se puede redimensionar solo verticalmente */
 .campo textarea {
     resize: vertical;
 }
 
-
-/* ================================================
-   MAPA DE UBICACIÓN
-   Iframe de Google Maps con bordes redondeados
-   ================================================ */
 .ubicacion__seccion {
     padding: 60px 80px;
     background-color: #f0f4f8;
 }
 
-/* Contenedor del mapa con sombra */
 .mapa__contenedor {
     margin-top: 16px;
     border-radius: 14px;
@@ -887,18 +753,12 @@ button.boton__primario {
     display: block;
 }
 
-
-/* ================================================
-   PIE DE PÁGINA
-   4 columnas: marca, servicios, información, contacto
-   ================================================ */
 .pie__pagina {
     background-color: #244c74;
     color: #fff;
     padding: 50px 80px 0;
 }
 
-/* Cuadrícula del pie: columna ancha + 3 columnas iguales */
 .pie__contenido {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -907,7 +767,6 @@ button.boton__primario {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Título de cada columna del pie */
 .pie__columna h3 {
     font-size: 1rem;
     color: #45cdfa;
@@ -922,7 +781,6 @@ button.boton__primario {
     color: #cde8f5;
 }
 
-/* Lista de enlaces del pie */
 .pie__columna ul {
     display: flex;
     flex-direction: column;
@@ -940,7 +798,6 @@ button.boton__primario {
     color: #45cdfa;
 }
 
-/* Botones de redes sociales */
 .pie__redes {
     display: flex;
     gap: 10px;
@@ -962,7 +819,6 @@ button.boton__primario {
     transform: scale(1.05);
 }
 
-/* Línea de derechos reservados */
 .pie__derechos {
     text-align: center;
     padding: 20px 0;
