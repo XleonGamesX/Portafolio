@@ -1,3 +1,14 @@
+/* ================================================
+   ESTILOS — TIENDA PATITAS FELICES
+   Todas las clases están en español.
+   Sin position ni JavaScript.
+   ================================================ */
+
+
+/* ================================================
+   RESET BÁSICO
+   Elimina márgenes y paddings por defecto del navegador
+   ================================================ */
 * {
     margin: 0;
     padding: 0;
