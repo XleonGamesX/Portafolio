@@ -163,7 +163,7 @@ button.boton__primario {
         url("imagenes/veterinaria1.jpg");
 
     background-repeat: no-repeat;
-    background-size: auto 100%; /* Mantiene la imagen completa en altura */
+    background-size: auto 100%;
     background-position: right center;
 }
 
