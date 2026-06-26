@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,9 +7,15 @@
     <title>Tienda — Patitas Felices</title>
 </head>
 <body>
+
+    <!-- ========================================
+         ENCABEZADO
+         Logo + nombre de la veterinaria + nav + botón cita
+    ======================================== -->
     <header class="encabezado">
         <div class="encabezado__contenido">
 
+            <!-- Logo y nombre -->
             <div class="encabezado__marca">
                 <img src="../imagenes/log_veterinaria.png" alt="Logo Patitas Felices" class="encabezado__logo">
                 <div class="encabezado__nombre">
@@ -19,6 +24,7 @@
                 </div>
             </div>
 
+            <!-- Menú de navegación -->
             <nav class="encabezado__nav">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
@@ -34,12 +40,25 @@
 
         </div>
     </header>
-    
+
+
+    <!-- ========================================
+         PORTADA DE LA TIENDA
+         Título y frase con fondo degradado azul
+    ======================================== -->
     <section class="tienda__portada">
         <h1>Nuestra Tienda</h1>
         <p>Tu mascota hace parte de nosotros</p>
     </section>
 
+
+    <!-- ========================================
+         BARRA DE FILTROS
+         Botones para filtrar los productos por categoría.
+         Cada botón apunta a un ancla (#cat-xxx) que está
+         dentro del grid. El CSS usa :target para mostrar
+         solo los productos de esa categoría.
+    ======================================== -->
     <section class="filtros__barra">
         <div class="filtros__contenido">
 
@@ -54,13 +73,21 @@
                 <a href="#cat-juguetes"     class="filtro__boton">Juguetes</a>
             </div>
 
+            <!-- Contador dinámico: el CSS actualiza este texto según el filtro activo -->
             <span class="filtros__contador"></span>
 
         </div>
     </section>
 
+
+    <!-- ========================================
+         SECCIÓN DE PRODUCTOS
+         Anclas invisibles para el sistema de filtros CSS.
+         Están ANTES del grid para que el selector ~ funcione.
+    ======================================== -->
     <section class="tienda__seccion">
 
+        <!-- Anclas de filtro (no se ven, solo son puntos de referencia) -->
         <div id="cat-todos"></div>
         <div id="cat-alimentacion"></div>
         <div id="cat-higiene"></div>
@@ -68,8 +95,11 @@
         <div id="cat-accesorios"></div>
         <div id="cat-juguetes"></div>
 
+        <!-- Cuadrícula de tarjetas de productos -->
         <div class="productos__cuadricula">
 
+
+            <!-- ===== ALIMENTACIÓN (3 productos) ===== -->
 
             <div class="producto__tarjeta tarjeta--alimentacion">
                 <div class="producto__imagen__marco">
@@ -113,9 +143,12 @@
                 </div>
             </div>
 
+
+            <!-- ===== HIGIENE (3 productos) ===== -->
+
             <div class="producto__tarjeta tarjeta--higiene">
                 <div class="producto__imagen__marco">
-                    <img src="https://images.unsplash.com/photo-1584552532191-ab7a5b86a40f?w=400&q=80"
+                    <img src="https://animall.com.mx/cdn/shop/files/Captura_de_pantalla_2026-02-13_170243.png?v=1771023786"
                          alt="Shampoo veterinario" class="producto__imagen">
                     <span class="producto__etiqueta etiqueta--higiene">Higiene</span>
                 </div>
@@ -155,9 +188,12 @@
                 </div>
             </div>
 
+
+            <!-- ===== SALUD (3 productos) ===== -->
+
             <div class="producto__tarjeta tarjeta--salud">
                 <div class="producto__imagen__marco">
-                    <img src="https://images.unsplash.com/photo-1550583723-9f9c28966e1c?w=400&q=80"
+                    <img src="https://farmex.cl/cdn/shop/files/naxpetr-raza-grande-30-mg-x-10-comprimidos-analgesico-para-perros-drag-pharma-210655.jpg?v=1728607890&width=713"
                          alt="Medicamentos veterinarios" class="producto__imagen">
                     <span class="producto__etiqueta etiqueta--salud">Salud</span>
                 </div>
@@ -171,7 +207,7 @@
 
             <div class="producto__tarjeta tarjeta--salud">
                 <div class="producto__imagen__marco">
-                    <img src="https://images.unsplash.com/photo-1612276529731-4b21494e6d9e?w=400&q=80"
+                    <img src="https://m.media-amazon.com/images/I/61a3tQDo-sL._AC_SX679_.jpg"
                          alt="Suplementos para mascotas" class="producto__imagen">
                     <span class="producto__etiqueta etiqueta--salud">Salud</span>
                 </div>
@@ -196,6 +232,9 @@
                     <a href="../index.html#cita" class="producto__boton">Consultar precio</a>
                 </div>
             </div>
+
+
+            <!-- ===== ACCESORIOS (4 productos) ===== -->
 
             <div class="producto__tarjeta tarjeta--accesorios">
                 <div class="producto__imagen__marco">
@@ -227,7 +266,7 @@
 
             <div class="producto__tarjeta tarjeta--accesorios">
                 <div class="producto__imagen__marco">
-                    <img src="https://images.unsplash.com/photo-1607923432780-7a9c30adcb73?w=400&q=80"
+                    <img src="https://imgs.search.brave.com/1jSUvC2HCEId49AchbZGQSJ6dvK8-FHoVHBb2IUGnTw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9rYW51/LnBldC9jZG4vc2hv/cC9maWxlcy9QT1JU/QURBSU5JQ0lBTFBS/T0RVQ1RPU185Xzcy/YmJkZTU0LTM4MGYt/NDFlNy04YmFjLTc3/OTAwNTAxZGFkZS5q/cGc_dj0xNzM2OTgx/OTc2JndpZHRoPTUz/Mw"
                          alt="Comederos y bebederos" class="producto__imagen">
                     <span class="producto__etiqueta etiqueta--accesorios">Accesorios</span>
                 </div>
@@ -252,6 +291,9 @@
                     <a href="../index.html#cita" class="producto__boton">Consultar precio</a>
                 </div>
             </div>
+
+
+            <!-- ===== JUGUETES (3 productos) ===== -->
 
             <div class="producto__tarjeta tarjeta--juguetes">
                 <div class="producto__imagen__marco">
@@ -296,9 +338,14 @@
             </div>
 
 
-        </div>
+        </div><!-- fin productos__cuadricula -->
     </section>
-    
+
+
+    <!-- ========================================
+         AVISO DE CONTACTO
+         Sección final para cuando no encuentran un producto
+    ======================================== -->
     <section class="contacto__aviso">
         <h2>¿No encuentras lo que buscas?</h2>
         <p>Contáctanos y te ayudamos a conseguir el producto ideal para tu mascota.</p>
@@ -308,6 +355,11 @@
         </div>
     </section>
 
+
+    <!-- ========================================
+         PIE DE PÁGINA
+         4 columnas: marca, categorías, links, contacto
+    ======================================== -->
     <footer class="pie__pagina">
         <div class="pie__contenido">
 
