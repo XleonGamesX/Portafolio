@@ -147,16 +147,25 @@ button.boton__primario {
     transform: scale(1.05);
 }
 
-.portada {
-    background-image:
-        linear-gradient(rgba(18, 77, 140, 0.65), rgba(18, 77, 140, 0.65)),
-        url("imagenes/veterinaria1.jpg");
-    background-size: contain;
-    background-position: right center;
-    background-repeat: no-repeat;
-    min-height: auto;
+.portada{
+    min-height: 520px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background: linear-gradient(to right,
+        rgba(36,76,116,.85) 40%,
+        rgba(0,191,255,.20) 100%);
+}
+
+.portada__imagen{
+    width: 45%;
+}
+
+.portada__imagen img{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .portada__fondo {
@@ -168,8 +177,8 @@ button.boton__primario {
     padding: 60px 80px;
 }
 
-.portada__contenido {
-    max-width: 560px;
+.portada__contenido{
+    width: 50%;
     color: #fff;
 }
 
