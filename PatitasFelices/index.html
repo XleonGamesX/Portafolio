@@ -1,464 +1,843 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <title>Patitas Felices</title>
-</head>
-<body>
-    <header class="encabezado" id="inicio">
-        <div class="encabezado__contenido">
-
-            <div class="encabezado__marca">
-                <img src="imagenes/log_veterinaria.png" alt="Logo Patitas Felices" class="encabezado__logo">
-                <div class="encabezado__nombre">
-                    <span>Patitas</span>
-                    <strong>Felices</strong>
-                </div>
-            </div>
-
-            <nav class="encabezado__nav">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="/Productos/index.html">Productos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <a href="#cita" class="encabezado__boton">Agenda tu cita</a>
-
-        </div>
-    </header>
-
-    <section class="portada">
-
-    <div class="portada__contenido">
-        <h1 class="portada__titulo">Bienvenidos a Patitas Felices</h1>
-        <p class="portada__subtitulo">
-            "Experiencia médica que inspira confianza"
-        </p>
-        <p class="portada__descripcion">
-            Cuidamos a tus mascotas con amor y profesionalismo. Nuestro equipo está comprometido a brindar la mejor atención para tu compañero peludo.
-        </p>
-        <a href="#cita" class="portada__boton">Agenda tu cita</a>
-    </div>
-
-    <div class="portada__imagen">
-        <img src="imagenes/veterinaria1.jpg" alt="Veterinaria atendiendo una mascota">
-    </div>
-
-</section>
-
-    <section class="nosotros" id="nosotros">
-        <div class="nosotros__imagen">
-            <img src="imagenes/log_veterinaria.png" alt="Patitas Felices">
-        </div>
-        <div class="nosotros__texto">
-            <h2 class="titulo__seccion">¿Quiénes somos?</h2>
-            <p>En Patitas Felices nos dedicamos a cuidar de tus mascotas con amor y profesionalismo. Nuestro equipo de veterinarios altamente capacitados está comprometido a brindar la mejor atención médica para tu compañero peludo.</p>
-            <p>Ofrecemos una amplia gama de servicios, desde consultas de rutina hasta tratamientos especializados, todo en un ambiente cálido y acogedor.</p>
-            <a href="#cita" class="boton__primario">Contáctanos</a>
-        </div>
-    </section>
-
-    <section class="veterinarios__seccion">
-        <h2 class="titulo__seccion centrado">Nuestros Veterinarios</h2>
-        <div class="veterinarios__cuadricula">
-
-            <div class="veterinario__tarjeta">
-                <img src="imagenes/veterinario1.jpg" alt="Dr. Andrés Martínez">
-                <div class="veterinario__info">
-                    <h3>Dr. Andrés Martínez</h3>
-                    <span>Urgencias y cuidado general</span>
-                    <p>Andrés disfruta ayudar a las mascotas cuando más lo necesitan. Transmite calma y confianza, explicando todo de forma sencilla.</p>
-                </div>
-            </div>
-
-            <div class="veterinario__tarjeta">
-                <img src="imagenes/veterinaria1.jpg" alt="Dra. Laura Gómez">
-                <div class="veterinario__info">
-                    <h3>Dra. Laura Gómez</h3>
-                    <span>Especialista en mascotas pequeñas</span>
-                    <p>Laura tiene más de 8 años acompañando a perros y gatos. Es conocida por su paciencia y trato cálido y cercano.</p>
-                </div>
-            </div>
-
-            <div class="veterinario__tarjeta">
-                <img src="imagenes/veterinario2.jpg" alt="Dra. Camila Rojas">
-                <div class="veterinario__info">
-                    <h3>Dra. Camila Rojas</h3>
-                    <span>Bienestar y cuidado preventivo</span>
-                    <p>Camila se enfoca en prevenir enfermedades y mantener a las mascotas felices. Crea vínculos especiales con animales y familias.</p>
-                </div>
-            </div>
-
-            <div class="veterinario__tarjeta">
-                <img src="imagenes/veterinaria2.jpg" alt="Dr. Felipe Torres">
-                <div class="veterinario__info">
-                    <h3>Dr. Felipe Torres</h3>
-                    <span>Animales exóticos</span>
-                    <p>Felipe tiene experiencia atendiendo aves, conejos, hámsters y otras mascotas poco comunes con atención personalizada.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="servicios__seccion" id="servicios">
-        <h2 class="titulo__seccion centrado">Nuestros Servicios</h2>
-        <div class="servicios__cuadricula">
-
-            <div class="servicio__tarjeta">
-                <img
-                    src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=600&q=80"
-                    alt="Consulta General veterinaria"
-                    class="servicio__imagen">
-                <div class="servicio__cuerpo">
-                    <h3>Consulta General</h3>
-                    <p>Evaluamos la salud de tu mascota y ofrecemos diagnósticos y recomendaciones personalizadas.</p>
-                    <a href="#cita" class="boton__secundario">Más información</a>
-                </div>
-            </div>
-
-            <div class="servicio__tarjeta">
-                <img
-                    src="https://www.lavanguardia.com/files/image_990_484/uploads/2019/10/25/5fa52ef8267ad.jpeg"
-                    alt="Vacunación de mascotas"
-                    class="servicio__imagen">
-                <div class="servicio__cuerpo">
-                    <h3>Vacunación</h3>
-                    <p>Protege a tu mascota con vacunas esenciales para prevenir enfermedades.</p>
-                    <a href="#cita" class="boton__secundario">Más información</a>
-                </div>
-            </div>
-
-            <div class="servicio__tarjeta">
-                <img
-                    src="https://veteriastur.com/wp-content/uploads/2019/06/iStock-868086578.jpg"
-                    alt="Cirugía veterinaria"
-                    class="servicio__imagen">
-                <div class="servicio__cuerpo">
-                    <h3>Cirugía</h3>
-                    <p>Procedimientos quirúrgicos seguros realizados por especialistas veterinarios.</p>
-                    <a href="#cita" class="boton__secundario">Más información</a>
-                </div>
-            </div>
-
-            <div class="servicio__tarjeta">
-                <img
-                    src="https://us.123rf.com/450wm/pavlik18/pavlik181307/pavlik18130700040/20689296-s%C3%ADmbolo-de-veterinaria-con-una-imagen-de-un-gato-y-un-perro.jpg?ver=6"
-                    alt="Emergencias veterinarias 24/7"
-                    class="servicio__imagen">
-                <div class="servicio__cuerpo">
-                    <h3>Emergencias 24/7</h3>
-                    <p>Atención veterinaria inmediata disponible las 24 horas del día.</p>
-                    <a href="#cita" class="boton__secundario">Más información</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="aviso__urgencias">
-        <h2>Urgencias 24/7</h2>
-        <p>Estamos disponibles las 24 horas para atender cualquier emergencia veterinaria.</p>
-
-        <a href="tel:3204567890" class="aviso__boton__telefono">
-            <span class="aviso__icono__llamada">📲</span>
-            <span class="aviso__numero">320 456 7890</span>
-            <span class="aviso__etiqueta__llamada">Llámanos ahora</span>
-        </a>
-    </section>
-
-    <section class="videos__seccion">
-        <h2 class="titulo__seccion centrado">Videos de nuestras mascotas</h2>
-        <div class="videos__cuadricula">
-
-            <div class="video__tarjeta">
-                <video controls width="100%">
-                    <source src="https://www.dropbox.com/scl/fi/54gfourakq3t19abdkih1/Principal.mp4?rlkey=j3hls28ieq2odh5jgavwd906y&raw=1" type="video/mp4">
-                </video>
-                <h3>Consulta veterinaria</h3>
-                <p>Video sobre una consulta veterinaria.</p>
-            </div>
-
-            <div class="video__tarjeta">
-                <video autoplay muted loop width="100%">
-                    <source src="https://www.dropbox.com/scl/fi/rd5vfybtya42qnvd6mnkj/cuidado_mascota.mp4?rlkey=4hk17iri29xzpvhp064oz2ukz&raw=1" type="video/mp4">
-                    </video>
-                <h3>como cuidar a tu mascota </h3>
-                <p>Mascota disfrutando en el parque.</p>
-            </div>
-
-            <div class="video__tarjeta">
-                <video autoplay muted loop width="100%">
-                   <source src="https://www.dropbox.com/scl/fi/fnzxyeq0dkye75xg10ok1/Cu-nto-Duerme-un-Gato-al-D-a-Cachorro-Adulto-y-Anciano.mp4?rlkey=ozter77dy8coeg4g3bok12lvr&raw=1" type="video/mp4">
-                </video>
-                <h3>cuanto duerme un gato<h3>
-                <p>Momento tranquilo de uno de nuestros pacientes.</p>
-            </div>
-
-            <div class="video__tarjeta">
-                <video autoplay muted loop width="100%">
-                    <source src="https://www.dropbox.com/scl/fi/7tv061rrk3k2hkoye7bq5/Limpiar-perro.mp4?rlkey=uxz0vapbja1h6jnlgemih2fvw&raw=1" type="video/mp4">
-                </video>
-                <h3>limpiar a tu mascota</h3>
-                <p>Cuidado e higiene para perros y gatos.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="blog__seccion">
-        <h2 class="titulo__seccion centrado">Blog de Cuidados</h2>
-        <div class="blog__cuadricula">
-
-            <article class="blog__tarjeta">
-                <img src="imagenes/perro_agua.jpg" alt="Cuidado de perros en verano">
-                <div class="blog__info">
-                    <span class="blog__fecha">15 Mayo 2026</span>
-                    <h3>Cómo cuidar a tu perro en verano</h3>
-                    <p>Consejos para mantener hidratado y saludable a tu perro durante días calurosos.</p>
-                    <!-- details despliega el texto completo al hacer clic en "Leer más" -->
-                    <details class="blog__detalle">
-                        <summary class="blog__enlace">Leer más →</summary>
-                        <div class="blog__texto__completo">
-                            <p>Durante el verano las altas temperaturas pueden ser peligrosas para tu perro. Asegúrate de que siempre tenga agua fresca disponible y evita los paseos en las horas de mayor calor (entre 12 pm y 4 pm).</p>
-                            <p>Nunca dejes a tu mascota encerrada en el carro. El suelo caliente puede quemar sus patas, así que camina sobre pasto o superficies frescas. Si notas que jadea excesivamente, busca sombra de inmediato y moja su cuerpo con agua tibia.</p>
-                            <p>Consulta con tu veterinario si tu perro es de raza braquicéfala (Bulldog, Pug, etc.), ya que son más propensos al golpe de calor.</p>
-                        </div>
-                    </details>
-                </div>
-            </article>
-
-            <article class="blog__tarjeta">
-                <img src="imagenes/vacuna_perro.jpg" alt="Vacunas">
-                <div class="blog__info">
-                    <span class="blog__fecha">10 Mayo 2026</span>
-                    <h3>Importancia de las vacunas</h3>
-                    <p>Las vacunas ayudan a prevenir enfermedades graves y mejoran la calidad de vida.</p>
-                    <details class="blog__detalle">
-                        <summary class="blog__enlace">Leer más →</summary>
-                        <div class="blog__texto__completo">
-                            <p>Vacunar a tu mascota es una de las decisiones más importantes que puedes tomar como dueño responsable. Las vacunas entrenan el sistema inmunológico para reconocer y combatir enfermedades como el moquillo, la rabia o el parvovirus.</p>
-                            <p>El calendario de vacunación comienza desde las 6-8 semanas de vida. Las vacunas básicas deben reforzarse anualmente o cada tres años según el tipo. Consulta con nuestros veterinarios para conocer el esquema ideal para tu mascota según su edad, raza y estilo de vida.</p>
-                            <p>Recuerda que las mascotas vacunadas también protegen a las personas que conviven con ellas.</p>
-                        </div>
-                    </details>
-                </div>
-            </article>
-
-            <article class="blog__tarjeta">
-                <img src="imagenes/gato_comiendo.jpg" alt="Gatos">
-                <div class="blog__info">
-                    <span class="blog__fecha">05 Mayo 2026</span>
-                    <h3>Alimentación saludable para gatos</h3>
-                    <p>Descubre qué alimentos son recomendados para mantener a tu gato fuerte y saludable.</p>
-                    <details class="blog__detalle">
-                        <summary class="blog__enlace">Leer más →</summary>
-                        <div class="blog__texto__completo">
-                            <p>Los gatos son carnívoros estrictos, lo que significa que necesitan proteína animal de alta calidad en su dieta. Elige alimentos balanceados específicos para gatos, ya sea húmedos o secos, que contengan carne como primer ingrediente.</p>
-                            <p>Evita darles alimentos como cebolla, ajo, uvas, chocolate o lácteos, ya que son tóxicos o difíciles de digerir para los felinos. El agua fresca es esencial: muchos gatos prefieren bebederos con flujo de agua.</p>
-                            <p>Si tu gato tiene más de 7 años, considera una dieta senior formulada para proteger riñones y articulaciones. Consulta con nuestros especialistas para recomendaciones personalizadas.</p>
-                        </div>
-                    </details>
-                </div>
-            </article>
-
-            <article class="blog__tarjeta">
-                <img src="imagenes/baño_perro.jpg" alt="Baño mascotas">
-                <div class="blog__info">
-                    <span class="blog__fecha">01 Mayo 2026</span>
-                    <h3>¿Cada cuánto bañar a tu mascota?</h3>
-                    <p>Consejos de higiene para perros y gatos según su raza y tipo de pelaje.</p>
-                    <details class="blog__detalle">
-                        <summary class="blog__enlace">Leer más →</summary>
-                        <div class="blog__texto__completo">
-                            <p>La frecuencia del baño depende del tipo de pelaje y el estilo de vida de tu mascota. En general, los perros de pelo corto pueden bañarse cada 4-6 semanas, mientras que los de pelo largo o rizado necesitan higiene más frecuente, cada 2-3 semanas.</p>
-                            <p>Los gatos raramente necesitan baños ya que se autolimpian, pero si están muy sucios o tienen pulgas, un baño con shampoo veterinario es necesario. Usa siempre productos formulados para mascotas; el shampoo humano puede irritar su piel.</p>
-                            <p>Sécalos bien después del baño, especialmente en días fríos, para evitar resfriados. En Patitas Felices ofrecemos servicio de baño y peluquería profesional.</p>
-                        </div>
-                    </details>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <section class="adopcion__seccion">
-        <h2 class="titulo__seccion centrado">Adopta una mascota</h2>
-        <div class="adopcion__cuadricula">
-
-            <div class="adopcion__tarjeta">
-                <img src="imagenes/perro1.jpg" alt="Max">
-                <div class="adopcion__info">
-                    <h3>Max</h3>
-                    <span>Edad: 2 años</span>
-                    <p>Max fue rescatado de la calle y busca una familia amorosa. Es juguetón y muy amigable.</p>
-                    <a href="#contacto" class="boton__primario">Adoptarme</a>
-                </div>
-            </div>
-
-            <div class="adopcion__tarjeta">
-                <img src="imagenes/gato1.jpg" alt="Luna">
-                <div class="adopcion__info">
-                    <h3>Luna</h3>
-                    <span>Edad: 1 año</span>
-                    <p>Luna es una gatita tranquila y cariñosa que disfruta dormir y recibir mucho cariño.</p>
-                    <a href="#contacto" class="boton__primario">Adoptarme</a>
-                </div>
-            </div>
-
-            <div class="adopcion__tarjeta">
-                <img src="imagenes/perro2.jpg" alt="Rocky">
-                <div class="adopcion__info">
-                    <h3>Rocky</h3>
-                    <span>Edad: 3 años</span>
-                    <p>Rocky es muy protector y le encanta jugar con niños. Está vacunado y listo para adopción.</p>
-                    <a href="#contacto" class="boton__primario">Adoptarme</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <section class="testimonios__seccion">
-        <h2 class="titulo__seccion centrado">Lo que dicen nuestros clientes</h2>
-        <div class="testimonios__cuadricula">
-
-            <div class="testimonio__tarjeta">
-                <p>"Gracias a Patitas Felices encontré a mi mejor amigo. Max ahora es parte de nuestra familia."</p>
-                <h4>— Carolina Pérez</h4>
-            </div>
-
-            <div class="testimonio__tarjeta">
-                <p>"La atención fue excelente y Luna se adaptó rápidamente a nuestro hogar."</p>
-                <h4>— Andrés Gómez</h4>
-            </div>
-
-            <div class="testimonio__tarjeta">
-                <p>"Rocky llegó a nuestra vida y cambió todo para mejor. Excelente servicio."</p>
-                <h4>— Laura Martínez</h4>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="formulario__seccion" id="cita">
-        <h2 class="titulo__seccion centrado">Agenda tu cita</h2>
-        <p class="formulario__descripcion">Completa el siguiente formulario para reservar una cita para tu mascota.</p>
-
-        <form class="formulario">
-
-            <div class="campo">
-                <label for="nombre">Nombre del dueño</label>
-                <input type="text" id="nombre" placeholder="Ingresa tu nombre">
-            </div>
-
-            <div class="campo">
-                <label for="mascota">Nombre de la mascota</label>
-                <input type="text" id="mascota" placeholder="Nombre de tu mascota">
-            </div>
-
-            <div class="campo">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" placeholder="Número de contacto">
-            </div>
-
-            <div class="campo">
-                <label for="fecha">Fecha de la cita</label>
-                <input type="date" id="fecha">
-            </div>
-
-            <div class="campo">
-                <label for="servicio">Servicio</label>
-                <select id="servicio">
-                    <option>Consulta General</option>
-                    <option>Vacunación</option>
-                    <option>Cirugía</option>
-                    <option>Urgencias</option>
-                    <option>Baño y cuidado</option>
-                </select>
-            </div>
-
-            <div class="campo">
-                <label for="mensaje">Mensaje adicional</label>
-                <textarea id="mensaje" rows="5" placeholder="Escribe información importante sobre tu mascota"></textarea>
-            </div>
-
-            <button type="submit" class="boton__primario">Reservar cita</button>
-
-        </form>
-    </section>
-
-    <section class="ubicacion__seccion" id="contacto">
-        <h2 class="titulo__seccion centrado">Nuestra ubicación</h2>
-        <p class="texto__centrado">Visítanos y conoce nuestras instalaciones en San Gil, Santander.</p>
-        <div class="mapa__contenedor">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.879821365147!2d-73.11980042505676!3d7.376018392634932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6846f8a8c39d7d%3A0x53d4d4e3d5c3f8b4!2sSan%20Gil%2C%20Santander!5e0!3m2!1ses!2sco!4v1717000000000!5m2!1ses!2sco"
-                width="100%"
-                height="350"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
-        </div>
-    </section>
-
-    <footer class="pie__pagina">
-        <div class="pie__contenido">
-
-            <div class="pie__columna">
-                <h3>Patitas Felices</h3>
-                <p>Cuidamos a tus mascotas con amor y profesionalismo en San Gil, Santander.</p>
-                <div class="pie__redes">
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">TikTok</a>
-                    <a href="#">WhatsApp</a>
-                </div>
-            </div>
-
-            <div class="pie__columna">
-                <h3>Servicios</h3>
-                <ul>
-                    <li><a href="#servicios">Consulta General</a></li>
-                    <li><a href="#servicios">Vacunación</a></li>
-                    <li><a href="#servicios">Cirugía</a></li>
-                    <li><a href="#servicios">Emergencias 24/7</a></li>
-                </ul>
-            </div>
-
-            <div class="pie__columna">
-                <h3>Información</h3>
-                <ul>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#cita">Agendar cita</a></li>
-                    <li><a href="/Productos/index.html">Productos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="pie__columna">
-                <h3>Contacto</h3>
-                <ul>
-                    <li>📲 320 456 7890</li>
-                    <li>📍 San Gil, Santander</li>
-                    <li>🕐 Lun–Sab: 8am–6pm</li>
-                    <li>🚑 Urgencias: 24/7</li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="pie__derechos">
-            <p>© 2026 Patitas Felices — Todos los derechos reservados</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.boton__primario {
+    display: inline-block;
+    background-color: #00BFFF;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton__primario:hover {
+    background-color: #45cdfa;
+    transform: scale(1.05);
+}
+
+button.boton__primario {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+}
+
+.boton__secundario {
+    display: inline-block;
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
+    color: #fff;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-top: 12px;
+}
+
+.boton__secundario:hover {
+    transform: scale(1.05);
+}
+
+.titulo__seccion {
+    font-size: 2rem;
+    color: #244c74;
+    margin-bottom: 36px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.texto__centrado {
+    text-align: center;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.encabezado {
+    background-color: #fdf6ee;
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
+    padding: 14px 40px;
+}
+
+.encabezado__contenido {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.encabezado__marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.encabezado__logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.encabezado__nombre {
+    display: flex;
+    gap: 5px;
+    font-size: 1.2rem;
+    color: #00BFFF;
+    align-items: center;
+}
+
+.encabezado__nombre strong {
+    color: #244c74;
+}
+
+.encabezado__nav ul {
+    display: flex;
+    gap: 24px;
+}
+
+.encabezado__nav a {
+    font-size: 0.95rem;
+    color: #244c74;
+    transition: color 0.2s;
+}
+
+.encabezado__nav a:hover {
+    color: #00BFFF;
+}
+
+.encabezado__boton {
+    background-color: #00BFFF;
+    color: #f0f8ff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.encabezado__boton:hover {
+    background-color: #45cdfa;
+    transform: scale(1.05);
+}
+
+.portada{
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background: linear-gradient(to right,
+        rgba(36,76,116,.85) 40%,
+        rgba(0,191,255,.20) 100%);
+}
+
+.portada__imagen{
+    width: 45%;
+    line-height: 0;
+}
+
+.portada__imagen img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+.portada__fondo {
+    width: 100%;
+    min-height: 520px;
+    background: linear-gradient(to right, rgba(36, 76, 116, 0.85) 40%, rgba(0, 191, 255, 0.2) 100%);
+    display: flex;
+    align-items: center;
+    padding: 60px 80px;
+}
+
+.portada__contenido{
+    width: 50%;
+    color: #fff;
+}
+
+.portada__titulo {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.portada__subtitulo {
+    font-size: 1.15rem;
+    color: #a8e8ff;
+    margin-bottom: 14px;
+    font-style: italic;
+}
+
+.portada__descripcion {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ddeeff;
+    margin-bottom: 28px;
+}
+
+.portada__boton {
+    display: inline-block;
+    background-color: #00BFFF;
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.portada__boton:hover {
+    background-color: #45cdfa;
+    transform: scale(1.05);
+}
+
+.nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 48px;
+    align-items: center;
+    padding: 72px 80px;
+    background-color: #fdf6ee;
+}
+
+.nosotros__imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8f6ff;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.nosotros__imagen img {
+    max-width: 260px;
+    border-radius: 14px;
+}
+
+.nosotros__texto h2 {
+    margin-bottom: 20px;
+}
+
+.nosotros__texto p {
+    color: #7f8688;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.nosotros__texto .boton__primario {
+    margin-top: 8px;
+}
+
+.veterinarios__seccion {
+    padding: 60px 80px;
+    background-color:#fdf6ee;
+}
+
+.veterinarios__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.veterinario__tarjeta {
+    border: 2px solid #f0f8ff;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 191, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.veterinario__tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 191, 255, 0.2);
+}
+
+.veterinario__tarjeta img {
+    width: 100%;
+    height: auto;
+    object-fit:cover;
+}
+
+.veterinario__info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.veterinario__info h3 {
+    color: #244c74;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+/* Especialidad en azul */
+.veterinario__info span {
+    font-size: 0.82rem;
+    color: #00BFFF;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.veterinario__info p {
+    color: #7f8688;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.servicios__seccion {
+    padding: 60px 80px;
+    background-color: #fdf6ee;
+}
+
+.servicios__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.servicio__tarjeta {
+    background-color: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicio__tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 191, 255, 0.2);
+}
+
+.servicio__imagen {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    border-radius:18px;
+}
+
+.servicio__tarjeta:hover .servicio__imagen {
+    transform: scale(1.05);
+}
+
+.servicio__cuerpo {
+    padding: 20px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+}
+
+.servicio__cuerpo h3 {
+    color: #244c74;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.servicio__cuerpo p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.aviso__urgencias {
+    background: linear-gradient(135deg, #244c74, #00BFFF);
+    padding: 50px 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.aviso__urgencias h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.aviso__urgencias p {
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.aviso__boton__telefono {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background-color: #e63946;       
+    color: #fff;
+    padding: 18px 48px;
+    border-radius: 14px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(230, 57, 70, 0.5);
+    animation: pulso__telefono 2s ease-in-out infinite;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.aviso__boton__telefono:hover {
+    background-color: #c1121f;
+    transform: scale(1.06);
+    animation: none;                  
+}
+
+.aviso__icono__llamada {
+    font-size: 2rem;
+}
+
+.aviso__numero {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.aviso__etiqueta__llamada {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes pulso__telefono {
+    0%   { box-shadow: 0 6px 24px rgba(230, 57, 70, 0.5); transform: scale(1); }
+    50%  { box-shadow: 0 8px 36px rgba(230, 57, 70, 0.8); transform: scale(1.04); }
+    100% { box-shadow: 0 6px 24px rgba(230, 57, 70, 0.5); transform: scale(1); }
+}
+
+.videos__seccion {
+    padding: 60px 80px;
+    background-color: #fdf6ee;
+}
+
+.videos__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.video__tarjeta {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 0 0 16px;
+}
+
+.video__tarjeta video {
+    width: 100%;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+.video__tarjeta h3 {
+    color: #244c74;
+    font-size: 0.95rem;
+    padding: 12px 14px 4px;
+}
+
+.video__tarjeta p {
+    color: #888;
+    font-size: 0.85rem;
+    padding: 0 14px;
+}
+
+.blog__seccion {
+    padding: 60px 80px;
+    background-color: #fdf6ee;
+}
+
+.blog__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.blog__tarjeta {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.blog__tarjeta:hover {
+    transform: translateY(-4px);
+}
+
+.blog__tarjeta img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.blog__info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog__fecha {
+    font-size: 0.78rem;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+.blog__info h3 {
+    color: #244c74;
+    font-size: 0.97rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.blog__info > p {
+    color: #666;
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+.blog__detalle {
+    margin-top: 12px;
+}
+
+.blog__detalle > summary.blog__enlace {
+    display: inline-block;
+    color: #00BFFF;
+    font-size: 0.88rem;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;          
+    transition: color 0.2s;
+    user-select: none;
+}
+
+.blog__detalle > summary.blog__enlace::-webkit-details-marker {
+    display: none;
+}
+
+.blog__detalle > summary.blog__enlace:hover {
+    color: #244c74;
+}
+
+.blog__detalle[open] > summary.blog__enlace {
+    color: #244c74;
+}
+
+.blog__texto__completo {
+    margin-top: 12px;
+    padding: 14px;
+    background-color: #f0f8ff;
+    border-left: 3px solid #00BFFF;
+    border-radius: 0 8px 8px 0;
+    /* Animación de apertura suave */
+    animation: desplegar 0.3s ease;
+}
+
+.blog__texto__completo p {
+    color: #555;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.blog__texto__completo p:last-child {
+    margin-bottom: 0;
+}
+
+
+@keyframes desplegar {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.adopcion__seccion {
+    padding: 60px 80px;
+    background-color: #fdf6ee;
+}
+
+.adopcion__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.adopcion__tarjeta {
+    background-color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.adopcion__tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.adopcion__tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.adopcion__info {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.adopcion__info h3 {
+    color: #244c74;
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+}
+
+.adopcion__info span {
+    font-size: 0.85rem;
+    color: #00BFFF;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.adopcion__info p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 14px;
+}
+
+.testimonios__seccion {
+    padding: 60px 80px;
+    background-color: #fdf6ee;
+}
+
+.testimonios__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.testimonio__tarjeta {
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    border-left: 4px solid #00BFFF;
+}
+
+.testimonio__tarjeta p {
+    color: #555;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+}
+
+.testimonio__tarjeta h4 {
+    color: #244c74;
+    font-size: 0.9rem;
+}
+
+.formulario__seccion {
+    padding: 60px 80px;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(253, 246, 238, 0.92) 0%,
+            rgba(253, 246, 238, 0.75) 50%,
+            rgba(180, 225, 245, 0.70) 100%
+        ),
+        url('./imagenes/perros_fondos.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.formulario__descripcion {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    margin-top: -16px;
+}
+
+.formulario {
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 36px;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(0, 191, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    color: #244c74;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    padding: 12px;
+    border: 1px solid #cce8ff;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* Borde azul al enfocar el campo */
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #00BFFF;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.ubicacion__seccion {
+    padding: 60px 80px;
+    background-color: #f0f4f8;
+}
+
+.mapa__contenedor {
+    margin-top: 16px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.mapa__contenedor iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    display: block;
+}
+
+.pie__pagina {
+    background-color: #244c74;
+    color: #fff;
+    padding: 50px 80px 0;
+}
+
+.pie__contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pie__columna h3 {
+    font-size: 1rem;
+    color: #45cdfa;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pie__columna p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #cde8f5;
+}
+
+.pie__columna ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pie__columna ul li,
+.pie__columna ul a {
+    font-size: 0.88rem;
+    color: #cde8f5;
+    transition: color 0.2s;
+}
+
+.pie__columna ul a:hover {
+    color: #45cdfa;
+}
+
+.pie__redes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.pie__redes a {
+    background-color: #45cdfa;
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.pie__redes a:hover {
+    background-color: #00BFFF;
+    transform: scale(1.05);
+}
+
+.pie__derechos {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.5);
+}
