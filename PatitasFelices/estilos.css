@@ -148,10 +148,12 @@ button.boton__primario {
 }
 
 .portada {
-    background-image: url('imagenes/veterinaria1.jpg');
+    background-image:
+        linear-gradient(rgba(18, 77, 140, 0.65), rgba(18, 77, 140, 0.65)),
+        url("imagenes/veterinaria1.jpg");
+    background-size: cover;
+    background-position: right center;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     min-height: 520px;
     display: flex;
     align-items: center;
