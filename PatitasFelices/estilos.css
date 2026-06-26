@@ -149,6 +149,7 @@ button.boton__primario {
 
 .portada {
     background-image: url('imagenes/veterinaria1.jpg');
+    background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     min-height: 520px;
