@@ -177,8 +177,8 @@ button.boton__primario {
     padding: 60px 80px;
 }
 
-.portada__contenido{
-    width: 50%;
+.portada__contenido {
+    max-width: 560px;
     color: #fff;
 }
 
