@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.18.1/axios.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Perfil Completo</title>
+</head>
+<body>
+    <div class="tarjeta">
+        <div class="tarjeta_contenido">
+            
+           
+            <div class="contenedor_nombre">
+                <p>
+                    <span id="titulo_persona"></span> 
+                    <span id="primer_nombre"></span> 
+                    <span id="apellido"></span>
+                </p>
+            </div>
+            <img class="imagen_perfil" id="foto_usuario" alt="Foto de usuario">
+
+            
+            <div class="seccion_informacion">
+                <h3>Contacto</h3>
+                <p>Correo: <span id="correo_electronico"></span></p>
+                <p>Teléfono: <span id="telefono_fijo"></span></p>
+                <p>Celular: <span id="telefono_celular"></span></p>
+            </div>
+
+            
+            <div class="seccion_informacion">
+                <h3>Personal</h3>
+                <p>Género: <span id="genero"></span></p>
+                <p>Edad: <span id="edad"></span> años</p>
+                <p>Fecha de Nac.: <span id="fecha_nacimiento"></span></p>
+                <p>Nacionalidad: <span id="nacionalidad"></span></p>
+            </div>
+
+            
+            <div class="seccion_informacion">
+                <h3>Ubicación</h3>
+                <p>Dirección: <span id="nombre_calle"></span> <span id="numero_calle"></span></p>
+                <p>Ciudad/Estado: <span id="ciudad"></span>, <span id="estado"></span></p>
+                <p>País: <span id="pais"></span> (CP: <span id="codigo_postal"></span>)</p>
+                <p>Coordenadas: <span id="latitud"></span>, <span id="longitud"></span></p>
+                <p>Zona Horaria: <span id="zona_horaria_desc"></span> (<span id="zona_horaria_diferencia"></span>)</p>
+            </div>
+
+            
+            <div class="seccion_informacion">
+                <h3>Cuenta</h3>
+                <p>Usuario: <span id="nombre_usuario"></span></p>
+                <p>ID: <span id="nombre_documento"></span> - <span id="numero_documento"></span></p>
+                <p>Antigüedad: <span id="antiguedad_registro"></span> años (<span id="fecha_registro"></span>)</p>
+                <p>UUID: <span id="identificador_unico"></span></p>
+                <details>
+                    <summary>Datos de Seguridad</summary>
+                    <p>Contraseña: <span id="contrasena"></span></p>
+                    <p>Salt: <span id="semilla_criptografica"></span></p>
+                    <p>MD5: <span id="md5"></span></p>
+                    <p>SHA1: <span id="sha1"></span></p>
+                    <p>SHA256: <span id="sha256"></span></p>
+                </details>
+            </div>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
