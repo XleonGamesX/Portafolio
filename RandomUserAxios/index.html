@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.18.1/axios.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.18.1/axios.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Perfil Completo</title>
 </head>
@@ -30,26 +31,28 @@
             </div>
 
             
-            <div class="seccion_informacion">
+            <div class="seccion_informacion_derecha">
                 <h3>Personal</h3>
                 <p>Género: <span id="genero"></span></p>
                 <p>Edad: <span id="edad"></span> años</p>
-                <p>Fecha de Nac.: <span id="fecha_nacimiento"></span></p>
+                <p>Fecha de Nacimiento: <span id="fecha_nacimiento"></span></p>
                 <p>Nacionalidad: <span id="nacionalidad"></span></p>
             </div>
 
-            
             <div class="seccion_informacion">
                 <h3>Ubicación</h3>
                 <p>Dirección: <span id="nombre_calle"></span> <span id="numero_calle"></span></p>
                 <p>Ciudad/Estado: <span id="ciudad"></span>, <span id="estado"></span></p>
                 <p>País: <span id="pais"></span> (CP: <span id="codigo_postal"></span>)</p>
-                <p>Coordenadas: <span id="latitud"></span>, <span id="longitud"></span></p>
+                <div class="boton_mapa">
+                    <p>Coordenadas: <span id="latitud"></span>, <span id="longitud"></span></p>
+                    <button onclick="abrirMapa()">Ver en Google Maps</button>
+                </div>
                 <p>Zona Horaria: <span id="zona_horaria_desc"></span> (<span id="zona_horaria_diferencia"></span>)</p>
             </div>
 
             
-            <div class="seccion_informacion">
+            <div class="seccion_informacion_derecha" id="seccion_informacion_derecha">
                 <h3>Cuenta</h3>
                 <p>Usuario: <span id="nombre_usuario"></span></p>
                 <p>ID: <span id="nombre_documento"></span> - <span id="numero_documento"></span></p>
