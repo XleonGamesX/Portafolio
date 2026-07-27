@@ -48,4 +48,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("md5").textContent = usuario.login.md5;
     document.getElementById("sha1").textContent = usuario.login.sha1;
     document.getElementById("sha256").textContent = usuario.login.sha256;
+    
 });
+function abrirMapa() {
+    const lat = document.getElementById("latitud").textContent.trim();
+    const long = document.getElementById("longitud").textContent.trim();
+
+    if(lat && long) {
+        window.open(`https://www.google.com/maps?q=${lat},${long}`, "_blank");
+    }else {
+        Swal.fire({
+        icon: "error",
+        title: "Ha ocurrido un error...",
+        text: "No se pudo abrir el mapa.",
+        });
+    }
+}
